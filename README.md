@@ -11,13 +11,13 @@ The idea being to clone down this repo into your project's component folder to m
 From your Next.js project folder
 ```bash
 cd components
-git clone git://github.com/quantstamp/qsp-ui-library.git
+git clone git://github.com/quantstamp/qs-ui-library.git
 ```
 
 Then to source the component in your page or top level component
 ```js
 // File: pages/mypage.js
-import MyComponent from '../components/qsp-up-library/MYCOMPONENT'
+import MyComponent from '../components/qs-up-library/MYCOMPONENT'
 
 |
 |
@@ -31,7 +31,7 @@ import MyComponent from '../components/qsp-up-library/MYCOMPONENT'
 How to start locally for development:
 
 ```
-git clone git://github.com/quantstamp/qsp-ui-library.git
+git clone git://github.com/quantstamp/qs-ui-library.git
 cd qsp-ui-library
 npm i
 npx styleguidist server
