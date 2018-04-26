@@ -32,7 +32,7 @@ How to start locally for development:
 
 ```
 git clone git://github.com/quantstamp/qs-ui-library.git
-cd qsp-ui-library
+cd qs-ui-library
 npm i
 npx styleguidist server
 ```
