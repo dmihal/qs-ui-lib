@@ -17,7 +17,7 @@ git clone git://github.com/quantstamp/qs-ui-library.git
 Then to source the component in your page or top level component
 ```js
 // File: pages/mypage.js
-import MyComponent from '../components/qs-up-library/MYCOMPONENT'
+import MyComponent from '../components/qs-up-library/MyComponent'
 
 |
 |
