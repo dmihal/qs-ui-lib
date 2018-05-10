@@ -220,7 +220,7 @@ export const MarginPaddingSize = [
 //   line-height: $type-eyebrow-line-height;
 //   margin: $type-eyebrow-margin;
 //   text-transform: $type-eyebrow-text-transform;
-}
+// }
 
 // PARAGRAPH
 // ====================================================
@@ -365,57 +365,57 @@ export const MarginPaddingSize = [
 // -----------------------------------------------------------------------------
 // SPACING (we use a 4 / 8pt spacing system)
 // -----------------------------------------------------------------------------
-$space-default:             16px;
-$space-xxs:                 4px;
-$space-xs:                  8px;
-$space-sm:                  16px;
-$space-md:                  24px;
-$space-lg:                  32px;
-$space-xl:                  48px;
-$space-xxl:                 64px;
-$space-xxxl:                72px;
+// $space-default:             16px;
+// $space-xxs:                 4px;
+// $space-xs:                  8px;
+// $space-sm:                  16px;
+// $space-md:                  24px;
+// $space-lg:                  32px;
+// $space-xl:                  48px;
+// $space-xxl:                 64px;
+// $space-xxxl:                72px;
 
-// INSET
-$space-inset:               $space-default;
-$space-inset-xxs:           $space-xxs;
-$space-inset-xs:            $space-xs;
-$space-inset-sm:            $space-sm;
-$space-inset-md:            $space-md;
-$space-inset-lg:            $space-lg;
-$space-inset-xl:            $space-xl;
-$space-inset-xxl:           $space-xxl;
-// INSET SQUISH
-$space-inset-squish-xs:     $space-xs/2 $space-xs;
-$space-inset-squish-sm:     $space-sm/2 $space-sm;
-$space-inset-squish-md:     $space-md/2 $space-md;
-// INSET STRETCH
-$space-inset-stretch-xs:    $space-xs $space-xs/2;
-$space-inset-stretch-sm:    $space-sm $space-sm/2;
-$space-inset-stretch-md:    $space-md $space-md/2;
-// STACK
-$space-stack:               0 0 $space-default 0;
-$space-stack-xxs:           0 0 $space-xxs 0;
-$space-stack-xs:            0 0 $space-xs 0;
-$space-stack-sm:            0 0 $space-sm 0;
-$space-stack-md:            0 0 $space-md 0;
-$space-stack-lg:            0 0 $space-lg 0;
-$space-stack-xl:            0 0 $space-xl 0;
-$space-stack-xxl:           0 0 $space-xxl 0;
-// INLINE
-$space-inline:              0 $space-default 0 0;
-$space-inline-xxs:          0 $space-xxs 0 0;
-$space-inline-xs:           0 $space-xs 0 0;
-$space-inline-sm:           0 $space-sm 0 0;
-$space-inline-md:           0 $space-md 0 0;
-$space-inline-lg:           0 $space-lg 0 0;
-$space-inline-xl:           0 $space-xl 0 0;
-$space-inline-xxl:          0 $space-xxl 0 0;
+// // INSET
+// $space-inset:               $space-default;
+// $space-inset-xxs:           $space-xxs;
+// $space-inset-xs:            $space-xs;
+// $space-inset-sm:            $space-sm;
+// $space-inset-md:            $space-md;
+// $space-inset-lg:            $space-lg;
+// $space-inset-xl:            $space-xl;
+// $space-inset-xxl:           $space-xxl;
+// // INSET SQUISH
+// $space-inset-squish-xs:     $space-xs/2 $space-xs;
+// $space-inset-squish-sm:     $space-sm/2 $space-sm;
+// $space-inset-squish-md:     $space-md/2 $space-md;
+// // INSET STRETCH
+// $space-inset-stretch-xs:    $space-xs $space-xs/2;
+// $space-inset-stretch-sm:    $space-sm $space-sm/2;
+// $space-inset-stretch-md:    $space-md $space-md/2;
+// // STACK
+// $space-stack:               0 0 $space-default 0;
+// $space-stack-xxs:           0 0 $space-xxs 0;
+// $space-stack-xs:            0 0 $space-xs 0;
+// $space-stack-sm:            0 0 $space-sm 0;
+// $space-stack-md:            0 0 $space-md 0;
+// $space-stack-lg:            0 0 $space-lg 0;
+// $space-stack-xl:            0 0 $space-xl 0;
+// $space-stack-xxl:           0 0 $space-xxl 0;
+// // INLINE
+// $space-inline:              0 $space-default 0 0;
+// $space-inline-xxs:          0 $space-xxs 0 0;
+// $space-inline-xs:           0 $space-xs 0 0;
+// $space-inline-sm:           0 $space-sm 0 0;
+// $space-inline-md:           0 $space-md 0 0;
+// $space-inline-lg:           0 $space-lg 0 0;
+// $space-inline-xl:           0 $space-xl 0 0;
+// $space-inline-xxl:          0 $space-xxl 0 0;
 
-// -----------------------------------------------------------------------------
-// AVATARS
-// -----------------------------------------------------------------------------
-$avatar-size-sm:            $space-lg;
-$avatar-size-base:          $space-xl;
-$avatar-size-lg:            $space-xxxl;
-$avatar-bg:                 $color-grey-200;
-$avatar-color:              $color-grey-500;
+// // -----------------------------------------------------------------------------
+// // AVATARS
+// // -----------------------------------------------------------------------------
+// $avatar-size-sm:            $space-lg;
+// $avatar-size-base:          $space-xl;
+// $avatar-size-lg:            $space-xxxl;
+// $avatar-bg:                 $color-grey-200;
+// $avatar-color:              $color-grey-500;
