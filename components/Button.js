@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
  * It is a "stateless" component that has no methods.
  */
 const Button = ({ children, color, size }) => (
-  <button className="button modifier">
+  <button className="button">
     {children}
     <style jsx>{`
       .button {
@@ -23,12 +23,6 @@ const Button = ({ children, color, size }) => (
         @media (width >= 320px) {
           /*background: blue;*/
         }	
-
-        &.modifier {
-          @media (width >= 320px) {
-            /*width: 800px;*/
-          }	
-        }
       }
     `}</style>
   </button>
