@@ -1,0 +1,535 @@
+/// -----------------------------------------------------------------------------
+/// Modular scale
+/// -----------------------------------------------------------------------------
+$ms-base: 1rem;
+$ms-ratio: $minor-third;
+
+/// -----------------------------------------------------------------------------
+/// Breakpoints
+/// -----------------------------------------------------------------------------
+$breakpoints: (
+  sm:  480px,
+  md: 720px,
+  lg:  960px,
+  xl: 1280px
+);
+$mappy-queries: (
+  sm:      mappy-bp(sm),
+  md:      mappy-bp(md),
+  lg:      mappy-bp(lg),
+  xl:      mappy-bp(xl),
+  xs-only: mappy-bp(max sm),
+  sm-only: mappy-bp(sm md),
+  md-only: mappy-bp(md lg),
+  lg-only: mappy-bp(lg xl),
+  xl-only: mappy-bp(xl)
+);
+
+/// -----------------------------------------------------------------------------
+/// Grid
+/// -----------------------------------------------------------------------------
+$grid-config: (
+  row-name: 'row',
+  column-name: 'col',
+  columns: 12,
+  default-padding: 16px,
+  max-width: map-get($breakpoints, xl),
+  breakpoints: (
+    xs: (target: 0, gutter: 24px),
+    sm: (target: map-get($breakpoints, sm), gutter: 24px),
+    md: (target: map-get($breakpoints, md), gutter: 30px),
+    lg: (target: map-get($breakpoints, lg), gutter: 30px),
+    xl: (target: map-get($breakpoints, xl), gutter: 30px)
+  )
+) !default;
+
+/// -----------------------------------------------------------------------------
+/// Colours
+/// -----------------------------------------------------------------------------
+$color-primary-red:       #de3535 !default;
+$color-primary-teal:      #0d8390 !default;
+$color-primary-grey:      #222 !default;
+$color-white:             #fff !default;
+$color-black:             #000 !default;
+$color-secondary-yellow:  #ffdb00 !default;
+$color-functional-blue:   #edf2f9 !default;
+$color-functional-green:  #25be55 !default;
+$color-grey-100:          #f6f6f6 !default;
+$color-grey-200:          #ececec !default;
+$color-grey-300:          #dadada !default;
+$color-grey-400:          #c3c3c3 !default;
+$color-grey-500:          #767676 !default;
+$color-grey-600:          #4e4e4e !default;
+$color-grey-700:          #3d3d3d !default;
+$color-grey-800:          #2e2e2e !default;
+$color-grey-900:          $color-primary-grey !default;
+$color-teal-100:          #c8f5ee !default;
+$color-teal-200:          #85e8da !default;
+$color-teal-300:          #1ecac7 !default;
+$color-teal-400:          #07aab0 !default;
+$color-teal-500:          $color-primary-teal !default;
+$color-teal-600:          #026e7c !default;
+$color-teal-700:          #01515f !default;
+$color-teal-800:          #01414c !default;
+$color-teal-900:          #002c34 !default;
+$color-red-300:           #fc7870 !default;
+$color-red-400:           #fa4542 !default;
+$color-red-500:           $color-primary-red !default;
+$color-red-600:           #d41916 !default;
+$color-red-700:           #bb2826 !default;
+$color-functional-green-200:  #e7f1ea !default;
+$color-functional-red-200:    #fff5f5 !default;
+/// Functional names
+$color-error:   $color-red-500 !default;
+$color-success: $color-functional-green !default;
+/// color-map
+$color-map: (
+  primary-red: $color-primary-red,
+  primary-teal: $color-primary-teal,
+  primary-grey: $color-primary-grey,
+  white: $color-white,
+  black: $color-black,
+  secondary-yellow: $color-secondary-yellow,
+  functional-blue: $color-functional-blue,
+  functional-green: $color-functional-green,
+  grey-100: $color-grey-100,
+  grey-200: $color-grey-200,
+  grey-300: $color-grey-300,
+  grey-400: $color-grey-400,
+  grey-500: $color-grey-500,
+  grey-600: $color-grey-600,
+  grey-700: $color-grey-700,
+  grey-800: $color-grey-800,
+  grey-900: $color-grey-900,
+  teal-100: $color-teal-100,
+  teal-200: $color-teal-200,
+  teal-300: $color-teal-300,
+  teal-400: $color-teal-400,
+  teal-500: $color-teal-500,
+  teal-600: $color-teal-600,
+  teal-700: $color-teal-700,
+  teal-800: $color-teal-800,
+  teal-900: $color-teal-900,
+  red-300: $color-red-300,
+  red-400: $color-red-400,
+  red-500: $color-red-500,
+  red-600: $color-red-600,
+  red-700: $color-red-700,
+  functional-green-200: $color-functional-green-200,
+  functional-red-200: $color-functional-red-200,
+  error: $color-error,
+  success: $color-success,
+) !default;
+
+/// -----------------------------------------------------------------------------
+/// Icons
+/// -----------------------------------------------------------------------------
+$icon-font-path: 'https://s3.amazonaws.com/ga-patterns/icon-font' !default;
+$icon-font-version: 'v1.0.3' !default;
+$icon-font-filename: 'patterns-icons' !default;
+
+/// -----------------------------------------------------------------------------
+/// Fonts/Type
+/// -----------------------------------------------------------------------------
+$font-path: 'https://ga-static-assets-s3.global.ssl.fastly.net/fonts' !default;
+
+$type-primary-font:                'Circular' !default;
+$type-primary-stack:               $type-primary-font, Helvetica, Arial, sans-serif !default;
+$type-primary-header-line-height:  1.2 !default;
+$type-primary-body-line-height:    1.414 !default;
+
+$type-alt-font:                    'News 706' !default;
+$type-alt-stack:                   $type-alt-font, Georgia, serif !default;
+$type-alt-body-line-height:        1.6 !default;
+$type-alt-header-line-height:      1.4 !default;
+
+$type-alt-2-font:                  'PFDin' !default;
+$type-alt-2-stack:                 $type-alt-2-font, Impact, sans-serif !default;
+$type-alt-2-header-line-height:    1.2 !default;
+
+/// -----------------------------------------------------------------------------
+/// Borders
+/// -----------------------------------------------------------------------------
+$border-width:         1px !default;
+$border-width-md:      2px !default;
+$border-radius:        2px !default;
+$border-radius-md:     4px !default;
+$border-radius-round:  50% !default;
+
+/// -----------------------------------------------------------------------------
+/// Shadows
+/// -----------------------------------------------------------------------------
+$black-rgb:              rgb(0, 0, 0) !default;
+$shadow-elevation-1:     0 1px 5px rgba($black-rgb, 0.18) !default;
+$shadow-elevation-2:     0 3px 10px rgba($black-rgb, 0.15) !default;
+$shadow-elevation-3:     0 3px 15px rgba($black-rgb, 0.25) !default;
+$shadow-elevation-alt-1: 0 3px 10px rgba($black-rgb, 0.5) !default;
+$shadow-elevation-alt-2: 0 3px 20px rgba($black-rgb, 0.8) !default;
+$shadow-elevation-alt-3: 0 3px 30px $black-rgb !default;
+
+/// -----------------------------------------------------------------------------
+/// Duration
+/// -----------------------------------------------------------------------------
+$duration-instantly:   0s;
+$duration-immediately: 0.05s;
+$duration-quickly:     0.1s;
+$duration-promptly:    0.2s;
+$duration-slowly:      0.4s;
+
+/// -----------------------------------------------------------------------------
+/// Base
+/// used to provide a basic style to the <html>, <body> and <a> tags.
+/// -----------------------------------------------------------------------------
+$base-html-background-color: $color-white !default;
+$base-body-background-color: $color-white !default;
+$base-body-text-color:       $color-grey-800 !default;
+$base-body-font-stack:       $type-primary-stack !default;
+$base-body-font-size:        ms(0) !default;
+$base-body-line-height:      $type-primary-body-line-height !default;
+
+/// =============================================================================
+/// ATOMS
+/// =============================================================================
+/// Links
+/// -----------------------------------------------------------------------------
+$default-link-text-color:   $color-primary-teal !default;
+$default-link-hover-color:  $color-primary-red !default;
+$default-link-active-color: $color-primary-red !default;
+
+/// -----------------------------------------------------------------------------
+/// Buttons
+/// -----------------------------------------------------------------------------
+/// Color variations
+$button-primary-red: (
+  bg-color: $color-primary-red, text-color: $color-white,
+  hover: (bg-color: $color-red-700, text-color: $color-white)
+) !default;
+
+$button-primary-teal: (
+  bg-color: $color-teal-500, text-color: $color-white,
+  hover: (bg-color: $color-teal-700, text-color: $color-white)
+) !default;
+
+$button-primary-teal-200: (
+  bg-color: $color-teal-200, text-color: $color-teal-800,
+  hover: (bg-color: $color-teal-300, text-color: $color-teal-800)
+) !default;
+
+$button-secondary-red: (
+  bg-color: $color-white, text-color: $color-primary-red, border-color: $color-red-500,
+  hover: (bg-color: $color-red-500, border-color: $color-red-500, text-color: $color-white)
+) !default;
+
+$button-secondary-teal: (
+  bg-color: $color-white, text-color: $color-teal-500, border-color: $color-teal-500,
+  hover: (bg-color: $color-teal-500, border-color: $color-teal-500, text-color: $color-white)
+) !default;
+
+$button-secondary-teal-200: (
+  bg-color: $color-teal-600, text-color: $color-teal-100, border-color: $color-teal-200,
+  hover: (bg-color: $color-teal-200, border-color: $color-teal-200, text-color: $color-teal-800)
+) !default;
+
+$button-secondary-grey-100: (
+  bg-color: transparent, text-color: $color-grey-100, border-color: $color-grey-100,
+  hover: (bg-color: $color-grey-400, border-color: $color-grey-400, text-color: $color-grey-700)
+) !default;
+
+$button-tertiary-grey-100: (
+  bg-color: $color-grey-100, text-color: $color-grey-600,
+  hover: (bg-color: $color-grey-400, text-color: $color-grey-600)
+) !default;
+
+$button-tertiary-grey-500: (
+  bg-color: $color-grey-500, text-color: $color-grey-100,
+  hover: (bg-color: $color-grey-600, text-color: $color-grey-100)
+) !default;
+
+$button-tertiary-white: (
+  bg-color: $color-white, text-color: $color-primary-grey, border-color: $color-white,
+  hover: (bg-color: $color-grey-600, border-color: $color-grey-600, text-color: $color-white)
+) !default;
+
+$button-tertiary-grey-800: (
+  bg-color: $color-grey-800, text-color: $color-grey-100, border-color: $color-grey-800,
+  hover: (bg-color: $color-grey-400, border-color: $color-grey-400, text-color: $color-grey-700)
+) !default;
+
+$button-tertiary-teal-700: (
+  bg-color: $color-teal-700, text-color: $color-teal-100,
+  hover: (bg-color: $color-teal-800, text-color: $color-teal-100)
+) !default;
+
+$button-tertiary-teal-600: (
+  bg-color: $color-teal-600, text-color: $color-grey-100,
+  hover: (bg-color: $color-teal-500, text-color: $color-grey-100)
+) !default;
+
+/// Default setup
+$button-default: (
+  bg-color: $color-black,
+  border-color: $color-black,
+  border-radius: $border-radius-md,
+  border-style: solid,
+  border-width: $border-width-md,
+  display: inline-block,
+  font-family: $type-primary-stack,
+  font-size: ms(0),
+  font-smoothing: true,
+  font-weight: 500,
+  line-height: $type-primary-body-line-height,
+  padding: ms(-2) ms(2),
+  text-align: center,
+  text-color: $color-white,
+  text-decoration: none,
+  hover: (
+    bg-color: $color-grey-800,
+    border-color: $color-grey-800,
+    text-color: $color-white,
+  ),
+  disabled: (
+    bg-color: $color-grey-100,
+    border-color: $color-grey-100,
+    text-color: $color-grey-400,
+  )
+) !default;
+
+/// Sizes
+$button-xs: (padding: ms(-7) ms(0)) !default;
+$button-sm: (padding: ms(-2) ms(0)) !default;
+$button-lg: (font-size: ms(1), padding: ms(0) ms(4)) !default;
+
+/// Styles
+$button-full:   (width: 100%) !default;
+$button-left:   (border-radius: $border-radius-md 0 0 $border-radius-md, margin-right: -1.5px) !default;
+$button-middle: (border-radius: 0, margin-left: -1.5px, margin-right: -1.5px) !default;
+$button-right:  (border-radius: 0 $border-radius-md $border-radius-md 0, margin-left: -1.5px) !default;
+
+/// Purpose
+$button-primary:   $button-primary-red !default;
+$button-secondary: $button-secondary-red !default;
+/// Alternative styles
+$button-alt-1:     $button-primary-teal !default;
+$button-alt-2:     $button-primary-teal-200 !default;
+$button-alt-3:     $button-secondary-teal !default;
+$button-alt-4:     $button-secondary-teal-200 !default;
+$button-alt-5:     $button-secondary-grey-100 !default;
+$button-alt-6:     $button-tertiary-grey-100 !default;
+$button-alt-7:     $button-tertiary-grey-500 !default;
+$button-alt-8:     $button-tertiary-white !default;
+$button-alt-9:     $button-tertiary-grey-800 !default;
+$button-alt-10:    $button-tertiary-teal-700 !default;
+$button-alt-11:    $button-tertiary-teal-600 !default;
+
+// Icons
+$button-with-icon-offset: ms(-4) !default;
+$button-icon-only-size: ms(6) !default;
+
+/// -----------------------------------------------------------------------------
+/// Dividers
+/// -----------------------------------------------------------------------------
+$dividers: (
+  base: (
+    bg-color: $color-primary-grey,
+    height: 1px
+  ),
+  alt: (bg-color: $color-grey-300),
+  alt-2: (bg-color: $color-grey-500),
+  white: (bg-color: $color-white)
+);
+
+$text-dividers: (
+  base: (
+    bg-color: $color-primary-grey,
+    height: 4px,
+    max-width: 48px
+  ),
+  alt: (
+    bg-color: $color-grey-300,
+    height: 1px,
+  ),
+  alt-2: (
+    bg-color: $color-white,
+    height: 1px,
+  ),
+  white: (
+    bg-color: $color-white
+  ),
+  full: (max-width: none),
+);
+
+/// -----------------------------------------------------------------------------
+/// Forms
+/// -----------------------------------------------------------------------------
+/// Labels
+$form-label-base-color:                    $color-grey-800 !default;
+$form-label-base-font-stack:               $type-primary-stack !default;
+$form-label-base-font-size:                ms(0) !default;
+$form-label-base-font-weight:              bold !default;
+$form-label-base-line-height:              $type-primary-body-line-height !default;
+$form-label-lg-font-size:                  ms(1) !default;
+$form-label-base-bottom-margin:            ms(-4) !default;
+/// Input
+$form-input-bg-color:                      $color-white !default;
+$form-input-border-color:                  $color-grey-400 !default;
+$form-input-border-radius:                 $border-radius !default;
+$form-input-text-color:                    $color-grey-500 !default;
+$form-input-font-family:                   $type-primary-stack !default;
+$form-input-font-size:                     ms(0) !default;
+$form-input-line-height:                   1 !default;
+$form-input-padding:                       ms(0) !default;
+$form-input-lg-padding:                    ms(0) ms(2) !default;
+$form-input-placeholder-color:             $color-grey-500 !default;
+$form-input-hover-border-color:            $color-grey-500 !default;
+$form-input-focus-border-color:            $color-grey-500 !default;
+$form-input-focus-text-color:              $color-grey-800 !default;
+$form-input-disabled-bg-color:             $color-grey-100 !default;
+$form-input-disabled-border-color:         $color-grey-400 !default;
+$form-input-disabled-text-color:           $color-grey-500 !default;
+/// Textarea
+$form-textarea-min-height:                 146px !default;
+/// Box inputs (global checkboxes/radios styling)
+$form-box-input-base-size:                  ms(2) !default;
+$form-box-input-base-padding:               0 !default;
+$form-box-input-base-top-offset:            ms(-3) !default;
+$form-box-input-base-right-margin:          ms(-1) !default;
+$form-box-input-base-checked-bg-color:      $color-teal-300 !default;
+$form-box-input-base-checked-border-color:  $color-teal-300 !default;
+$form-box-input-base-disabled-bg-color:     $color-grey-300 !default;
+$form-box-input-base-disabled-border-color: $color-grey-400 !default;
+$form-box-input-sm-size:                    ms(0) !default;
+$form-box-input-sm-top-offset:              ms(-5) !default;
+$form-box-input-longlabel-top-offset:       -(ms(1)) !default;
+$form-box-input-longlabel-left-padding:     ms(5) !default;
+/// Checkboxes
+$form-checkbox-base-tick-color:             $color-white !default;
+$form-checkbox-base-tick-height:            7px !default;
+$form-checkbox-base-tick-width:             15px !default;
+$form-checkbox-base-tick-offset-left:       3px !default;
+$form-checkbox-base-tick-offset-top:        5px !default;
+$form-checkbox-sm-tick-height:              4px !default;
+$form-checkbox-sm-tick-width:               9px !default;
+$form-checkbox-sm-tick-offset-left:         3px !default;
+$form-checkbox-sm-tick-offset-top:          4px !default;
+/// Radio Buttons
+$form-radiobtn-checked-border-color:        $color-grey-500 !default;
+/// Fieldset & Legends
+$form-fieldset-border-color:                $color-grey-400 !default;
+$form-fieldset-padding:                     0 ms(0) ms(0) !default;
+$form-legend-padding:                       0 ms(-2) !default;
+/// Toggle
+$form-toggle-off-bg-color:                  $color-grey-400 !default;
+$form-toggle-on-bg-color:                   $color-teal-300 !default;
+$form-toggle-color:                         $color-white !default;
+$form-toggle-top-offset:                    13px !default;
+$form-toggle-height:                        33px !default;
+/// Range
+$form-range-bg-color:                       $color-grey-200 !default;
+$form-range-toggle-color:                   $color-teal-300 !default;
+$form-range-height:                         8px !default;
+$form-range-toggle-height:                  23px !default;
+$form-range-offset-top:                     15px !default;
+/// Form Group
+$form-group-bottom-margin:                  ms(0) !default;
+
+/// -----------------------------------------------------------------------------
+/// Tables
+/// -----------------------------------------------------------------------------
+$table-cell-padding:         ms(0) ms(2) !default;
+$table-cell-padding-sm:      ms(-4) ms(2) !default;
+$table-th-border-color:      $color-primary-grey !default;
+$table-td-border-color:      $color-grey-200 !default;
+$table-tr-hover-color:       $color-grey-100 !default;
+$table-outline-border-color: $color-grey-300 !default;
+
+/// -----------------------------------------------------------------------------
+/// Tags
+/// -----------------------------------------------------------------------------
+$tag-base-bg-color:       $color-secondary-yellow !default;
+$tag-base-border-color:   $color-secondary-yellow !default;
+$tag-base-border-radius:  2px !default;
+$tag-base-font-family:    $type-primary-stack !default;
+$tag-base-font-size:      ms(-1) !default;
+$tag-base-font-weight:    500 !default;
+$tag-base-line-height:    1 !default;
+$tag-base-margin:         ms(-7) !default;
+$tag-base-padding:        ms(-7) ms(-4) !default;
+/// style: round
+$tag-round-border-radius: 20px !default;
+/// variation
+$tag-alt:                 $color-teal-200, $color-teal-200 !default;
+$tag-white:               $color-white, $color-grey-500 !default;
+
+/// -----------------------------------------------------------------------------
+/// Tooltips
+/// -----------------------------------------------------------------------------
+$tooltip-arrow-size:         8px !default;
+$tooltip-background-color:   $color-grey-800 !default;
+$tooltip-font-family:        $type-primary-stack !default;
+$tooltip-font-size:          ms(-1) !default;
+$tooltip-line-height:        1 !default;
+$tooltip-horizontal-padding: ms(0) !default;
+$tooltip-vertical-padding:   ms(-2) !default;
+$tooltip-text-color:         $color-white !default;
+$tooltip-zindex:             999999 !default;
+$tooltip-height:             strip-unit($tooltip-font-size) * strip-unit($tooltip-vertical-padding) !default;
+$tooltip-width-sm:           100px !default;
+$tooltip-width-md:           160px !default;
+$tooltip-width-lg:           300px !default;
+
+/// =============================================================================
+/// MOLECULES
+/// =============================================================================
+/// Blocks
+/// -----------------------------------------------------------------------------
+$blocks: (
+  base: (
+    bg-color: $color-white,
+    text-color: $color-grey-800,
+    link-color: $color-primary-teal,
+    link-hover-color: $color-primary-red,
+    link-active-color: $color-primary-red,
+  ),
+  accent: (
+    bg-color: $color-teal-600,
+    text-color: $color-grey-100,
+    link-color: $color-teal-100,
+    link-hover-color: $color-teal-300,
+    link-active-color: $color-teal-300,
+  ),
+  secondary: (
+    bg-color: $color-grey-100,
+    text-color: $color-grey-800,
+    link-color: $color-teal-600,
+    link-hover-color: $color-red-600,
+    link-active-color: $color-red-600,
+  ),
+  dark: (
+    bg-color: $color-grey-800,
+    text-color: $color-white,
+    link-color: $color-teal-300,
+    link-hover-color: $color-red-300,
+    link-active-color: $color-red-300,
+  ),
+);
+
+/// -----------------------------------------------------------------------------
+/// Masthead
+/// -----------------------------------------------------------------------------
+$masthead-background-color:             $color-black !default;
+$masthead-height:                       55px !default;
+$masthead-padding:                      15px !default;
+$masthead-title-font:                   $type-primary-stack !default;
+$masthead-title-font-size:              18px !default;
+$masthead-title-font-weight:            800 !default;
+$masthead-title-line-height:            1.56 !default;
+/// tabs
+$masthead-tab-padding-v:                17px !default;
+$masthead-tab-padding-h:                25px !default;
+$masthead-tab-title-font:               $type-primary-stack !default;
+$masthead-tab-title-font-size:          14px !default;
+$masthead-tab-text-color:               $color-white !default;
+$masthead-tab-text-color-hover:         $color-primary-red !default;
+$masthead-tab-background-hover:         $color-white !default;
+// dropdowns
+$masthead-dropdown-text-color-hover:    $color-primary-red !default;
