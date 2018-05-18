@@ -25,8 +25,8 @@ export const Colors = {
 // -----------------------------------------------------------------------------
 export const Typography = {
   fontPath: 'SOME URL',
-  typePrimaryFont: 'GTWalsheimPro',
-  typePrimaryStack: '"GTWalsheimPro", Helvetica, Arial, sans-serif',
+  typePrimaryFont: 'gtwalsheimpro-regular',
+  typePrimaryStack: 'gtwalsheimpro-regular, Helvetica, Arial, sans-serif',
   typePrimaryWeight: {
     regular: 'Regular',
     medium: 'Medium',
@@ -50,6 +50,9 @@ export const LayoutSizes = [
   '1440px',
   '1200px',
   '960px',
+  '600px',
+  '460px',
+  '320px'
 ]
 
 export const MarginPaddingSize = [
