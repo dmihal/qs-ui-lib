@@ -78,6 +78,11 @@ const Colors = () => (
       i {
         font-size: ${Typography.fontSize[4]}
       }
+
+      h4 {
+        margin-bottom: ${MarginPaddingSize[5]};
+      }
+
       .Circle {
         width: ${MarginPaddingSize[2]};
         height: ${MarginPaddingSize[2]};

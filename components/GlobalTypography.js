@@ -6,7 +6,7 @@ import { Typography as Type, Colors, MarginPaddingSize } from '../vars.js';
  * This is a global style baseline that is meant to be imported
  * at the top layer of your app
  */
-const Typography = () => (
+const GlobalTypography = () => (
   <style jsx global>{`
     html, body {
       font-family: ${Type.typePrimaryStack};
@@ -58,7 +58,7 @@ const Typography = () => (
   `}</style>
 )
 
-Typography.propTypes = {}
-Typography.defaultProps = {}
+GlobalTypography.propTypes = {}
+GlobalTypography.defaultProps = {}
 
-export default Typography
+export default GlobalTypography

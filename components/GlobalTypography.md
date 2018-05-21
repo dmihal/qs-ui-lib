@@ -1,5 +1,5 @@
 ```js static
-<Typography>
+<GlobalTypography>
 ```
 
 <h1>The Quick Brown Fox jumps over the Lazy Dog</h1>
