@@ -17,10 +17,6 @@ const LayoutGrid = ({ children, columns, offset }) => (
         width: 100%;
         
         > :global(*) {
-          min-height: ${MarginPaddingSize[2]};
-        }
-        
-        > :global(*) {
           ${
             columns > 1
               ? 'width: calc( ('+LayoutSizes[2]+'/'+columns+') - ('+MarginPaddingSize[3]+'/'+columns+') );'

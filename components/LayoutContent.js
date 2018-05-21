@@ -10,12 +10,8 @@ const LayoutContent = ({ children }) => (
     {children}
     <style jsx>{`
       .LayoutContent {
-        margin: auto;
         max-width: ${LayoutSizes[1]};
-        
-        > :global(*) {
-          min-height: ${MarginPaddingSize[2]};
-        }
+        margin: auto;
       }  
     `}</style>
   </main>

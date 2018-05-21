@@ -5,7 +5,7 @@ import { LayoutSizes, MarginPaddingSize } from '../vars.js';
 /**
  * This is a top-level wrapper layout block
  */
-const LayoutWrapper = ({ children }) => (
+const LayoutWrapper = ({ children, documentationStylesOnly }) => (
   <div className="LayoutWrapper">
     {children}
     <style jsx>{`
@@ -13,11 +13,9 @@ const LayoutWrapper = ({ children }) => (
         margin: auto;
         max-width: ${LayoutSizes[0]};
         padding: 0 ${MarginPaddingSize[2]};
-
-        > :global(*) {
-          min-height: ${MarginPaddingSize[2]};
-        }
-      }  
+        width: 100%;
+      } 
+      ${documentationStylesOnly}
     `}</style>
   </div>
 )
