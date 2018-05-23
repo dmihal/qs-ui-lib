@@ -7,9 +7,6 @@ import GlobalReset from './GlobalReset';
 
 import { MarginPaddingSize, Colors } from '../vars.js';
 
-/**
- * This is a top-level wrapper layout block
- */
 const NavigationSub = ({ children }) => (
   <React.Fragment>
     <GlobalReset />

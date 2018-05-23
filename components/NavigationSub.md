@@ -1,10 +1,8 @@
-NavigationSub Element:
-
 ```jsx
 <NavigationSub>
-  <li>Hi</li>
-  <li>Hi</li>
-  <li>Hi</li>
-  <li>Hi</li>
+  <li>Item</li>
+  <li>Item</li>
+  <li>Item</li>
+  <li>Item</li>
 </NavigationSub>
 ```

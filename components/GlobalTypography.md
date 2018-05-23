@@ -2,6 +2,9 @@
 <GlobalTypography>
 ```
 
+<br/>
+
+Rendered Examples:
 <h1>The Quick Brown Fox jumps over the Lazy Dog</h1>
 <h2>The Quick Brown Fox jumps over the Lazy Dog</h2>
 <h3>The Quick Brown Fox jumps over the Lazy Dog</h3>

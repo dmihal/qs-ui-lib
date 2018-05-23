@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import LayoutGrid from './LayoutGrid';
 import GlobalTypography from './GlobalTypography';
 import GlobalReset from './GlobalReset';
+import Button from './Button';
 
 import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 
-/**
- * This is a top-level wrapper layout block
- */
-const PageBanner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
+const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>
     <GlobalReset />
     <GlobalTypography />
-    <div className="PageBanner">
+    <div className="Banner">
       <LayoutGrid columns="1">
         <div className="banner-left">
           <h1>{title}</h1>
@@ -22,13 +20,13 @@ const PageBanner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }
         <div className="banner-right">
           { 
             ctaBtnText && ctaBtnAction 
-              ? <button onClick={ctaBtnAction}>{ctaBtnText}</button> 
+              ? <Button onClick={ctaBtnAction}>{ctaBtnText}</Button> 
               : null 
           }
         </div>
       </LayoutGrid>
       <style jsx>{`
-        .PageBanner {
+        .Banner {
           display: flex;
           flex-direction: vertical;
           align-items: center;
@@ -69,31 +67,31 @@ const PageBanner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }
   </React.Fragment>
 )
 
-PageBanner.propTypes = {
+Banner.propTypes = {
   /**
-   * PageBanner header text
+   * Banner header text
    */
   title: PropTypes.string.isRequired,
   /**
-   * PageBanner header text
+   * Banner header text
    */
   altStyle: PropTypes.string,
   /**
-   * PageBanner header text
+   * Banner header text
    */
   secondayTitle: PropTypes.string,
   /**
-   * PageBanner header text
+   * Banner header text
    */
   ctaBtnText: PropTypes.string,
   /**
-   * PageBanner header text
+   * Banner header text
    */
   ctaBtnAction: PropTypes.func
 }
 
-PageBanner.defaultProps = {
+Banner.defaultProps = {
   title: 'FILL IN PAGE BANNER TITLE'
 }
 
-export default PageBanner
+export default Banner
