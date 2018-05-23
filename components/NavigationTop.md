@@ -1,5 +1,3 @@
-NavigationTop Element:
-
 ```jsx
 <NavigationTop>
   <li>Hi</li>
