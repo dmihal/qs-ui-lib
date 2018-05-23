@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors as ColorVars , MarginPaddingSize } from '../vars.js';
 
-/**
- * This is the logo component - it takes different types
- */
 const Logo = ({ type, inverted, product }) => (
   <div className="Logo">
     { 
