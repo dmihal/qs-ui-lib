@@ -16,6 +16,8 @@ export const Colors = {
   colorPrimaryCinnabar: 'rgba(227,66,52,1)',
   colorPrimaryLavender: 'rgba(224,78,227,1)',
   colorPrimaryViolet: 'rgba(155,64,164,1)',
+  colorPrimarySanMarino: 'rgba(80,104,178,1)',
+  colorPrimaryResolutionBlue: 'rgba(0,31,124,1)',
   colorWhite: 'rgba(255,255,255,1)',
   colorsBlack: 'rgba(0,0,0,1)',
 }
