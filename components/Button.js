@@ -12,111 +12,118 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
         cursor: pointer;
         border-width: 1px;
         border--style: solid;
+        color: ${Colors.colorPrimaryRoyal};
+        background: ${Colors.colorWhite};
+        border-color: ${Colors.colorPrimaryGallery};
+        padding: 6px calc(${MarginPaddingSize[3]}/ 2 );
+        font-size: ${Typography.fontSize[3]};
+        &:hover {
+          color: ${Colors.colorPrimaryPoloBlue};
+        }
       }
     `}</style>
     <style jsx>{`
       .Button {        
         /* DEFAULT - Type Overides*/
-
-        /* TODO - CONVERT TO WRAPPING CHECKING */
-
-        /* OLD_NOTE: - We have to write the CSS this way 
-        * ( css property -> specific case) 
-        * due to depth of interpolation limitations inside string templates
-        * for styled-jsx-plugin-postcss -> post-css-nested
-        * ... yea I know. But do it once and you will thank ourself later.
-        */
-
-        background: ${ 
+        ${
           type === 'primary'
-            ? Colors.colorPrimaryRoyal
-            : type === 'warning'
-              ? Colors.colorPrimaryCinnabar
-              : type === 'disabled'
-                ? Colors.colorPrimaryGallery
-                : Colors.colorWhite
-        };
-
-
-
-        border-color: ${ 
-          type === 'primary'
-            ? Colors.colorPrimaryRoyal
-            : type === 'warning'
-              ? Colors.colorPrimaryCinnabar
-              : Colors.colorPrimaryGallery
-        };
-
-        color: ${ 
-          type === 'primary'
-            ? Colors.colorWhite
-            : type === 'warning'
-              ? Colors.colorWhite
-              : type === 'disabled'
-                ? Colors.colorPrimarySlate
-                : Colors.colorPrimaryRoyal
-        };
-
-        min-width: ${
+            ? (`
+              background: ${Colors.colorPrimaryRoyal};
+              border-color: ${Colors.colorPrimaryRoyal};
+              color: ${Colors.colorWhite};
+            `) : ''
+        }
+        ${
+          type === 'warning'
+            ? (`
+              background: ${Colors.colorPrimaryCinnabar};
+              border-color: ${Colors.colorPrimaryCinnabar};
+              color: ${Colors.colorWhite};
+              cursor: not-allowed;
+            `) : ''
+        }
+        ${
+          type === 'disabled'
+            ? (`
+              background: ${Colors.colorPrimaryGallery};
+              border-color: #eee;
+              color: ${Colors.colorPrimarySlate};
+              cursor: not-allowed;
+            `) : ''
+        }
+        ${
           type === 'left' || type === 'right'
-            ? '0px'
-            : 'auto'
-        };
-
-        width: ${
-          type === 'left' || type === 'right'
-            ? MarginPaddingSize[3]
-            : 'auto'
-        };
-
-        height: ${
-          type === 'left' || type === 'right'
-            ? MarginPaddingSize[3]
-            : 'auto'
-        };
-
-        /* DEFAULT - Size Overides */
-        font-size: ${ 
-          size === 'small'
-            ? Typography.fontSize[4]
-            : Typography.fontSize[3]
-        };
-
-        padding: ${ 
-          size === 'small'
-            ? '2px calc(' + MarginPaddingSize[3] + '/ 4 )'
-            : '6px calc(' + MarginPaddingSize[3] + '/ 2 )'
-        };
-
+            ? (`
+              min-width: 0px;
+              width: ${MarginPaddingSize[3]}
+              height: ${MarginPaddingSize[3]};
+            `) : ''
+        }
+        
+        /* DEFAULT - Size Overide */
+        ${
+          type === 'small'
+            ? (`
+              font-size: ${fontSize[4]};
+              padding: 2px calc(' + ${MarginPaddingSize[3]} + '/ 4 );
+            `) : ''
+        }
+        
         /* HOVER - Type Overides*/
         &:hover {
-          background: ${ 
+          ${
             type === 'primary'
-              ? Colors.colorPrimaryPoloBlue
-              : type === 'warning'
-                ? Colors.colorPrimaryCinnabar
-                : type === 'disabled'
-                  ? Colors.colorPrimaryGallery
-                  : Colors.colorWhite
-          };
+              ? (`
+                background: ${Colors.colorPrimaryPoloBlue};
+                border-color: ${Colors.colorPrimaryPoloBlue};
+                color: ${Colors.colorWhite};
+              `) : ''
+          }
+          ${
+            type === 'warning'
+              ? (`
+                background: ${Colors.colorPrimaryCinnabar};
+                border-color: ${Colors.colorPrimaryCinnabar};
+                color: ${Colors.colorWhite};
+              `) : ''
+          }
+          ${
+            type === 'disabled'
+              ? (`
+                background: ${Colors.colorPrimaryGallery};
+                border-color: #eee;
+                color: ${Colors.colorPrimarySlate};
+                cursor: not-allowed;
+              `) : ''
+          }          
+        }
 
-          border-color: ${ 
+        &:active {
+          ${
             type === 'primary'
-              ? Colors.colorPrimaryPoloBlue
-              : type === 'warning'
-                ? Colors.colorPrimaryCinnabar
-                : Colors.colorPrimaryGallery
-          };
-
-          color: ${ 
-            type === 'primary'
-              ? Colors.colorWhite
-              : type === 'warning'
-                ? Colors.colorWhite
-                : type === 'disabled'
-                  ? Colors.colorPrimarySlate
-                  : Colors.colorPrimaryPoloBlue
-          };
+              ? (`
+                background: ${Colors.colorPrimaryResolutionBlue};
+                border-color: ${Colors.colorPrimaryResolutionBlue};
+                color: ${Colors.colorWhite};
+              `) : ''
+          }
+          ${
+            type === 'warning'
+              ? (`
+                background: ${Colors.colorPrimaryCinnabar};
+                border-color: ${Colors.colorPrimaryCinnabar};
+                color: ${Colors.colorWhite};
+              `) : ''
+          }
+          ${
+            type === 'disabled'
+              ? (`
+                background: ${Colors.colorPrimaryGallery};
+                border-color: #eee;
+                color: ${Colors.colorPrimarySlate};
+                cursor: not-allowed;
+              `) : ''
+          }          
         }
       }
     `}</style>
