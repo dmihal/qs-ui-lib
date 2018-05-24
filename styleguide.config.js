@@ -5,5 +5,10 @@ module.exports = {
 		maxWidth: '1600px'
 	},
 	styles: {
-	},
+    StyleGuide: {
+      '@global *': {
+        boxSizing: 'border-box'
+      }
+    }
+  }
 };

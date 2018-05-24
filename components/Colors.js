@@ -89,46 +89,46 @@ const Colors = () => (
         border-radius: 50%;
 
         &.Royal {
-          background: ${ColorVars.colorPrimaryRoyal}
+          background: ${ColorVars.Royal}
         }
         &.Malibu {
-          background: ${ColorVars.colorPrimaryMalibu}
+          background: ${ColorVars.Malibu}
         }
         &.PoloBlue {
-          background: ${ColorVars.colorPrimaryPoloBlue}
+          background: ${ColorVars.PoloBlue}
         }
         &.Slate {
-          background: ${ColorVars.colorPrimarySlate}
+          background: ${ColorVars.Slate}
         }
         &.Gallery {
-          background: ${ColorVars.colorPrimaryGallery}
+          background: ${ColorVars.Gallery}
         }
         &.Alabaster {
-          background: ${ColorVars.colorPrimaryAlabaster}
+          background: ${ColorVars.Alabaster}
         }
         &.Mirage {
-          background: ${ColorVars.colorPrimaryMirage}
+          background: ${ColorVars.Mirage}
         }
         &.LaPalma {
-          background: ${ColorVars.colorPrimaryLaPalma}
+          background: ${ColorVars.LaPalma}
         }
         &.Atlantis {
-          background: ${ColorVars.colorPrimaryAtlantis}
+          background: ${ColorVars.Atlantis}
         }
         &.Yellow {
-          background: ${ColorVars.colorPrimaryYellow}
+          background: ${ColorVars.Yellow}
         }
         &.Crusta {
-          background: ${ColorVars.colorPrimaryCrusta}
+          background: ${ColorVars.Crusta}
         }
         &.Cinnabar {
-          background: ${ColorVars.colorPrimaryCinnabar}
+          background: ${ColorVars.Cinnabar}
         }
         &.Lavender {
-          background: ${ColorVars.colorPrimaryLavender}
+          background: ${ColorVars.Lavender}
         }
         &.Violet {
-          background: ${ColorVars.colorPrimaryViolet}
+          background: ${ColorVars.Violet}
         }
       }
     `}</style>

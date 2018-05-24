@@ -2,117 +2,143 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
-const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
+const Button = ({ children, type, size, disabled }) => (
   <button className="Button" disabled={disabled}>
-    {text}
+    { type === 'left' || 
+      type === 'right'
+        ? `➜` 
+        : null
+    }
+    {children}
     <style jsx>{`
       .Button {
         /* DEFAULT - Unchanging Styles */
-        min-width: 120px;
         cursor: pointer;
+        text-align: center;
         border-width: 1px;
-        border--style: solid;
+        border-style: solid;
+        color: ${Colors.Royal};
+        background: ${Colors.White};
+        border-color: ${Colors.Gallery};
+        padding: 6px calc(${MarginPaddingSize[3]}/2);
+        font-size: ${Typography.fontSize[3]};
+        &:hover {
+          color: ${Colors.PoloBlue};
+        }
+        &:focus{
+          outline: none;
+        }
       }
     `}</style>
     <style jsx>{`
       .Button {        
         /* DEFAULT - Type Overides*/
-
-        /* NOTE: - We have to write the CSS this way 
-        * ( css property -> specific case) 
-        * due to depth of interpolation limitations inside string templates
-        * for styled-jsx-plugin-postcss -> post-css-nested
-        * ... yea I know. But do it once and you will thank ourself later.
-        */
-
-        background: ${ 
+        ${
           type === 'primary'
-            ? Colors.colorPrimaryRoyal
-            : type === 'warning'
-              ? Colors.colorPrimaryCinnabar
-              : type === 'disabled'
-                ? Colors.colorPrimaryGallery
-                : Colors.colorWhite
-        };
-
-        border-color: ${ 
-          type === 'primary'
-            ? Colors.colorPrimaryRoyal
-            : type === 'warning'
-              ? Colors.colorPrimaryCinnabar
-              : Colors.colorPrimaryGallery
-        };
-
-        color: ${ 
-          type === 'primary'
-            ? Colors.colorWhite
-            : type === 'warning'
-              ? Colors.colorWhite
-              : type === 'disabled'
-                ? Colors.colorPrimarySlate
-                : Colors.colorPrimaryRoyal
-        };
-
-        min-width: ${
+            ? (`
+              background: ${Colors.Royal};
+              border-color: ${Colors.Royal};
+              color: ${Colors.White};
+            `) : ''
+        }
+        ${
+          type === 'warning'
+            ? (`
+              background: ${Colors.Cinnabar};
+              border-color: ${Colors.Cinnabar};
+              color: ${Colors.White};
+              cursor: default;
+            `) : ''
+        }
+        ${
+          type === 'disabled'
+            ? (`
+              background: ${Colors.Gallery};
+              border-color: #eee;
+              color: ${Colors.Slate};
+              cursor: not-allowed;
+            `) : ''
+        }
+        ${
           type === 'left' || type === 'right'
-            ? '0px'
-            : 'auto'
-        };
-
-        width: ${
-          type === 'left' || type === 'right'
-            ? MarginPaddingSize[3]
-            : 'auto'
-        };
-
-        height: ${
-          type === 'left' || type === 'right'
-            ? MarginPaddingSize[3]
-            : 'auto'
-        };
-
-        /* DEFAULT - Size Overides */
-        font-size: ${ 
+            ? (`
+              min-width: 0px;
+              width: ${MarginPaddingSize[3]};
+              height: ${MarginPaddingSize[3]};
+              padding: 0;
+            `) : ''
+        }
+        ${
+          type === 'left'
+            ? (`transform:rotateY(180deg)`) : ''
+        }
+        
+        /* DEFAULT - Size Overide */
+        ${
           size === 'small'
-            ? Typography.fontSize[4]
-            : Typography.fontSize[3]
-        };
-
-        padding: ${ 
-          size === 'small'
-            ? '2px calc(' + MarginPaddingSize[3] + '/ 4 )'
-            : '6px calc(' + MarginPaddingSize[3] + '/ 2 )'
-        };
-
+            ? (`
+              padding: 2px calc(${MarginPaddingSize[3]}/4);
+              font-size: ${Typography.fontSize[4]};
+              min-width: auto;
+            `) : ''
+        }
+        
         /* HOVER - Type Overides*/
         &:hover {
-          background: ${ 
+          ${
             type === 'primary'
-              ? Colors.colorPrimaryPoloBlue
-              : type === 'warning'
-                ? Colors.colorPrimaryCinnabar
-                : type === 'disabled'
-                  ? Colors.colorPrimaryGallery
-                  : Colors.colorWhite
-          };
+              ? (`
+                background: ${Colors.PoloBlue};
+                border-color: ${Colors.PoloBlue};
+                color: ${Colors.White};
+              `) : ''
+          }
+          ${
+            type === 'warning'
+              ? (`
+                background: ${Colors.Cinnabar};
+                border-color: ${Colors.Cinnabar};
+                color: ${Colors.White};
+              `) : ''
+          }
+          ${
+            type === 'disabled'
+              ? (`
+                background: ${Colors.Gallery};
+                border-color: #eee;
+                color: ${Colors.Slate};
+                cursor: not-allowed;
+              `) : ''
+          }          
+        }
 
-          border-color: ${ 
+        /* ACTIVE - Type Overides*/
+        &:active {
+          ${
             type === 'primary'
-              ? Colors.colorPrimaryPoloBlue
-              : type === 'warning'
-                ? Colors.colorPrimaryCinnabar
-                : Colors.colorPrimaryGallery
-          };
-
-          color: ${ 
-            type === 'primary'
-              ? Colors.colorWhite
-              : type === 'warning'
-                ? Colors.colorWhite
-                : type === 'disabled'
-                  ? Colors.colorPrimarySlate
-                  : Colors.colorPrimaryPoloBlue
-          };
+              ? (`
+                background: ${Colors.ResolutionBlue};
+                border-color: ${Colors.ResolutionBlue};
+                color: ${Colors.White};
+              `) : ''
+          }
+          ${
+            type === 'warning'
+              ? (`
+                background: ${Colors.Cinnabar};
+                border-color: ${Colors.Cinnabar};
+                color: ${Colors.White};
+              `) : ''
+          }
+          ${
+            type === 'disabled'
+              ? (`
+                background: ${Colors.Gallery};
+                border-color: #eee;
+                color: ${Colors.Slate};
+                cursor: not-allowed;
+              `) : ''
+          }          
         }
       }
     `}</style>
@@ -121,33 +147,25 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
 
 Button.propTypes = {
   /**
-   * Button text
-   */
-  text: PropTypes.string,
-  /**
    * Button style
    */
   type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
   /**
+   * Button style
+   */
+  children: PropTypes.string,
+  /**
    * Button size
    */
-  size: PropTypes.oneOf(['default', 'small']),
+  size: PropTypes.string,
   /**
    * Icon image
    */
-  icon: PropTypes.string,
-  /**
-   * Icon position
-   */
-  iconPosition: PropTypes.oneOf(['left', 'right']),
+  icon: PropTypes.string
 }
 
 Button.defaultProps = {
-  text: 'Button',
-  type: 'default',
-  size: 'default',
-  icon: 'none',
-  iconPosition: 'none'
+  type: 'default'
 }
 
 export default Button

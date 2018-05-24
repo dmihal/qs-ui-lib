@@ -17,7 +17,7 @@ const GlobalTypography = () => (
     label,
     small {
       font-family: ${Type.typePrimaryStack};
-      color: ${Colors.colorPrimaryMirage};
+      color: ${Colors.Mirage};
     }
     
     h1, h2, h3, h4 {
