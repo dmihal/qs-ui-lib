@@ -24,11 +24,6 @@ const GlobalReset = () => (
       html,body {
         height: 100%;
       }
-      
-      body,
-      *[data-preview] > * > * > * {
-        background: ${Colors.colorPrimaryAlabaster};
-      }
 
       img {
         max-width: 100%;

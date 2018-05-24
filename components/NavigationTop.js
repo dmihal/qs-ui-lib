@@ -15,7 +15,7 @@ const NavigationTop = ({ children }) => (
       <LayoutWrapper>
         <nav>
           <div className="nav-left">
-            <Logo type="row" />
+            <Logo height="40px"/>
           </div>
           <div className="nav-right">
             <ul className="nav-items">
@@ -28,7 +28,8 @@ const NavigationTop = ({ children }) => (
         .NavigationTop {
           display: flex;
           height: 100px;
-          border-bottom: 1px solid ${Colors.colorPrimaryGallery};
+          border-bottom: 1px solid #e4e4e4;
+          background: ${Colors.Gallery};
 
           nav {
             display: flex;
@@ -41,9 +42,14 @@ const NavigationTop = ({ children }) => (
 
           .nav-items {
             display: flex;
+            height: 100%;
 
             > :global(*) { 
               padding: 0 ${MarginPaddingSize[4]};
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
 
               &:last-child {
                 padding-right: 0;

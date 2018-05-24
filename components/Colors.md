@@ -1,12 +1,12 @@
 ```js static
 // Every color is imported as
-// Colors.colorPrimary_COLOR_NAME_HERE_
+// Colors._COLOR_NAME_HERE_
 //
 // examples:
 // import { Colors } from '../vars.js';
 // 
-// Colors.colorPrimaryRoyal
-// Colors.colorPrimaryMalibu
+// Colors.Royal
+// Colors.Malibu
 ```
 
 ```jsx noeditor

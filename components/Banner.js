@@ -33,7 +33,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           height: 200px;
           padding: 0 ${MarginPaddingSize[2]};
           
-          background-color: ${ altStyle ? 'none' : Colors.colorPrimaryMirage };
+          background-color: ${ altStyle ? 'none' : Colors.Mirage };
           background-image: ${ altStyle ? 'none' : 'url(/' + require('../assets/waves-bg.svg') + ')' };
           background-position: center;
           background-size: 100% auto;
@@ -46,10 +46,10 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           }
 
           h1 {
-            color: ${ altStyle ? Colors.colorPrimaryMirage : Colors.colorWhite };
+            color: ${ altStyle ? Colors.Mirage : Colors.White };
           }
           h2 {
-            color: ${ altStyle ? Colors.colorPrimarySlate : Colors.colorWhite };
+            color: ${ altStyle ? Colors.Slate : Colors.White };
           }
 
           .banner-right {

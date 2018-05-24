@@ -1,31 +1,42 @@
 Default Button
 ```jsx
-<Button text="Default"/>
+<Button>Default</Button>
 ```
 
 Primary Button
 ```jsx
-<Button type="primary" text="Primary"/>
+<Button type="primary">Primary</Button>
 ```
 
 Warning Button
 ```jsx
-<Button type="warning" text="Warning"/>
+<Button type="warning">Warning</Button>
 ```
 
 Disabled Button
 ```jsx
-<Button type="disabled" text="Disabled" disabled/>
+<Button type="disabled" disabled>Disabled</Button>
+```
+
+Left Button
+```jsx
+<Button type="left"/>
+```
+
+Right Button
+```jsx
+<Button type="right"/>
 ```
 
 Small Button
 ```jsx
-<Button size="small" text="Small"/>
+<Button size="small">Small</Button>
 ```
 
 Small Button Primary
 ```jsx
-<Button type="primary" size="small" text="Small"/>
+<Button type="primary" size="small">Small</Button>
 ```
+
 
 <!-- type, size, text, icon, iconPosition  -->

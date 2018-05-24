@@ -62,7 +62,7 @@ const Logo = ({ type, theme, productName, width, height }) => (
           margin-left: calc(${MarginPaddingSize[5]} / 2);
           ${
             theme === 'onLight'
-              ? `color: ${Colors.colorPrimaryRoyal};`
+              ? `color: ${Colors.Royal};`
               : `color: ${Colors.colorWhite};`
           }
         }

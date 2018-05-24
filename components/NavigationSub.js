@@ -23,7 +23,8 @@ const NavigationSub = ({ children }) => (
         .NavigationSub {
           display: flex;
           height: 50px;
-          border-bottom: 1px solid ${Colors.colorPrimaryGallery};
+          border-bottom: 1px solid #e4e4e4;
+          background: ${Colors.Gallery};
 
           .nav-items {
             display: flex;

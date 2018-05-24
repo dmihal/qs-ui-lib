@@ -2,23 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
-const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
+const Button = ({ children, type, size, disabled }) => (
   <button className="Button" disabled={disabled}>
-    {text}
+    { type === 'left' || 
+      type === 'right'
+        ? `➜` 
+        : null
+    }
+    {children}
     <style jsx>{`
       .Button {
         /* DEFAULT - Unchanging Styles */
-        min-width: 120px;
         cursor: pointer;
+        text-align: center;
         border-width: 1px;
-        border--style: solid;
-        color: ${Colors.colorPrimaryRoyal};
-        background: ${Colors.colorWhite};
-        border-color: ${Colors.colorPrimaryGallery};
-        padding: 6px calc(${MarginPaddingSize[3]}/ 2 );
+        border-style: solid;
+        color: ${Colors.Royal};
+        background: ${Colors.White};
+        border-color: ${Colors.Gallery};
+        padding: 6px calc(${MarginPaddingSize[3]}/2);
         font-size: ${Typography.fontSize[3]};
         &:hover {
-          color: ${Colors.colorPrimaryPoloBlue};
+          color: ${Colors.PoloBlue};
+        }
+        &:focus{
+          outline: none;
         }
       }
     `}</style>
@@ -28,26 +36,26 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
         ${
           type === 'primary'
             ? (`
-              background: ${Colors.colorPrimaryRoyal};
-              border-color: ${Colors.colorPrimaryRoyal};
-              color: ${Colors.colorWhite};
+              background: ${Colors.Royal};
+              border-color: ${Colors.Royal};
+              color: ${Colors.White};
             `) : ''
         }
         ${
           type === 'warning'
             ? (`
-              background: ${Colors.colorPrimaryCinnabar};
-              border-color: ${Colors.colorPrimaryCinnabar};
-              color: ${Colors.colorWhite};
-              cursor: not-allowed;
+              background: ${Colors.Cinnabar};
+              border-color: ${Colors.Cinnabar};
+              color: ${Colors.White};
+              cursor: default;
             `) : ''
         }
         ${
           type === 'disabled'
             ? (`
-              background: ${Colors.colorPrimaryGallery};
+              background: ${Colors.Gallery};
               border-color: #eee;
-              color: ${Colors.colorPrimarySlate};
+              color: ${Colors.Slate};
               cursor: not-allowed;
             `) : ''
         }
@@ -55,17 +63,23 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
           type === 'left' || type === 'right'
             ? (`
               min-width: 0px;
-              width: ${MarginPaddingSize[3]}
+              width: ${MarginPaddingSize[3]};
               height: ${MarginPaddingSize[3]};
+              padding: 0;
             `) : ''
+        }
+        ${
+          type === 'left'
+            ? (`transform:rotateY(180deg)`) : ''
         }
         
         /* DEFAULT - Size Overide */
         ${
-          type === 'small'
+          size === 'small'
             ? (`
-              font-size: ${fontSize[4]};
-              padding: 2px calc(' + ${MarginPaddingSize[3]} + '/ 4 );
+              padding: 2px calc(${MarginPaddingSize[3]}/4);
+              font-size: ${Typography.fontSize[4]};
+              min-width: auto;
             `) : ''
         }
         
@@ -74,53 +88,54 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
           ${
             type === 'primary'
               ? (`
-                background: ${Colors.colorPrimaryPoloBlue};
-                border-color: ${Colors.colorPrimaryPoloBlue};
-                color: ${Colors.colorWhite};
+                background: ${Colors.PoloBlue};
+                border-color: ${Colors.PoloBlue};
+                color: ${Colors.White};
               `) : ''
           }
           ${
             type === 'warning'
               ? (`
-                background: ${Colors.colorPrimaryCinnabar};
-                border-color: ${Colors.colorPrimaryCinnabar};
-                color: ${Colors.colorWhite};
+                background: ${Colors.Cinnabar};
+                border-color: ${Colors.Cinnabar};
+                color: ${Colors.White};
               `) : ''
           }
           ${
             type === 'disabled'
               ? (`
-                background: ${Colors.colorPrimaryGallery};
+                background: ${Colors.Gallery};
                 border-color: #eee;
-                color: ${Colors.colorPrimarySlate};
+                color: ${Colors.Slate};
                 cursor: not-allowed;
               `) : ''
           }          
         }
 
+        /* ACTIVE - Type Overides*/
         &:active {
           ${
             type === 'primary'
               ? (`
-                background: ${Colors.colorPrimaryResolutionBlue};
-                border-color: ${Colors.colorPrimaryResolutionBlue};
-                color: ${Colors.colorWhite};
+                background: ${Colors.ResolutionBlue};
+                border-color: ${Colors.ResolutionBlue};
+                color: ${Colors.White};
               `) : ''
           }
           ${
             type === 'warning'
               ? (`
-                background: ${Colors.colorPrimaryCinnabar};
-                border-color: ${Colors.colorPrimaryCinnabar};
-                color: ${Colors.colorWhite};
+                background: ${Colors.Cinnabar};
+                border-color: ${Colors.Cinnabar};
+                color: ${Colors.White};
               `) : ''
           }
           ${
             type === 'disabled'
               ? (`
-                background: ${Colors.colorPrimaryGallery};
+                background: ${Colors.Gallery};
                 border-color: #eee;
-                color: ${Colors.colorPrimarySlate};
+                color: ${Colors.Slate};
                 cursor: not-allowed;
               `) : ''
           }          
@@ -132,13 +147,13 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
 
 Button.propTypes = {
   /**
-   * Button text
+   * Button style
    */
-  text: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
   /**
    * Button style
    */
-  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']).isRequired,
+  children: PropTypes.string,
   /**
    * Button size
    */
@@ -146,15 +161,10 @@ Button.propTypes = {
   /**
    * Icon image
    */
-  icon: PropTypes.string,
-  /**
-   * Icon position
-   */
-  iconPosition: PropTypes.oneOf(['left', 'right']),
+  icon: PropTypes.string
 }
 
 Button.defaultProps = {
-  text: 'Button Text',
   type: 'default'
 }
 
