@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography as Type, Colors, MarginPaddingSize } from '../vars.js';
+import { Colors } from '../vars.js';
 
 /**
  * This is a global style baseline that is meant to be imported
@@ -28,6 +28,11 @@ const GlobalReset = () => (
       body,
       *[data-preview] > * > * > * {
         background: ${Colors.colorPrimaryAlabaster};
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
       }
       
     `}</style>

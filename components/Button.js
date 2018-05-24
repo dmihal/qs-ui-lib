@@ -18,7 +18,9 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
       .Button {        
         /* DEFAULT - Type Overides*/
 
-        /* NOTE: - We have to write the CSS this way 
+        /* TODO - CONVERT TO WRAPPING CHECKING */
+
+        /* OLD_NOTE: - We have to write the CSS this way 
         * ( css property -> specific case) 
         * due to depth of interpolation limitations inside string templates
         * for styled-jsx-plugin-postcss -> post-css-nested
@@ -34,6 +36,8 @@ const Button = ({ text, type, size, icon, iconPosition, disabled }) => (
                 ? Colors.colorPrimaryGallery
                 : Colors.colorWhite
         };
+
+
 
         border-color: ${ 
           type === 'primary'
@@ -123,15 +127,15 @@ Button.propTypes = {
   /**
    * Button text
    */
-  text: PropTypes.string,
+  text: PropTypes.string.isRequired,
   /**
    * Button style
    */
-  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
+  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']).isRequired,
   /**
    * Button size
    */
-  size: PropTypes.oneOf(['default', 'small']),
+  size: PropTypes.string,
   /**
    * Icon image
    */
@@ -143,11 +147,8 @@ Button.propTypes = {
 }
 
 Button.defaultProps = {
-  text: 'Button',
-  type: 'default',
-  size: 'default',
-  icon: 'none',
-  iconPosition: 'none'
+  text: 'Button Text',
+  type: 'default'
 }
 
 export default Button
