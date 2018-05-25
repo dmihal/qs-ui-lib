@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
-const LinkText = ({ children, arrow }) => (
+const LinkText = ({ children, arrow, inverse, activeState }) => (
   <span className="LinkText">
     { arrow ? (<div className="arrow-right"></div>) : null }
     {children}
@@ -12,9 +12,18 @@ const LinkText = ({ children, arrow }) => (
         color: ${Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
+
+        ${ inverse ? (`color: ${Colors.Slate}`) : '' }
+        ${ activeState ? (`color: ${Colors.Royal}`) : '' }
         
         &:hover {
           text-decoration: underline;
+          
+          ${
+            inverse
+              ? (`color: ${Colors.Royal}`)
+              : ''
+          }
         }
 
         .arrow-right {
@@ -40,6 +49,14 @@ LinkText.propTypes = {
    * LinkText arrow
    */
   arrow: PropTypes.bool,
+  /**
+   * LinkText inverse colors
+   */
+  inverse: PropTypes.bool,
+  /**
+   * LinkText activeState
+   */
+  activeState: PropTypes.bool
 }
 
 LinkText.defaultProps = {}

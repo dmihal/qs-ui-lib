@@ -42,7 +42,6 @@ const LinkCTA = ({ children, label }) => (
         
         &:hover {
           .description-box {
-            text-decoration: underline;
             cursor: pointer;
           }
         }
