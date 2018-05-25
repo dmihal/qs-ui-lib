@@ -9,8 +9,6 @@ import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 
 const NavigationTop = ({ children }) => (
   <React.Fragment>
-    <GlobalReset />
-    <GlobalTypography />
     <header className="NavigationTop">
       <LayoutWrapper>
         <nav>

@@ -9,8 +9,6 @@ import { MarginPaddingSize, Colors } from '../vars.js';
 
 const NavigationSub = ({ children }) => (
   <React.Fragment>
-    <GlobalReset />
-    <GlobalTypography />
     <header className="NavigationSub">
       <LayoutGrid columns="1">
         <nav>

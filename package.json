@@ -27,10 +27,11 @@
     "dog-names": "^1.0.2",
     "file-loader": "^1.1.11",
     "lodash": "^4.17.5",
+    "micro": "latest",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
     "prop-types": "^15.6.1",
-    "react": "^16.2.0",
+    "react": "^16.4.0",
     "react-dom": "^16.2.0",
     "react-styleguidist": "^6.5.3",
     "sanitize.css": "^5.0.0",
@@ -42,7 +43,8 @@
   "scripts": {
     "build": "webpack",
     "styleguide": "styleguidist server",
-    "styleguide:build": "styleguidist build"
+    "styleguide:build": "styleguidist build",
+    "start": "micro"
   },
   "postcss": {
     "plugins": {
