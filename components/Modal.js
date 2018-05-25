@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { LayoutSizes, MarginPaddingSize } from '../vars.js';
+import { LayoutSizes, Colors, MarginPaddingSize } from '../vars.js';
 
 
 export default class Modal extends Component {
@@ -61,7 +61,9 @@ export default class Modal extends Component {
                 : ''
             )}
           >
-            <label htmlFor={'modal-trigger-' + this.props.modalID} className="close">&#10006;</label>
+            <label htmlFor={'modal-trigger-' + this.props.modalID} className="close">
+              <img src={require('../assets/close-x.svg')} alt="close button" />
+            </label>
             <h2>{this.state.title}</h2>
             {this.props.children}
           </div>
@@ -100,7 +102,7 @@ export default class Modal extends Component {
           
           /* Box */
           .modal .modal-wrap {
-            background-color: #ddd;
+            background-color: ${Colors.White};
             box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
             padding: 40px 50px;
             width: 60%;
@@ -128,11 +130,14 @@ export default class Modal extends Component {
             width: 30px;
             height: 30px;
             color: #282c34;
+            img{
+              cursor: pointer;
+              display: block;
+            }
           }
           
-          .modal .modal-overlay .close:hover {
-            cursor: pointer;
-            color: #4b5361;
+          h2{
+            margin-bottom: ${MarginPaddingSize[3]};
           }
           
            .modal .o-close {
