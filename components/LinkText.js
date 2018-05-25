@@ -13,17 +13,8 @@ const LinkText = ({ children, arrow, inverse, activeState }) => (
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
 
-        ${ inverse ? (`color: ${Colors.Slate}`) : '' }
-        ${ activeState ? (`color: ${Colors.Royal}`) : '' }
-        
         &:hover {
           text-decoration: underline;
-          
-          ${
-            inverse
-              ? (`color: ${Colors.Royal}`)
-              : ''
-          }
         }
 
         .arrow-right {
