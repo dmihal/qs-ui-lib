@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
-const Button = ({ children, type, size, disabled }) => (
+const Button = ({ children, type, size, disabled, bgColor }) => (
   <button className="Button" disabled={disabled}>
     { type === 'left' || 
       type === 'right'
@@ -19,7 +19,7 @@ const Button = ({ children, type, size, disabled }) => (
         border-style: solid;
         color: ${Colors.Royal};
         background: ${Colors.White};
-        border-color: ${Colors.Gallery};
+        border-color: ${bgColor} || ${Colors.Gallery};
         padding: 6px calc(${MarginPaddingSize[3]}/2);
         font-size: ${Typography.fontSize[3]};
         &:hover {
@@ -162,7 +162,11 @@ Button.propTypes = {
   /**
    * Icon image
    */
-  icon: PropTypes.string
+  icon: PropTypes.string,
+  /**
+   * BGColor
+   */
+  bgColor: PropTypes.string
 }
 
 Button.defaultProps = {

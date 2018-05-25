@@ -9,8 +9,6 @@ import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 
 const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>
-    <GlobalReset />
-    <GlobalTypography />
     <div className="Banner">
       <LayoutGrid columns="1">
         <div className="banner-left">
