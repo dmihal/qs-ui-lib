@@ -5,7 +5,7 @@ import GlobalTypography from './GlobalTypography';
 import GlobalReset from './GlobalReset';
 import Button from './Button';
 
-import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
+import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.mjs';
 
 const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>

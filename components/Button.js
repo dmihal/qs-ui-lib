@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors , MarginPaddingSize } from '../vars.js';
+import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
 
 const Button = ({ children, type, size, disabled, bgColor }) => (
   <button className="Button" disabled={disabled}>

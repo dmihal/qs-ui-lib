@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import { Typography, Colors, MarginPaddingSize } from '../vars.mjs';
 
 const ModalTrigger = ({ children, modalID }) => (
   <label htmlFor={'modal-trigger-' + modalID} className="toggleModal">

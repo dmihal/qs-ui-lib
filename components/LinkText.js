@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors , MarginPaddingSize } from '../vars.js';
+import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
 
 const LinkText = ({ children, arrow, inverse, activeState }) => (
   <span className="LinkText">
