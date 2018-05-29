@@ -1,3 +1,5 @@
+const globalTypeBase = require('./globals-for-styleguidist-render/type-base-css2json.json');
+
 module.exports = {
 	title: 'Style Guide',
 	components: 'components/**/*.js',
@@ -5,10 +7,6 @@ module.exports = {
 		maxWidth: '1600px'
 	},
 	styles: {
-    StyleGuide: {
-      '@global *': {
-        boxSizing: 'border-box'
-      }
-    }
+    StyleGuide: globalTypeBase
   }
 };
