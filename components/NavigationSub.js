@@ -5,7 +5,7 @@ import GlobalTypography from './GlobalTypography';
 import Logo from './Logo';
 import GlobalReset from './GlobalReset';
 
-import { MarginPaddingSize, Colors } from '../vars.js';
+import { MarginPaddingSize, Colors } from '../vars.mjs';
 
 const NavigationSub = ({ children }) => (
   <React.Fragment>

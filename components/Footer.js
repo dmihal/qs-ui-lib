@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import LayoutWrapper from './LayoutWrapper';
 import LayoutGrid from './LayoutGrid';
-import { LayoutSizes, MarginPaddingSize } from '../vars.js';
+import GlobalTypography from './GlobalTypography';
+import { LayoutSizes, MarginPaddingSize } from '../vars.mjs';
 
 
 
@@ -10,13 +11,13 @@ import { LayoutSizes, MarginPaddingSize } from '../vars.js';
  * This is a footer layout block
  */
 const Footer = () => (
-  <footer class="footer">
+  <footer className="footer">
     <LayoutWrapper>
       <LayoutGrid columns="2" offset="right">
         <div>
-          <div class="box -stacked">
-            <div class="logo">Quantstamp</div>
-            <p class="feedback">
+          <div className="box -stacked">
+            <div className="logo">Quantstamp</div>
+            <p className="feedback">
               <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScNPpLHqlkePlb6WiAQ__cSLC_RwEEQLpzZ13hpIIkCl3VIeQ/viewform">Give us your Product Feedback</a>
             </p>
           </div>
@@ -68,7 +69,7 @@ const Footer = () => (
           </div>
           <div>
             <div class="box -stacked">
-              <h3 class="footer-title">Information</h3>
+              <h3 className="footer-title">Information</h3>
               <ul>
                 <li>
                   <a target="_blank" href="https://docsend.com/view/shcsmhe">Whitepaper</a>
@@ -87,7 +88,7 @@ const Footer = () => (
           </div>
           <div>
             <div class="box -stacked">
-              <h3 class="footer-title">Smart Contract Audits</h3>
+              <h3 className="footer-title">Smart Contract Audits</h3>
               <ul>
                 <li>
                   <a href="/public-reports">Public Reports</a>
@@ -107,13 +108,13 @@ const Footer = () => (
         </LayoutGrid>
       </LayoutGrid>
       <LayoutGrid>
-        <p class="fine-print">
+        <p className="fine-print">
           © {new Date().toDateString().split(' ')[3]} Quantstamp, Inc
-          <span class="divider">|</span>
+          <span className="divider">|</span>
           <a href="/responsible-disclosure">Responsible Disclosure</a>
-          <span class="divider">|</span>
+          <span className="divider">|</span>
           <a href="/terms">Terms and Conditions</a>
-          <span class="divider">|</span>
+          <span className="divider">|</span>
           <a href="/privacy">Privacy Policy</a>
         </p>
       </LayoutGrid>

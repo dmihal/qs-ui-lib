@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { LayoutSizes, Colors, MarginPaddingSize } from '../vars.js';
+import { LayoutSizes, Colors, MarginPaddingSize } from '../vars.mjs';
 
 
 export default class Modal extends Component {

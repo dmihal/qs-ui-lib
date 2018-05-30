@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Colors } from '../vars.js';
+import { Colors } from '../vars.mjs';
 
 /**
  * This is a global style baseline that is meant to be imported
