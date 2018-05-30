@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Colors, MarginPaddingSize } from '../vars.mjs';
+import { Typography } from '../vars.mjs';
 
 const quantstampLogo            = require('../assets/quantstamp-logo.svg');
 const quantstampLogoDark         = require('../assets/quantstamp-logo-dark.svg');
@@ -58,8 +59,11 @@ const Logo = ({ type, theme, productName, width, height }) => (
           padding: 0;
           margin: 0;
           line-height: 1;
-          font-size: ${height};
+          font-size: ${Typography.fontSize[3]};
+          top: -3px;
+          position: relative;
           margin-left: calc(${MarginPaddingSize[5]} / 2);
+          
           ${
             theme === 'onLight'
               ? `color: ${Colors.Royal};`

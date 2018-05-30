@@ -154,7 +154,7 @@ Button.propTypes = {
   /**
    * Button style
    */
-  children: PropTypes.string,
+  children: PropTypes.array,
   /**
    * Button size
    */

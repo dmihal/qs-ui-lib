@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LayoutSizes, MarginPaddingSize } from '../vars.mjs';
 
-/**
- * This is a column layout block
- */
 const CTAGrid = ({ children, columns }) => (
   <div className="CTAGrid">
     {children}
@@ -42,7 +39,7 @@ CTAGrid.propTypes = {
   /**
    * CTAGrid block
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
   /**
    * Columns total
    */

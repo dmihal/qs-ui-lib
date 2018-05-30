@@ -24,8 +24,8 @@ const Footer = () => (
         </div>
         <LayoutGrid columns={4}>
           <div>
-            <div class="box -stacked">
-              <h3 class="footer-title">Company</h3>
+            <div className="box -stacked">
+              <h3 className="footer-title">Company</h3>
               <ul>
                 <li>
                   <a href="/team">Our Team</a>
@@ -40,8 +40,8 @@ const Footer = () => (
             </div>
           </div>
           <div>
-            <div class="box -stacked">
-              <h3 class="footer-title">Community</h3>
+            <div className="box -stacked">
+              <h3 className="footer-title">Community</h3>
               <ul>
                 <li>
                   <a target="_blank" href="https://t.me/quantstamp">Telegram</a>
@@ -68,7 +68,7 @@ const Footer = () => (
             </div>
           </div>
           <div>
-            <div class="box -stacked">
+            <div className="box -stacked">
               <h3 className="footer-title">Information</h3>
               <ul>
                 <li>
@@ -87,7 +87,7 @@ const Footer = () => (
             </div>
           </div>
           <div>
-            <div class="box -stacked">
+            <div className="box -stacked">
               <h3 className="footer-title">Smart Contract Audits</h3>
               <ul>
                 <li>

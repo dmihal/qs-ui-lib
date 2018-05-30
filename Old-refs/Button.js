@@ -32,7 +32,7 @@ Button.propTypes = {
   /**
    * Button text
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
   /**
    * Button color
    */

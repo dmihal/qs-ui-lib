@@ -64,7 +64,7 @@ NavigationTop.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 }
 
 NavigationTop.defaultProps = {}

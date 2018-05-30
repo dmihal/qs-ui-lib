@@ -64,7 +64,7 @@ LinkCTA.propTypes = {
   /**
    * LinkCTA text
    */
-  children: PropTypes.string,
+  children: PropTypes.array,
   /**
    * LinkCTA arrow
    */

@@ -67,7 +67,7 @@ LayoutGrid.propTypes = {
   /**
    * LayoutGrid block
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
   /**
    * Columns total
    */

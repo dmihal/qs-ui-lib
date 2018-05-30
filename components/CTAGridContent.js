@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import LinkText from './LinkText'
 import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
 
-/**
- * This is a column layout block
- */
 const CTAGridContent = ({ itemTitle, subtext, linkText, linkURL, align }) => (
   <div className="CTAGridContent">
     <h2>{itemTitle}</h2>
