@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
 
-const Button = ({ children, type, size, disabled, bgColor }) => (
-  <button className="Button" disabled={disabled}>
+const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
+  <button className="Button" disabled={disabled}  onClick={onClick}>
     { type === 'left' || 
       type === 'right'
         ? `➜` 
@@ -19,7 +19,7 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
         border-style: solid;
         color: ${Colors.Royal};
         background: ${Colors.White};
-        border-color: ${bgColor} || ${Colors.Gallery};
+        background-color: ${bgColor || Colors.Gallery};
         padding: 6px calc(${MarginPaddingSize[3]}/2);
         font-size: ${Typography.fontSize[3]};
         &:hover {
@@ -30,8 +30,7 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
         }
       }
     `}</style>
-    <style jsx>{`
-      
+    <style jsx>{`      
       .Button {        
         /* DEFAULT - Type Overides*/
         ${
@@ -64,8 +63,8 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
           type === 'left' || type === 'right'
             ? (`
               min-width: 0px;
-              width: ${MarginPaddingSize[3]};
-              height: ${MarginPaddingSize[3]};
+              width: ${size || MarginPaddingSize[3]};
+              height: ${size || MarginPaddingSize[3]};
               padding: 0;
             `) : ''
         }
@@ -143,6 +142,9 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
         }
       }
     `}</style>
+    <style jsx>{`
+      ${styleOverrides}
+    `}</style>
   </button>
 )
 
@@ -154,7 +156,7 @@ Button.propTypes = {
   /**
    * Button style
    */
-  children: PropTypes.array,
+  children: PropTypes.string,
   /**
    * Button size
    */
