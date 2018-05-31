@@ -27,6 +27,7 @@
     "jss-cli": "^5.0.1",
     "lodash": "^4.17.5",
     "micro": "latest",
+    "nuka-carousel": "^4.2.1",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
     "prop-types": "^15.6.1",
