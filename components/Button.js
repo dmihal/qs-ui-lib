@@ -19,8 +19,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         border-style: solid;
         border-color: #c4cdd5;
         color: ${Colors.Royal};
-        background: ${Colors.White};
-        background-color: ${bgColor || Colors.Gallery};
+        background-color: ${ bgColor || Colors.White };
         padding: 6px calc(${MarginPaddingSize[3]}/2);
         font-size: ${Typography.fontSize[3]};
         &:hover {
