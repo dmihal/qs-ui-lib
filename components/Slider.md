@@ -41,11 +41,11 @@
 
 ```jsx
 <Slider type="B">
-  <img src="assets/photos/1.jpg"/>
-  <img src="assets/photos/2.jpg"/>
-  <img src="assets/photos/3.jpg"/>
-  <img src="assets/photos/4.jpg"/>
-  <img src="assets/photos/5.jpg"/>
-  <img src="assets/photos/6.jpg"/>
+  <img src="http://via.placeholder.com/500x375"/>
+  <img src="http://via.placeholder.com/500x375"/>
+  <img src="http://via.placeholder.com/500x375"/>
+  <img src="http://via.placeholder.com/500x375"/>
+  <img src="http://via.placeholder.com/500x375"/>
+  <img src="http://via.placeholder.com/500x375"/>
 </Slider>
 ```

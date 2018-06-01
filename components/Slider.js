@@ -79,10 +79,6 @@ const Slider = ({ children, type, label }) => (
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
-        :global(.slider-slide) { 
-          padding: ${ type === 'A' ? "padding-left: 20px !important;" : ''}; 
-        }
-
         :global(.slider-frame) {
           overflow: visible !important;
         }
