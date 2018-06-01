@@ -9,7 +9,7 @@ const Slider = ({ children, type, label }) => (
   <div className="Slider">
     { type === 'A'
       ? (
-        <div className="Slider-wrap">
+        <React.Fragment>
           <div className="Slider-offset-bg"/>
           <Carousel
             slidesToShow="3"
@@ -37,9 +37,27 @@ const Slider = ({ children, type, label }) => (
             )}>
             {children}
           </Carousel>
-        </div>
+        </React.Fragment>
       )
-      : (<div/>)
+      : (<React.Fragment>
+          <Carousel
+            slidesToShow="3"
+            heightMode="first"
+            renderCenterLeftControls={({ previousSlide }) => (
+              <Button
+                type="left"
+                onClick={previousSlide}/>
+            )}
+            renderCenterRightControls={({ nextSlide }) => (
+              <Button
+                  type="right"
+                  onClick={nextSlide}/>
+            )}
+            renderBottomCenterControls={() => null}>
+            {children}
+          </Carousel>
+        </React.Fragment>
+        )
     }
     <style jsx>{`
       .Slider {
@@ -47,7 +65,6 @@ const Slider = ({ children, type, label }) => (
         position: relative;
         overflow: hidden;
 
-        .Slider-wrap { }
         .Slider-offset-bg {
           background: #eeeeee;
           position: absolute;
@@ -62,7 +79,13 @@ const Slider = ({ children, type, label }) => (
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
-        :global(.slider-slide) { padding-left: 20px !important; }
+        :global(.slider-slide) { 
+          padding: ${ type === 'A' ? "padding-left: 20px !important;" : ''}; 
+        }
+
+        :global(.slider-frame) {
+          overflow: visible !important;
+        }
 
         .slider-label {
           display: inline-block;

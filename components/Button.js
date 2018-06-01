@@ -17,6 +17,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         text-align: center;
         border-width: 1px;
         border-style: solid;
+        border-color: #c4cdd5;
         color: ${Colors.Royal};
         background: ${Colors.White};
         background-color: ${bgColor || Colors.Gallery};
