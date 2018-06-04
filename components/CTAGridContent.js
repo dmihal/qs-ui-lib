@@ -3,36 +3,35 @@ import PropTypes from 'prop-types';
 import LinkText from './LinkText'
 import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
 
-const CTAGridContent = ({ itemTitle, subtext, linkText, linkURL, align }) => (
+const CTAGridContent = ({ children, align }) => (
   <div className="CTAGridContent">
-    <h2>{itemTitle}</h2>
-    <p>{subtext}</p>
-    {
-      linkText && linkURL 
-        ? (<LinkText arrow>{linkText}</LinkText>) : null
-    }
+    <div className="inner-wrap">
+      {children}
+    </div>
     <style jsx>{`
       .CTAGridContent {
         margin: auto;
-        
-        display: ${ align === 'left' ? "block" : "flex" };
-        flex-direction: ${ align === 'left' ? "none" : "column" };
-        justify-content: ${ align === 'left' ? "none" : "center" };
-        align-items: ${ align === 'left' ? "none" : "center" };
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         height: 100%;
 
-        text-align: ${ align === 'left' ? "left" : "center" };
+        .inner-wrap {
+          text-align: ${ align === 'left' ? "left" : "center" };
 
-        h2 {
-          font-size: ${Typography.fontSize[1]};
-          margin-bottom: ${MarginPaddingSize[5]};
-          color: ${Colors.Royal};
-        }
-        
-        p {
-          margin-bottom: ${MarginPaddingSize[5]};
+          > :global(h2) {
+            text-align: ${ align === 'left' ? "left" : "center" };
+            font-size: ${Typography.fontSize[1]};
+            margin-bottom: ${MarginPaddingSize[5]};
+            color: ${Colors.Royal};
+          }
+          
+          > :global(p) {
+            text-align: ${ align === 'left' ? "left" : "center" };
+            margin-bottom: ${MarginPaddingSize[5]};
+          }
         }
       }
     `}</style>

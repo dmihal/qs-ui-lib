@@ -20,8 +20,10 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         border-color: #c4cdd5;
         color: ${Colors.Royal};
         background-color: ${ bgColor || Colors.White };
-        padding: 6px calc(${MarginPaddingSize[3]}/2);
+        padding: 0 calc(${MarginPaddingSize[3]}/2);
+        line-height: ${MarginPaddingSize[3]};
         font-size: ${Typography.fontSize[3]};
+        max-height: ${MarginPaddingSize[3]};
         &:hover {
           color: ${Colors.PoloBlue};
         }
@@ -63,8 +65,10 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
           type === 'left' || type === 'right'
             ? (`
               min-width: 0px;
-              width: ${size || MarginPaddingSize[3]};
-              height: ${size || MarginPaddingSize[3]};
+              max-height: none;
+              width: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
+              height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
+              line-height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               padding: 0;
             `) : ''
         }
@@ -79,7 +83,9 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
             ? (`
               padding: 2px calc(${MarginPaddingSize[3]}/4);
               font-size: ${Typography.fontSize[4]};
+              max-height: 22px;
               min-width: auto;
+              line-height: 1;
             `) : ''
         }
         
