@@ -42,7 +42,7 @@ NavigationSub.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 }
 
 NavigationSub.defaultProps = {}

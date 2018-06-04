@@ -5,7 +5,12 @@ import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
 
 const LinkCTA = ({ children, label }) => (
   <div className="LinkCTA">
-    <Button type="primary" size="small">{label}</Button>
+    <Button
+      type="primary"
+      size="small"
+      styleOverrides={`border-radius: 2px;`}>
+        {label}
+      </Button>
     <div className="description-box">{children}</div>
     <style jsx>{`
       
@@ -17,6 +22,7 @@ const LinkCTA = ({ children, label }) => (
         color: ${Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
+        border-radius: 2px;
 
         :global(*) {
           display: inline-block;
@@ -28,6 +34,7 @@ const LinkCTA = ({ children, label }) => (
 
         .description-box {
           padding: 0 ${MarginPaddingSize[5]};
+          font-size: ${Typography.fontSize[4]};
           
           &::after {
             content: '';
@@ -64,7 +71,7 @@ LinkCTA.propTypes = {
   /**
    * LinkCTA text
    */
-  children: PropTypes.string,
+  children: PropTypes.array,
   /**
    * LinkCTA arrow
    */

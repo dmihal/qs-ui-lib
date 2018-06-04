@@ -1,16 +1,30 @@
 import { LayoutSizes, Typography as Type, Colors, MarginPaddingSize } from '../vars.mjs';
 
 export const GlobalTypeDefault = `
-  html, body {
+  
+  * { box-sizing: border-box; }
+
+  ul, li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  html,body {
+    height: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  a { cursor: pointer; }
+
+  * {
+    color: ${Colors.Mirage};
     font-family: ${Type.typePrimaryStack};
     font-size: ${Type.fontSize[3]};
-  }
-  h1,h2,h3,h4,
-  p,
-  label,
-  small {
-    font-family: ${Type.typePrimaryStack};
-    color: ${Colors.Mirage};
   }
 
   h1, h2, h3, h4 {

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
 
-const Button = ({ children, type, size, disabled, bgColor }) => (
-  <button className="Button" disabled={disabled}>
+const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
+  <button className="Button" disabled={disabled}  onClick={onClick}>
     { type === 'left' || 
       type === 'right'
         ? `➜` 
@@ -17,11 +17,13 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
         text-align: center;
         border-width: 1px;
         border-style: solid;
+        border-color: #c4cdd5;
         color: ${Colors.Royal};
-        background: ${Colors.White};
-        border-color: ${bgColor} || ${Colors.Gallery};
-        padding: 6px calc(${MarginPaddingSize[3]}/2);
+        background-color: ${ bgColor || Colors.White };
+        padding: 0 calc(${MarginPaddingSize[3]}/2);
+        line-height: ${MarginPaddingSize[3]};
         font-size: ${Typography.fontSize[3]};
+        max-height: ${MarginPaddingSize[3]};
         &:hover {
           color: ${Colors.PoloBlue};
         }
@@ -30,8 +32,7 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
         }
       }
     `}</style>
-    <style jsx>{`
-      
+    <style jsx>{`      
       .Button {        
         /* DEFAULT - Type Overides*/
         ${
@@ -64,8 +65,10 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
           type === 'left' || type === 'right'
             ? (`
               min-width: 0px;
-              width: ${MarginPaddingSize[3]};
-              height: ${MarginPaddingSize[3]};
+              max-height: none;
+              width: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
+              height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
+              line-height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               padding: 0;
             `) : ''
         }
@@ -80,7 +83,9 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
             ? (`
               padding: 2px calc(${MarginPaddingSize[3]}/4);
               font-size: ${Typography.fontSize[4]};
+              max-height: 22px;
               min-width: auto;
+              line-height: 1;
             `) : ''
         }
         
@@ -142,6 +147,9 @@ const Button = ({ children, type, size, disabled, bgColor }) => (
           }          
         }
       }
+    `}</style>
+    <style jsx>{`
+      ${styleOverrides}
     `}</style>
   </button>
 )

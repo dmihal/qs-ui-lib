@@ -38,7 +38,7 @@ ModalTrigger.propTypes = {
   /**
    * Wrapper layout block
    */
-  children: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
   /**
    * Wrapper layout block
    */

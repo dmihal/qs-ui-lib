@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 import LinkText from './LinkText'
 import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
 
-/**
- * This is a column layout block
- */
 const CalloutCard = ({ img, title, linkText, link }) => (
   <div className="CalloutCard">
     <img src={img} alt="call out card"/>
