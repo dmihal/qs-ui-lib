@@ -31,7 +31,7 @@ const Input = ({ label, placeholder, search, required, error, disabled }) => (
           display: block;
           width: 100%;
           font-size: ${Typography.fontSize[3]};
-          color: ${Colors.Mirage};
+          color: ${ error ? Colors.Cinnabar : Colors.Mirage};
           border: solid 1px ${Colors.Gallery};
           border-color: ${ error ? Colors.Cinnabar : Colors.Gallery };
           padding: calc(${MarginPaddingSize[5]}) calc(${MarginPaddingSize[5]});
