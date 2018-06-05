@@ -1,5 +1,5 @@
 ```js static
-<GlobalTypography>
+<GlobalTypography />
 ```
 
 <br/>
