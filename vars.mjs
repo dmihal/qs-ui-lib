@@ -27,8 +27,8 @@ export const Colors = {
 // -----------------------------------------------------------------------------
 export const Typography = {
   fontPath: 'SOME URL',
-  typePrimaryFont: 'gtwalsheimpro-regular',
-  typePrimaryStack: 'gtwalsheimpro-regular, Helvetica, Arial, sans-serif',
+  typePrimaryFont: 'GT Walsheim Pro',
+  typePrimaryStack: 'GT Walsheim Pro, Helvetica, Arial, sans-serif',
   typePrimaryWeight: {
     regular: 'Regular',
     medium: 'Medium',

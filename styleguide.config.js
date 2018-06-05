@@ -1,4 +1,4 @@
-const globalTypeBase = require('./globals-for-styleguidist-render/type-base-css2json.json');
+const globalTypeBase = require('./globals-jss-compiled/type-base-css2json.json');
 
 module.exports = {
 	title: 'Style Guide',
@@ -8,5 +8,19 @@ module.exports = {
 	},
 	styles: {
     StyleGuide: globalTypeBase
+	},
+	template: {
+		head: {
+      links: [
+				{
+					rel: 'stylesheet',
+					href: 'node_modules/sanitize.css/sanitize.css'
+				},
+				{
+					rel: 'stylesheet',
+					href: '/assets/fonts/gtwalsheim/stylesheet.css'
+				}
+			]
+    }
   }
 };

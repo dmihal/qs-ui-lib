@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 // import GlobalResetBase from '../globals/default-base.mjs';
-// NOTE::::: Using Sanitize.css INSTEAD
+// NOTE::::: Using Generated FontFace INSTEAD
 
 /**
  * This is a global style baseline that is meant to be imported
  * at the top layer of your app
  */
-const GlobalReset = () => (
+const GlobalFonts = () => (
   <style jsx global>{`
-    ${ require('../node_modules/sanitize.css/sanitize.css') }
+    ${ require('../assets/fonts/gtwalsheim/stylesheet.css') }
   `}</style>
 )
 
-GlobalReset.propTypes = {}
-GlobalReset.defaultProps = {}
+GlobalFonts.propTypes = {}
+GlobalFonts.defaultProps = {}
 
-export default GlobalReset
+export default GlobalFonts
