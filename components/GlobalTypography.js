@@ -15,7 +15,8 @@ const GlobalTypography = () => (
       font-size: ${Typography.fontSize[3]};
     }
     h1, h2, h3, h4 {
-      margin-bottom: ${MarginPaddingSize[2]};
+      margin-top: 0;
+      margin-bottom: ${MarginPaddingSize[3]};
     }
     p {
       margin-bottom: ${MarginPaddingSize[3]};

@@ -4,6 +4,3 @@
 ```jsx noeditor
 <GlobalReset/>
 ```
-```jsx noeditor
-<GlobalDefault/>
-```

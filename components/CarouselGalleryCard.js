@@ -29,6 +29,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
         box-shadow: 0 5px 20px 0 rgba(63, 63, 68, 0.1);
         border-radius: 2px;
         border-color: #c4cdd5;
+        margin: 0;
 
         :global(p) {
           line-height: 1.56;

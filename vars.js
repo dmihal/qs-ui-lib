@@ -30,9 +30,9 @@ export const Typography = {
   typePrimaryFont: 'GT Walsheim Pro',
   typePrimaryStack: 'GT Walsheim Pro, Helvetica, Arial, sans-serif',
   typePrimaryWeight: {
-    regular: 'Regular',
-    medium: 'Medium',
-    light: 'Light'
+    regular: '500',
+    medium: '500',
+    light: '100'
   },
   fontSize: [
     '34px', 
