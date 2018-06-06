@@ -5,7 +5,7 @@ import GlobalTypography from './GlobalTypography';
 import Logo from './Logo';
 import GlobalReset from './GlobalReset';
 
-import { MarginPaddingSize, Colors } from '../vars.mjs';
+import { MarginPaddingSize, Colors } from '../vars.js';
 
 
 const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (

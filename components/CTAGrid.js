@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LayoutSizes, MarginPaddingSize } from '../vars.mjs';
+import { LayoutSizes, MarginPaddingSize } from '../vars.js';
 
 const CTAGrid = ({ children, columns }) => (
   <div className="CTAGrid">

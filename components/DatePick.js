@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
-import { Typography, Colors, MarginPaddingSize } from '../vars.mjs';
+import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const DatePick = ({ selected, handleChange, width }) => (

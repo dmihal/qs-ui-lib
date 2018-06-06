@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { Typography, Colors , MarginPaddingSize } from '../vars.mjs';
+import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
 const LinkCTA = ({ children, label }) => (
   <div className="LinkCTA">

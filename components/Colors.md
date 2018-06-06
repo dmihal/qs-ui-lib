@@ -3,7 +3,7 @@
 // Colors._COLOR_NAME_HERE_
 //
 // examples:
-// import { Colors } from '../vars.mjs';
+// import { Colors } from '../vars.js';
 // 
 // Colors.Royal
 // Colors.Malibu
