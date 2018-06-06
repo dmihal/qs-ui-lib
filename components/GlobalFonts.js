@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import GlobalResetBase from '../globals/default-base.mjs';
+// import GlobalFontsBase from '../globals/fonts-base.js';
 // NOTE::::: Using Generated FontFace INSTEAD
 
 /**

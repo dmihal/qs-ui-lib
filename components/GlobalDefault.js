@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import GlobalDefaultBase from '../globals/default-base.mjs';
+// import GlobalDefaultBase from '../globals/default-base.js';
 
 
 /**
@@ -9,7 +9,29 @@ import GlobalDefaultBase from '../globals/default-base.mjs';
  */
 const GlobalDefault = () => (
   <style jsx global>{`
-    ${ GlobalDefaultBase }
+    *,
+    ::before,
+    ::after { box-sizing: border-box !important; }
+          
+    ul, li {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    html,body {
+      height: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    a { cursor: pointer; }
+
+    figure { margin: 0; }
+
   `}</style>
 )
 

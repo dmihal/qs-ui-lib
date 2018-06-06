@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import GlobalResetBase from '../globals/default-base.mjs';
+// import GlobalResetBase from '../globals/reset-base.js';
 // NOTE::::: Using Sanitize.css INSTEAD
 
 /**
