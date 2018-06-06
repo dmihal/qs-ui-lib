@@ -24,6 +24,15 @@ module.exports = {
 					name: 'static/media/[name].[hash:8].[ext]',
 				},
 			},
+			{
+				test: /\.(ttf|eot|woff|woff2)$/,
+				use: {
+					loader: 'file-loader',
+					options: {
+						limit: 50000,
+					},
+				},
+			},
 		],
 	},
 };
