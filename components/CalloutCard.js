@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LinkText from './LinkText'
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
+import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
 
 const CalloutCard = ({ img, title, linkText, link }) => (
   <div className="CalloutCard">

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.mjs';
+import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
 const RadioGroup = ({ name, options, error }) => (
   <React.Fragment>
@@ -63,8 +63,8 @@ const RadioGroup = ({ name, options, error }) => (
           position: absolute;
           left: 0;
           top: 0;
-          width: 16px;
-          height: 16px;
+          width: 20px;
+          height: 20px;
           border: 2px solid #ddd;
           border-radius: 100%;
           background: #fff;

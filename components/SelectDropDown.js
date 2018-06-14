@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
+import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
 
 class SelectDropDown extends React.Component {
   constructor () {

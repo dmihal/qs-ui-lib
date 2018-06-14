@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.mjs';
+import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
 const CheckboxGroup = ({ name, options, error }) => (
   <React.Fragment>
@@ -75,8 +75,8 @@ const CheckboxGroup = ({ name, options, error }) => (
           width: 11px;
           height: 9px;
           position: absolute;
-          top: 5px;
-          left: 5px;
+          top: 4px;
+          left: 3px;
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;

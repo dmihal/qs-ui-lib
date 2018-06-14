@@ -5,7 +5,7 @@ import GlobalTypography from './GlobalTypography';
 import Logo from './Logo';
 import GlobalReset from './GlobalReset';
 
-import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.mjs';
+import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 
 const NavigationTop = ({ children }) => (
   <React.Fragment>

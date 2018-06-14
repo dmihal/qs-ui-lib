@@ -1,7 +1,9 @@
 ```js static
-<GlobalTypography>
+<GlobalTypography />
 ```
-
+```jsx noeditor
+<GlobalTypography />
+```
 <br/>
 
 Rendered Examples:

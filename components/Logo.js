@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Colors, MarginPaddingSize } from '../vars.mjs';
-import { Typography } from '../vars.mjs';
+import { Colors, MarginPaddingSize } from '../vars.js';
+import { Typography } from '../vars.js';
 
 const quantstampLogo            = require('../assets/quantstamp-logo.svg');
 const quantstampLogoDark         = require('../assets/quantstamp-logo-dark.svg');

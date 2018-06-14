@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.mjs';
+import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
 
 import Carousel from 'nuka-carousel';
 
@@ -61,7 +61,7 @@ const CarouselGallery = ({ children, type, label }) => (
     }
     <style jsx>{`
       .CarouselGallery {
-        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0" : ''};
+        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 0 0" : ''};
         position: relative;
         overflow: hidden;
 

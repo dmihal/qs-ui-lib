@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.mjs';
+import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
 const Textarea = ({ label, placeholder, required, error, disabled }) => (
   <div className="Textarea-wrapper">
