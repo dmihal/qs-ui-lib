@@ -66,6 +66,14 @@ const Colors = () => (
       <h4>Violet</h4>
       <div className="Circle Violet"/>
     </div>
+    <div className="Legend">
+      <h4>San Marino</h4>
+      <div className="Circle SanMarino"/>
+    </div>
+    <div className="Legend">
+      <h4>Resolution Blue</h4>
+      <div className="Circle ResolutionBlue"/>
+    </div>
     <style jsx>{`
       .LegendWrapper {
         display: flex;
@@ -129,6 +137,12 @@ const Colors = () => (
         }
         &.Violet {
           background: ${ColorVars.Violet}
+        }
+        &.SanMarino {
+          background: ${ColorVars.SanMarino}
+        }
+        &.ResolutionBlue {
+          background: ${ColorVars.ResolutionBlue}
         }
       }
     `}</style>
