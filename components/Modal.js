@@ -18,7 +18,7 @@ export default class Modal extends Component {
     /**
      * Fullscreen
      */
-    fullscreen: PropTypes.string,
+    fullscreen: PropTypes.bool,
     /**
      * Modal Position
      */

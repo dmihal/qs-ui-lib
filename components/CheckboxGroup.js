@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
-const CheckboxGroup = ({ name, options, error }) => (
+const CheckboxGroup = ({ nameID, options, error }) => (
   <React.Fragment>
     <form>
       {
         options.map((option, index)=> {
           return (
-            <div 
+            <div
+              key={option.label+index}
               className={
                   "checkbox-choice-wrap" +
                   (option.disabled ? ' disabled' : '' ) +
                   (option.error ? ' error' : '' )}>
-                <input type="checkbox" id={option.label+index+name} name={name} disabled={option.disabled}/>
-                <label for={option.label+index+name}>{option.label}</label>
+                <input type="checkbox" id={option.label+index+nameID} name={nameID} disabled={option.disabled}/>
+                <label htmlFor={option.label+index+nameID}>{option.label}</label>
             </div>
           )
         })
@@ -101,11 +102,11 @@ CheckboxGroup.propTypes = {
   /**
    * Field label
    */
-  name: PropTypes.string.required,
+  nameID: PropTypes.string.isRequired,
   /**
    * checkbox ID
    */
-  options: PropTypes.array.required,
+  options: PropTypes.array.isRequired,
   /**
    * Error
    */

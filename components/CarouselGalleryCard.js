@@ -78,7 +78,7 @@ CarouselGalleryCard.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.array.isRequired,
+  children: PropTypes.object.isRequired,
 }
 
 CarouselGalleryCard.defaultProps = {}

@@ -5,7 +5,7 @@ import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 const Toggle = ({toggleID}) => (
   <React.Fragment>
     <input type="checkbox" name={toggleID} id={toggleID} />
-    <label for={toggleID}></label>
+    <label htmlFor={toggleID}></label>
     <style jsx>{`
       input {
         max-height: 0;

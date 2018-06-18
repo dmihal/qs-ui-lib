@@ -35,7 +35,7 @@ LinkText.propTypes = {
   /**
    * LinkText text
    */
-  children: PropTypes.array,
+  children: PropTypes.string,
   /**
    * LinkText arrow
    */

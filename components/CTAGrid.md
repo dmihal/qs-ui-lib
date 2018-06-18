@@ -1,6 +1,6 @@
 4 Columns:
 ```jsx
-<CTAGrid columns="4">
+<CTAGrid columns={4}>
   <CTAGridContent>
     <h2>$117M+</h2>
     <p>Secured by <br/>Quantstamp Audits</p>
@@ -22,7 +22,7 @@
 
 2 Columns:
 ```jsx
-<CTAGrid columns="2">
+<CTAGrid columns={2}>
   <CTAGridContent align="left">
     <h2>Telegram</h2>
     <p>Join the #1 smart contract security community.</p>

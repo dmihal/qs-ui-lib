@@ -1,7 +1,7 @@
 Radio
 ```jsx
 <RadioGroup 
-  name="XXXX2131241"
+  nameID="XXXX2131241"
   options={[
   { value: 'one', label: 'One' },
   { value: 'two', label: 'Two', disabled: true },

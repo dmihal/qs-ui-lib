@@ -12,7 +12,7 @@ const CarouselGallery = ({ children, type, label }) => (
         <React.Fragment>
           <div className="CarouselGallery-offset-bg"/>
           <Carousel
-            slidesToShow="3"
+            slidesToShow={3}
             heightMode="first"
             renderCenterLeftControls={() => null}
             renderCenterRightControls={() => null}
@@ -41,7 +41,7 @@ const CarouselGallery = ({ children, type, label }) => (
       )
       : (<React.Fragment>
           <Carousel
-            slidesToShow="3"
+            slidesToShow={3}
             heightMode="first"
             renderCenterLeftControls={({ previousSlide }) => (
               <Button

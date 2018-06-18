@@ -67,7 +67,10 @@ LayoutGrid.propTypes = {
   /**
    * LayoutGrid block
    */
-  children: PropTypes.array.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]).isRequired,
   /**
    * Columns total
    */

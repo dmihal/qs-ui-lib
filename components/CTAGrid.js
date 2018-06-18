@@ -40,11 +40,14 @@ CTAGrid.propTypes = {
   /**
    * CTAGrid block
    */
-  children: PropTypes.array.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.array
+  ]).isRequired,
   /**
    * Columns total
    */
-  columns: PropTypes.oneOf([2, 4]),
+  columns: PropTypes.oneOf([1, 2, 4]),
 }
 
 CTAGrid.defaultProps = {

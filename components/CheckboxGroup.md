@@ -1,6 +1,6 @@
 ```jsx
 <CheckboxGroup 
-  name="ZZ24124"
+  nameID="ZZ24124"
   options={[
   { value: 'one', label: 'One' },
   { value: 'two', label: 'Two', disabled: true },

@@ -21,15 +21,12 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
-    "bindings": "file:node_modules/bindings",
     "css-loader": "^0.28.11",
     "dog-names": "^1.0.2",
     "file-loader": "^1.1.11",
     "jss-cli": "^5.0.1",
     "lodash": "^4.17.5",
-    "micro": "latest",
     "moment": "^2.22.2",
-    "nan": "git+https://github.com/nodejs/nan.git",
     "nuka-carousel": "^4.2.1",
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
@@ -65,7 +62,7 @@
     "gulp-babel": "^7.0.1",
     "gulp-shell": "^0.6.5",
     "html-webpack-plugin": "^3.2.0",
-    "react-styleguidist": "^7.0.14",
-    "webpack": "^4.4.1"
+    "react-styleguidist": "^7.0.17",
+    "webpack": "^4.12.0"
   }
 }

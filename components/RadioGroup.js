@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
-const RadioGroup = ({ name, options, error }) => (
+const RadioGroup = ({ nameID, options, error }) => (
   <React.Fragment>
     <form>
       {
         options.map((option, index)=> {
           return (
             <div 
+              key={option.label+index}
               className={
                   "radio-choice-wrap" +
                   (option.disabled ? ' disabled' : '' ) +
                   (option.error ? ' error' : '' )}>
-                <input type="radio" id={option.label+index} name={name} disabled={option.disabled}/>
-                <label for={option.label+index}>{option.label}</label>
+                <input type="radio" id={option.label+index} name={nameID} disabled={option.disabled}/>
+                <label htmlFor={option.label+index}>{option.label}</label>
             </div>
           )
         })
@@ -101,11 +102,11 @@ RadioGroup.propTypes = {
   /**
    * Field label
    */
-  name: PropTypes.string.required,
+  nameID: PropTypes.string.isRequired,
   /**
    * Radio ID
    */
-  options: PropTypes.array.required,
+  options: PropTypes.array.isRequired,
   /**
    * Error
    */
