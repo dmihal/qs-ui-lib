@@ -8,7 +8,6 @@ const CTAGrid = ({ children, columns }) => (
     <style jsx>{`
       .CTAGrid {
         margin: auto;
-        max-width: ${LayoutSizes[2]};
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -17,12 +16,6 @@ const CTAGrid = ({ children, columns }) => (
         > :global(*) {
           border: 1px solid #eee;
           min-height: ${MarginPaddingSize[2]};
-          
-          ${
-            columns > 1
-              ? 'width: calc( ('+LayoutSizes[2]+'/'+columns+') );'
-              : 'width: 100%;'
-          }
         }
 
         > :global(*:first-child) {

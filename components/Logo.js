@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Colors, MarginPaddingSize } from '../vars.js';
 import { Typography } from '../vars.js';
 
-const quantstampLogo            = require('../assets/quantstamp-logo.svg');
-const quantstampLogoDark         = require('../assets/quantstamp-logo-dark.svg');
-const quantstampLogoVertical     = require('../assets/quantstamp-logo-vertical.svg');
-const quantstampLogoVerticalDark = require('../assets/quantstamp-logo-vertical-dark.svg');
-const quantstampLogoProduct      = require('../assets/quantstamp-logo-product.svg');
-const quantstampLogoProductDark  = require('../assets/quantstamp-logo-product-dark.svg');
+const quantstampLogo             = require('../assets/logos/quantstamp-logo.svg');
+const quantstampLogoDark         = require('../assets/logos/quantstamp-logo-dark.svg');
+const quantstampLogoVertical     = require('../assets/logos/quantstamp-logo-vertical.svg');
+const quantstampLogoVerticalDark = require('../assets/logos/quantstamp-logo-vertical-dark.svg');
+const quantstampLogoProduct      = require('../assets/logos/quantstamp-logo-product.svg');
+const quantstampLogoProductDark  = require('../assets/logos/quantstamp-logo-product-dark.svg');
 
 const Logo = ({ type, theme, productName, width, height }) => (
   <div className="Logo">
@@ -60,7 +60,7 @@ const Logo = ({ type, theme, productName, width, height }) => (
           margin: 0;
           line-height: 1;
           font-size: ${Typography.fontSize[3]};
-          top: -3px;
+          top: -1px;
           position: relative;
           margin-left: calc(${MarginPaddingSize[5]} / 2);
           

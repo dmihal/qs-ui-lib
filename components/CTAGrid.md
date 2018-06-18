@@ -44,8 +44,8 @@
 ```jsx
 <CTAGrid>
   <CTAGridContent>
-    <h2>Call to Action Header</h2>
-    <Button type="primary">Click Me</Button>
+    <h2 style={{marginBottom: '40px', color: '#1e2837'}}>Call to Action Header</h2>
+    <Button>Click Me</Button>
   </CTAGridContent>
 </CTAGrid>
 ```

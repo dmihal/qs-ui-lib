@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { LayoutSizes, Colors, MarginPaddingSize } from '../vars.js';
+import { LayoutSizes, Colors, MarginPaddingSize, Typography } from '../vars.js';
 
 
 export default class Modal extends Component {
@@ -62,7 +62,7 @@ export default class Modal extends Component {
             )}
           >
             <label htmlFor={'modal-trigger-' + this.props.modalID} className="close">
-              <img src={require('../assets/close-x.svg')} alt="close button" />
+              <img src={require('../assets/icons/icon-close-x.svg')} alt="close button" />
             </label>
             <h2>{this.state.title}</h2>
             {this.props.children}
@@ -124,8 +124,8 @@ export default class Modal extends Component {
           /* Close button */
           .modal .modal-overlay .close{
             position: absolute;
-            right: 10px;
-            top: 10px;
+            right: 20px;
+            top: 20px;
             font-size: 40px;
             width: 30px;
             height: 30px;
@@ -138,6 +138,7 @@ export default class Modal extends Component {
           
           h2{
             margin-bottom: ${MarginPaddingSize[3]};
+            font-weight: ${Typography.typePrimaryWeight.normal};
           }
           
            .modal .o-close {

@@ -23,9 +23,9 @@ const CTAGridContent = ({ children, align }) => (
 
           > :global(h2) {
             text-align: ${ align === 'left' ? "left" : "center" };
-            font-size: ${Typography.fontSize[1]};
             margin-bottom: ${MarginPaddingSize[5]};
             color: ${Colors.Royal};
+            font-weight: ${Typography.typePrimaryWeight.normal};
           }
           
           > :global(p) {

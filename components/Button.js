@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
+// TODO:
+// ICONS Left & Right
+// Buttons Tabs
+
 const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
   <button className="Button" disabled={disabled}  onClick={onClick}>
     { type === 'left' || 
@@ -24,6 +28,8 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         line-height: ${MarginPaddingSize[3]};
         font-size: ${Typography.fontSize[3]};
         max-height: ${MarginPaddingSize[3]};
+        min-width: 140px;
+        border-radius: 2px;
         &:hover {
           color: ${Colors.PoloBlue};
         }
@@ -56,7 +62,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
           type === 'disabled'
             ? (`
               background: ${Colors.Gallery};
-              border-color: #eee;
+              border-color: #c4cdd5;
               color: ${Colors.Slate};
               cursor: not-allowed;
             `) : ''
@@ -74,7 +80,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         }
         ${
           type === 'left'
-            ? (`transform:rotateY(180deg)`) : ''
+            ? (`transform:rotateY(180deg);`) : ''
         }
         
         /* DEFAULT - Size Overide */
@@ -94,7 +100,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
           ${
             type === 'primary'
               ? (`
-                background: ${Colors.PoloBlue};
+                background: #5068b2;
                 border-color: ${Colors.PoloBlue};
                 color: ${Colors.White};
               `) : ''
@@ -120,6 +126,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
 
         /* ACTIVE - Type Overides*/
         &:active {
+          color: ${Colors.ResolutionBlue};
           ${
             type === 'primary'
               ? (`

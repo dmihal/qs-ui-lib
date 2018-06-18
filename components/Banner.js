@@ -13,7 +13,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
       <LayoutGrid columns={1}>
         <div className="banner-left">
           <h1>{title}</h1>
-          { secondayTitle ? <h2>{secondayTitle}</h2> : null }
+          { secondayTitle ? <h1>{secondayTitle}</h1> : null }
         </div>
         <div className="banner-right">
           { 
@@ -32,23 +32,19 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           padding: 0 ${MarginPaddingSize[2]};
           
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
-          background-image: ${ altStyle ? 'none' : 'url(/' + require('../assets/waves-bg.svg') + ')' };
-          background-position: center;
+          background-image: ${ altStyle ? 'none' : 'url(/' + require('../assets/backgrounds/waves-bg.svg') + ')' };
+          background-position: bottom;
           background-size: 100% auto;
           background-size: cover;
           background-repeat: no-repeat;
 
-          h1,
-          h2 { 
-            margin: 0;
-          }
+          h1, h2 { margin: 0 }
 
-          h1 {
-            color: ${ altStyle ? Colors.Mirage : Colors.White };
-          }
-          h2 {
-            color: ${ altStyle ? Colors.Slate : Colors.White };
-          }
+          h1 { color: ${ altStyle ? Colors.Mirage : Colors.White } }
+          h1+h1 { color: ${ altStyle ? Colors.Slate : Colors.White } }
+
+          h1 { font-weight: normal }
+          h1+h1 { font-weight: 100 }
 
           .banner-right {
             text-align: right;

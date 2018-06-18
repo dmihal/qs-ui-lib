@@ -42,7 +42,7 @@ const LinkCTA = ({ children, label }) => (
             width: calc(${MarginPaddingSize[5]}*2);
             height: ${MarginPaddingSize[5]};
             margin-left: ${MarginPaddingSize[5]};
-            background: url( ${ require('../assets/double-arrow.svg') } ) no-repeat;
+            background: url( ${ require('../assets/icons/icon-double-arrow.svg') } ) no-repeat;
             background-position-x: right;
           }
         }

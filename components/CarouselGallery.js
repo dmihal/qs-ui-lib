@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
+import { MarginPaddingSize, Colors, Typography } from '../vars.js';
 
 import Carousel from 'nuka-carousel';
 
@@ -75,7 +75,7 @@ const CarouselGallery = ({ children, type, label }) => (
         }
 
         :global(.slider-control-topleft) {
-          top: ${ type === 'A' ? '-'+MarginPaddingSize[2]+' !important' : ''};
+          top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 

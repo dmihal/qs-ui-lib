@@ -81,7 +81,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
-          background-image: ${ error ? 'none' : 'url(/' + require('../assets/check.svg') + ')' };
+          background-image: ${ error ? 'none' : 'url(/' + require('../assets/icons/icon-check.svg') + ')' };
         }
         &:not(:checked) + label:after {
           opacity: 0;

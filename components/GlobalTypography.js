@@ -14,11 +14,8 @@ const GlobalTypography = () => (
       font-family: ${Typography.typePrimaryStack} !important;
       font-size: ${Typography.fontSize[3]};
     }
-    h1, h2, h3, h4 {
-      margin-top: 0;
-      margin-bottom: ${MarginPaddingSize[3]};
-    }
-    p {
+    h1, h2, h3, h4, p {
+      margin-top: 0 !important;
       margin-bottom: ${MarginPaddingSize[3]};
     }
     h1 {
@@ -38,7 +35,7 @@ const GlobalTypography = () => (
       font-size: ${Typography.fontSize[3]};
     }
     p {
-      font-weight: ${Typography.typePrimaryWeight.regular};
+      font-weight: ${Typography.typePrimaryWeight.normal};
       font-size: ${Typography.fontSize[3]};
     }
     label {

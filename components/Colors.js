@@ -78,6 +78,7 @@ const Colors = () => (
       .LegendWrapper {
         display: flex;
         flex-wrap: wrap;
+        width: 850px;
       }
       .Legend {
         width: ${MarginPaddingSize[1]};

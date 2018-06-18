@@ -32,7 +32,8 @@ export const Typography = {
   typePrimaryWeight: {
     regular: '500',
     medium: '500',
-    light: '100'
+    light: '100',
+    normal: 'normal'
   },
   fontSize: [
     '34px', 

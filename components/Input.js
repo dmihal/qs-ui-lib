@@ -37,15 +37,21 @@ const Input = ({ label, placeholder, search, required, error, disabled }) => (
           padding: calc(${MarginPaddingSize[5]}) calc(${MarginPaddingSize[5]});
           outline: none;
           position: relative;
+          border-radius: 2px;
 
           &::placeholder {
-            color: ${Colors.Gallery};
+            color: #708090;
+            opacity: 0.5;
+            font-weight: normal;
           }
 
           &:active, 
           &:focus {
-            border: solid 1px ${Colors.Royal};
-            border-color: ${ error ? Colors.Cinnabar : Colors.Gallery };  
+            border-color: ${ 
+              error 
+              ? Colors.Cinnabar 
+              : Colors.Royal 
+            };  
           }
         }
 
@@ -53,7 +59,7 @@ const Input = ({ label, placeholder, search, required, error, disabled }) => (
           display: block;
           vertical-align: middle;
           content: '';
-          background: ${ search ? 'url(/' + require('../assets/search.svg') + ')' : null };
+          background: ${ search ? 'url(/' + require('../assets/icons/icon-search.svg') + ')' : null };
           width: 14px;
           height: 14px;
           position: absolute;

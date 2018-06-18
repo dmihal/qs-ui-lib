@@ -10,7 +10,7 @@ Vertical on light:
 
 Product on light:
 ```jsx
-<Logo type="product" theme="onLight"/>
+<Logo type="product" theme="onLight" productName="Product Name"/>
 ```
 
 Default 100px wide (on light):
