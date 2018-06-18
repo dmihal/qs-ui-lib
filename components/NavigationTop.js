@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LayoutWrapper from './LayoutWrapper';
-import GlobalTypography from './GlobalTypography';
 import Logo from './Logo';
-import GlobalReset from './GlobalReset';
 
 import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 
@@ -66,7 +64,5 @@ NavigationTop.propTypes = {
    */
   children: PropTypes.array.isRequired,
 }
-
-NavigationTop.defaultProps = {}
 
 export default NavigationTop

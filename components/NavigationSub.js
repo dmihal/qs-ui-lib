@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import LayoutGrid from './LayoutGrid';
-import GlobalTypography from './GlobalTypography';
 import Logo from './Logo';
-import GlobalReset from './GlobalReset';
 
 import { MarginPaddingSize, Colors } from '../vars.js';
 
 const NavigationSub = ({ children }) => (
   <React.Fragment>
     <header className="NavigationSub">
-      <LayoutGrid columns="1">
+      <LayoutGrid columns={1}>
         <nav>
           <ul className="nav-items">
             { children }
@@ -44,7 +42,5 @@ NavigationSub.propTypes = {
    */
   children: PropTypes.array.isRequired,
 }
-
-NavigationSub.defaultProps = {}
 
 export default NavigationSub

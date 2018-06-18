@@ -10,7 +10,7 @@ import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
 const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>
     <div className="Banner">
-      <LayoutGrid columns="1">
+      <LayoutGrid columns={1}>
         <div className="banner-left">
           <h1>{title}</h1>
           { secondayTitle ? <h2>{secondayTitle}</h2> : null }
