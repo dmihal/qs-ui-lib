@@ -24,7 +24,11 @@ LayoutWrapper.propTypes = {
   /**
    * Wrapper layout block
    */
-  children: PropTypes.object.isRequired
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.array
+  ]).isRequired
 }
 
 LayoutWrapper.defaultProps = {}

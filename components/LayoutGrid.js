@@ -74,7 +74,7 @@ LayoutGrid.propTypes = {
   /**
    * Columns total
    */
-  columns: PropTypes.oneOf([1, 2, 3]),
+  columns: PropTypes.oneOf([1, 2, 3, 4]),
   /**
    * LayoutGrid offset
    */

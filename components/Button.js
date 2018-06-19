@@ -169,7 +169,11 @@ Button.propTypes = {
   /**
    * Button style
    */
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.array
+  ]).isRequired,
   /**
    * Button size
    */
