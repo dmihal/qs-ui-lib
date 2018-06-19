@@ -173,7 +173,7 @@ Button.propTypes = {
     PropTypes.object,
     PropTypes.string,
     PropTypes.array
-  ]).isRequired,
+  ]),
   /**
    * Button size
    */
