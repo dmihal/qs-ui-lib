@@ -11,7 +11,7 @@ const CTAGrid = ({ children, columns }) => (
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 200px;
+        min-height: 200px;
         
         > :global(*) {
           border: 1px solid #eee;
