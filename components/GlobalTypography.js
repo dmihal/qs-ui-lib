@@ -37,7 +37,6 @@ const GlobalTypography = () => (
     p {
       font-weight: ${Typography.typePrimaryWeight.normal};
       font-size: ${Typography.fontSize[3]};
-      line-height: 1.56;
     }
     label {
       font-weight: ${Typography.typePrimaryWeight.medium};
@@ -46,6 +45,9 @@ const GlobalTypography = () => (
     small {
       font-weight: ${Typography.typePrimaryWeight.light};
       font-size: ${Typography.fontSize[5]};
+    }
+    li, span, p {
+      line-height: 1.56;
     }
     html { background: inherit; }
   `}</style>

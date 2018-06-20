@@ -28,7 +28,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           display: flex;
           flex-direction: vertical;
           align-items: center;
-          height: 200px;
+          height: 240px;
           padding: 0 ${MarginPaddingSize[2]};
           
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
