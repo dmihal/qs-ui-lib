@@ -85,6 +85,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
         }
 
         :global(.slider-control-bottomleft) {
+          bottom: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
