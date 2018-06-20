@@ -37,6 +37,7 @@ const GlobalTypography = () => (
     p {
       font-weight: ${Typography.typePrimaryWeight.normal};
       font-size: ${Typography.fontSize[3]};
+      line-height: 1.56;
     }
     label {
       font-weight: ${Typography.typePrimaryWeight.medium};
