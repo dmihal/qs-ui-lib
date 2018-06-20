@@ -15,7 +15,7 @@ module.exports = {
 			},
 			{
 				test: /\.css$/,
-				loader: 'style-loader!css-loader?importLoaders=1',
+				loader: 'to-string-loader!css-loader?importLoaders=1',
 			},
 			{
 				test: /\.svg$/,
