@@ -66,7 +66,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
     }
     <style jsx>{`
       .CarouselGallery {
-        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 0 0" : ''};
+        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 "+MarginPaddingSize[2]+" 0" : ''};
         position: relative;
         overflow: hidden;
 
