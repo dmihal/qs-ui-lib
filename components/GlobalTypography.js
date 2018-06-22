@@ -46,6 +46,9 @@ const GlobalTypography = () => (
       font-weight: ${Typography.typePrimaryWeight.light};
       font-size: ${Typography.fontSize[5]};
     }
+    li, span, p {
+      line-height: 1.56;
+    }
     html { background: inherit; }
   `}</style>
 )

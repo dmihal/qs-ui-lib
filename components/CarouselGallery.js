@@ -5,7 +5,7 @@ import { MarginPaddingSize, Colors, Typography } from '../vars.js';
 
 import Carousel from 'nuka-carousel';
 
-const CarouselGallery = ({ children, type, label }) => (
+const CarouselGallery = ({ children, type, label, bottomLabel }) => (
   <div className="CarouselGallery">
     { type === 'A'
       ? (
@@ -34,6 +34,11 @@ const CarouselGallery = ({ children, type, label }) => (
                   styleOverrides={"border: none !important; border-left: 1px solid "+Colors.Alabaster+" !important;"}/>
                 <h3 className="CarouselGallery-label">{label}</h3>
               </React.Fragment>
+            )}
+            renderBottomLeftControls={() => (
+              <div className="CarouselGallery-bottomLabel">
+                {bottomLabel}
+              </div>
             )}>
             {children}
           </Carousel>
@@ -61,7 +66,7 @@ const CarouselGallery = ({ children, type, label }) => (
     }
     <style jsx>{`
       .CarouselGallery {
-        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 0 0" : ''};
+        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 "+MarginPaddingSize[2]+" 0" : ''};
         position: relative;
         overflow: hidden;
 
@@ -79,11 +84,17 @@ const CarouselGallery = ({ children, type, label }) => (
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
+        :global(.slider-control-bottomleft) {
+          bottom: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
+          left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
+        }
+
         :global(.slider-frame) {
           overflow: visible !important;
         }
 
-        .CarouselGallery-label {
+        .CarouselGallery-label,
+        .CarouselGallery-bottomLabel {
           display: inline-block;
           margin: 0 0 0 ${MarginPaddingSize[3]};
           line-height: ${MarginPaddingSize[2]};

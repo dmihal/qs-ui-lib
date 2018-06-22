@@ -38,22 +38,22 @@ const LayoutGrid = ({ children, columns, offset }) => (
         }
 
         > :global(*:first-child) {
-          ${ offset && columns === '2'
+          ${ offset && columns === 2
               ? offset === 'left' ? 'width: '+LayoutSizes[3]+';' : ''
               : ''
           }
-          ${ offset && columns === '2'
+          ${ offset && columns === 2
             ? offset === 'right' ? 'width: '+LayoutSizes[5]+';' : ''
             : ''
           }
         }
 
         > :global(*:nth-child(2)) {
-          ${ offset && columns === '2'
+          ${ offset && columns === 2
               ? offset === 'left' ? 'width: '+LayoutSizes[5]+';' : ''
               : ''
           }
-          ${ offset && columns === '2'
+          ${ offset && columns === 2
             ? offset === 'right' ? 'width: '+LayoutSizes[3]+';' : ''
             : ''
           }

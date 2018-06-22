@@ -28,11 +28,11 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           display: flex;
           flex-direction: vertical;
           align-items: center;
-          height: 200px;
+          height: 240px;
           padding: 0 ${MarginPaddingSize[2]};
           
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
-          background-image: ${ altStyle ? 'none' : 'url(/' + require('../assets/backgrounds/waves-bg.svg') + ')' };
+          background-image: ${ altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')' };
           background-position: bottom;
           background-size: 100% auto;
           background-size: cover;

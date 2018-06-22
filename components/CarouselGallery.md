@@ -1,5 +1,8 @@
 ```jsx
-<CarouselGallery type="A" label="Label">
+<CarouselGallery
+  type="A"
+  label="Label"
+  bottomLabel={<LinkText arrow>Bottom Label</LinkText>}>
   <CarouselGalleryCard 
     imgSrc="http://via.placeholder.com/120x120"
     title="Title"

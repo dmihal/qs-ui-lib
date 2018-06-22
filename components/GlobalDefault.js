@@ -1,7 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import GlobalDefaultBase from '../globals/default-base.js';
-
+import { Colors } from '../vars.js';
 
 /**
  * This is a global style baseline that is meant to be imported
@@ -32,10 +30,11 @@ const GlobalDefault = () => (
 
     figure { margin: 0; }
 
+    body {
+      background: ${Colors.Alabaster};
+    }
+
   `}</style>
 )
-
-GlobalDefault.propTypes = {}
-GlobalDefault.defaultProps = {}
 
 export default GlobalDefault
