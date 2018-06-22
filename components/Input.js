@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Typography, Colors, MarginPaddingSize } from '../vars.js';
 
-const Input = ({ label, placeholder, search, required, error, disabled }) => (
+const Input = ({ type, label, placeholder, search, required, error, disabled }) => (
   <div className="input-wrapper">
     { label ? <label>{label} {required ? '*' : null }</label> : null }
     { error ? <label className="error">{error}</label> : null }
-    <input type="text" placeholder={placeholder} disabled={disabled}/>
+    <input type={type || "text"} placeholder={placeholder} disabled={disabled}/>
     <style jsx>{`
       .input-wrapper {
         border-radius: 2px;
