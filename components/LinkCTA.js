@@ -39,6 +39,7 @@ const LinkCTA = ({ children, label, onDark }) => (
         .description-box {
           padding: 0 ${MarginPaddingSize[5]};
           font-size: ${Typography.fontSize[4]};
+          color: ${ !!onDark === true ? Colors.Malibu : '' };
           
           &::after {
             content: '';
@@ -46,8 +47,11 @@ const LinkCTA = ({ children, label, onDark }) => (
             width: calc(${MarginPaddingSize[5]}*2);
             height: ${MarginPaddingSize[5]};
             margin-left: ${MarginPaddingSize[5]};
-            // background: url( ${ !!onDark ? require('../assets/icons/icon-double-arrow.svg' : ) } ) no-repeat;
-            //background: url( ${ require('../assets/icons/icon-double-arrow-color-malibu.svg') } ) no-repeat;
+            background: ${ 
+              !!onDark
+                ? 'url( ' + require('../assets/icons/icon-double-arrow-color-malibu.svg') + ')' 
+                : 'url( ' + require('../assets/icons/icon-double-arrow.svg') + ')' 
+            } no-repeat;
             background-position-x: right;
           }
         }
