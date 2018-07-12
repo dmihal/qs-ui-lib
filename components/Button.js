@@ -156,7 +156,9 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
       }
     `}</style>
     <style jsx>{`
-      ${styleOverrides}
+      .Button {
+        ${styleOverrides}
+      }
     `}</style>
   </button>
 )

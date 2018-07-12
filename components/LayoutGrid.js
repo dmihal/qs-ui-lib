@@ -5,7 +5,7 @@ import { LayoutSizes, MarginPaddingSize } from '../vars.js';
 /**
  * This is a column layout block
  */
-const LayoutGrid = ({ children, columns, offset }) => (
+const LayoutGrid = ({ children, offset }) => (
   <div className="LayoutGrid">
     {children}
     <style jsx>{`
@@ -18,8 +18,8 @@ const LayoutGrid = ({ children, columns, offset }) => (
         
         > :global(*) {
           ${
-            columns > 1
-              ? 'width: calc( ('+LayoutSizes[2]+'/'+columns+') - ('+MarginPaddingSize[3]+'/'+columns+') );'
+            children.length > 1
+              ? 'width: calc( ('+LayoutSizes[2]+'/'+children.length+') - ('+MarginPaddingSize[3]+'/'+children.length+') );'
               : 'width: 100%;'
           }
 
@@ -38,22 +38,22 @@ const LayoutGrid = ({ children, columns, offset }) => (
         }
 
         > :global(*:first-child) {
-          ${ offset && columns === 2
+          ${ offset && children.length === 2
               ? offset === 'left' ? 'width: '+LayoutSizes[3]+';' : ''
               : ''
           }
-          ${ offset && columns === 2
+          ${ offset && children.length === 2
             ? offset === 'right' ? 'width: '+LayoutSizes[5]+';' : ''
             : ''
           }
         }
 
         > :global(*:nth-child(2)) {
-          ${ offset && columns === 2
+          ${ offset && children.length === 2
               ? offset === 'left' ? 'width: '+LayoutSizes[5]+';' : ''
               : ''
           }
-          ${ offset && columns === 2
+          ${ offset && children.length === 2
             ? offset === 'right' ? 'width: '+LayoutSizes[3]+';' : ''
             : ''
           }

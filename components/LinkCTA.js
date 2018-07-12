@@ -3,12 +3,16 @@ import PropTypes from 'prop-types';
 import Button from './Button';
 import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
-const LinkCTA = ({ children, label }) => (
+const LinkCTA = ({ children, label, onDark }) => (
   <div className="LinkCTA">
-    <Button
-      type="primary"
-      size="small"
-      styleOverrides={`border-radius: 2px;`}>
+      <Button
+        type="primary"
+        size="small"
+        styleOverrides={`
+        border-radius: 2px;
+        background-color: ${ !!onDark === true ? 'black' : '' };
+        border-color: ${ !!onDark === true ? 'black' : '' };
+        `}>
         {label}
       </Button>
     <div className="description-box">{children}</div>
@@ -17,9 +21,9 @@ const LinkCTA = ({ children, label }) => (
       .LinkCTA {
         display: inline-block;
         height: 100%;
-        background: ${Colors.Gallery};
+        background: ${ !!onDark === true ? '#1e2837' : Colors.Gallery};
         max-width: 400px;
-        color: ${Colors.Royal};
+        color: ${ !!onDark === true ? Colors.Malibu : Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
         border-radius: 2px;
@@ -29,7 +33,7 @@ const LinkCTA = ({ children, label }) => (
         }
 
         label {
-          background: ${Colors.Royal};
+          background: ${ onDark === true ? Colors.Black : Colors.Royal };
         }
 
         .description-box {
@@ -42,7 +46,8 @@ const LinkCTA = ({ children, label }) => (
             width: calc(${MarginPaddingSize[5]}*2);
             height: ${MarginPaddingSize[5]};
             margin-left: ${MarginPaddingSize[5]};
-            background: url( ${ require('../assets/icons/icon-double-arrow.svg') } ) no-repeat;
+            // background: url( ${ !!onDark ? require('../assets/icons/icon-double-arrow.svg' : ) } ) no-repeat;
+            //background: url( ${ require('../assets/icons/icon-double-arrow-color-malibu.svg') } ) no-repeat;
             background-position-x: right;
           }
         }
