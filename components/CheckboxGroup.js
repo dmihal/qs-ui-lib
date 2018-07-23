@@ -13,8 +13,9 @@ const CheckboxGroup = ({ nameID, options, error }) => (
               className={
                   "checkbox-choice-wrap" +
                   (option.disabled ? ' disabled' : '' ) +
+                  (option.deactive ? ' deactive' : '' ) +
                   (option.error ? ' error' : '' )}>
-                <input type="checkbox" id={option.label+index+nameID} name={nameID} disabled={option.disabled}/>
+                <input type="checkbox" id={option.label+index+nameID} name={nameID} disabled={option.disabled || option.error}/>
                 <label htmlFor={option.label+index+nameID}>{option.label}</label>
             </div>
           )
@@ -28,18 +29,22 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           &.disabled {
             input:checked + label:before,
             input:not(:checked) + label:before {
-              background: #c4cdd5;
+              cursor: not-allowed;
             }
+          }
+          &.deactive label::after {
+            filter: saturate(0%) opacity(20%);
           }
           &.error {
             input:checked + label:before,
             input:not(:checked) + label:before {
-              border: 2px solid ${Colors.Cinnabar};
+              border: 1px solid ${Colors.Cinnabar};
               background: rgba(227, 66, 52, 0.1);
+              cursor: not-allowed;
             }
             input:checked + label:after,
             input:not(:checked) + label:after {
-              display: none;
+              background-image: ${ 'url(/' + require('../assets/icons/icon-check.svg') + ')' };
             }
         }
       }
@@ -66,7 +71,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           top: 0;
           width: 16px;
           height: 16px;
-          border: 2px solid #ddd;
+          border: 1px solid #ddd;
           border-radius: 2px;
           background: #fff;
         }

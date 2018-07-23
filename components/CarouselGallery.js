@@ -66,7 +66,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
     }
     <style jsx>{`
       .CarouselGallery {
-        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 "+MarginPaddingSize[2]+" 0" : ''};
+        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 0 0" : ''};
         position: relative;
         overflow: hidden;
 
@@ -80,18 +80,20 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
         }
 
         :global(.slider-control-topleft) {
+          display: flex;
           top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
         :global(.slider-control-bottomleft) {
-          bottom: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
+          
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
         }
 
         :global(.slider-frame) {
           overflow: visible !important;
         }
+        
 
         .CarouselGallery-label,
         .CarouselGallery-bottomLabel {

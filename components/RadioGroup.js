@@ -13,8 +13,9 @@ const RadioGroup = ({ nameID, options, error }) => (
               className={
                   "radio-choice-wrap" +
                   (option.disabled ? ' disabled' : '' ) +
+                  (option.deactive ? ' deactive' : '' ) +
                   (option.error ? ' error' : '' )}>
-                <input type="radio" id={option.label+index} name={nameID} disabled={option.disabled}/>
+                <input type="radio" id={option.label+index} name={nameID} disabled={option.disabled || option.error}/>
                 <label htmlFor={option.label+index}>{option.label}</label>
             </div>
           )
@@ -28,14 +29,18 @@ const RadioGroup = ({ nameID, options, error }) => (
           &.disabled {
             input:checked + label:before,
             input:not(:checked) + label:before {
-              background: #c4cdd5;
+              cursor: not-allowed;
             }
+          }
+          &.deactive label::after {
+            filter: saturate(0%) opacity(20%);
           }
           &.error {
             input:checked + label:before,
             input:not(:checked) + label:before {
-              border: 2px solid ${Colors.Cinnabar};
+              border: 1px solid ${Colors.Cinnabar};
               background: rgba(227, 66, 52, 0.1);
+              cursor: not-allowed;
             }
             input:checked + label:after,
             input:not(:checked) + label:after {
@@ -66,7 +71,7 @@ const RadioGroup = ({ nameID, options, error }) => (
           top: 0;
           width: 20px;
           height: 20px;
-          border: 2px solid #ddd;
+          border: 1px solid #ddd;
           border-radius: 100%;
           background: #fff;
         }

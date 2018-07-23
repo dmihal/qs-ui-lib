@@ -20,6 +20,7 @@ const CTAGridContent = ({ children, align }) => (
 
         .inner-wrap {
           text-align: ${ align === 'left' ? "left" : "center" };
+          padding: ${MarginPaddingSize[2]} 0;
 
           > :global(h2) {
             text-align: ${ align === 'left' ? "left" : "center" };
@@ -31,6 +32,10 @@ const CTAGridContent = ({ children, align }) => (
           > :global(p) {
             text-align: ${ align === 'left' ? "left" : "center" };
             margin-bottom: ${MarginPaddingSize[5]};
+          }
+
+          > :global(a) {
+            text-decoration: none;
           }
         }
       }

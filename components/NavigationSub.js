@@ -20,7 +20,7 @@ const NavigationSub = ({ children }) => (
           display: flex;
           height: 50px;
           border-bottom: 1px solid #e4e4e4;
-          background: ${Colors.Gallery};
+          background-image: linear-gradient(to bottom, #f8f8f8, #ffffff);
 
           .nav-items {
             display: flex;

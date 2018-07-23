@@ -8,11 +8,11 @@ import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
 const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
   <button className="Button" disabled={disabled}  onClick={onClick}>
-    { type === 'left' || 
+    {/* { type === 'left' || 
       type === 'right'
         ? `➜` 
         : null
-    }
+    } */}
     {children}
     <style jsx>{`
       .Button {
@@ -76,6 +76,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
               height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               line-height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               padding: 0;
+              background: ${ `url( ` + require('../assets/icons/icon-carousel-arrow.svg') + `)` }  no-repeat center center;
             `) : ''
         }
         ${
@@ -104,6 +105,10 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
                 border-color: ${Colors.PoloBlue};
                 color: ${Colors.White};
               `) : ''
+          }
+          ${
+            type === 'primary' && size === 'small'
+              ? (`border-color: #5068b2;`) : ''
           }
           ${
             type === 'warning'
