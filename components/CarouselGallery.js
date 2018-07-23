@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import { MarginPaddingSize, Colors, Typography } from '../vars.js';
+import { MarginPaddingSize, Colors } from '../vars.js';
 
 import Carousel from 'nuka-carousel';
 
@@ -12,7 +12,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
         <React.Fragment>
           <div className="CarouselGallery-offset-bg"/>
           <Carousel
-            slidesToShow={3}
+            slidesToShow={window.innerWidth >= 500 ? 3 : 1}
             heightMode="first"
             renderCenterLeftControls={() => null}
             renderCenterRightControls={() => null}
@@ -48,6 +48,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
           <Carousel
             slidesToShow={3}
             heightMode="first"
+            cellSpacing={10}
             renderCenterLeftControls={({ previousSlide }) => (
               <Button
                 type="left"
@@ -77,17 +78,25 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
           width: 100%;
           top: 0;
           left: calc( ${MarginPaddingSize[2]} * 3);
+          @media (width <= 500px) {
+            left: 0;
+          }
         }
 
         :global(.slider-control-topleft) {
           display: flex;
           top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
+          @media (width <= 500px) {
+            left: 0 !important;
+          }
         }
 
         :global(.slider-control-bottomleft) {
-          
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
+          @media (width <= 500px) {
+            left: 0 !important;
+          }
         }
 
         :global(.slider-frame) {

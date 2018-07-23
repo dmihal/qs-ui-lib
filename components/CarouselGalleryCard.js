@@ -1,9 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import LayoutGrid from './LayoutGrid';
-import GlobalTypography from './GlobalTypography';
-import Logo from './Logo';
-import GlobalReset from './GlobalReset';
 
 import { MarginPaddingSize, Colors } from '../vars.js';
 
@@ -30,6 +26,13 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
         border-radius: 2px;
         border-color: #c4cdd5;
         margin: 0;
+        @media (width <= 500px) {
+          height: auto;
+          max-height: 430px;
+          width: auto;
+          display: flex;
+          flex-direction: column;
+        }
 
         :global(p) {
           line-height: 1.56;
