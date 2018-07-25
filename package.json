@@ -17,13 +17,20 @@
     "node": ">=6"
   },
   "babel": {
-    "presets": ["env", "react"],
+    "presets": [
+      "env",
+      "react"
+    ],
     "plugins": [
       "transform-class-properties",
       "transform-object-rest-spread",
       [
         "styled-jsx/babel",
-        { "plugins": ["styled-jsx-plugin-postcss"] }
+        {
+          "plugins": [
+            "styled-jsx-plugin-postcss"
+          ]
+        }
       ]
     ]
   },
@@ -32,6 +39,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
+    "codemirror": "^5.39.2",
     "css-loader": "^0.28.11",
     "dog-names": "^1.0.2",
     "file-loader": "^1.1.11",
@@ -44,6 +52,7 @@
     "prop-types": "^15.6.1",
     "rc-slider": "^8.6.1",
     "react": "^16.4.0",
+    "react-codemirror2": "^5.1.0",
     "react-datepicker": "^1.5.0",
     "react-dom": "^16.2.0",
     "react-form": "^3.5.5",
@@ -61,7 +70,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "styleguide:deploy": "npm run styleguide:build && cd styleguide && now && cd ..",
-    "start": "micro"
+    "start": "micro",
+    "dev": "scripts/dev.sh"
   },
   "postcss": {
     "plugins": {
