@@ -54,6 +54,10 @@ class CodeInputArea extends Component {
         {codeMirrorCSS}
       </style>
       <style jsx global>{`
+        .CodeMirror * {
+          font-family: monospace !important;
+          font-size: 12px !important;
+        }
         .CodeMirror-gutter { background: #f2f4f9; }
         .CodeMirror-linenumber { color: #052892; font-weight: bold; }
         pre.CodeMirror-line { padding-left: 20px; }
