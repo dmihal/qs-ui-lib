@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Glyph = ({ glyphType, size }) => (
+const Glyph = ({ type, size }) => (
     <img
-      alt={'Glyph ' + glyphType}
-      src={require('../assets/glyphs/'+glyphType+'.svg')}
+      alt={'Glyph ' + type}
+      src={require('../assets/glyphs/'+type+'.svg')}
       style={{
         'width': Glyph.sizes[size] || '40px',
         'height': Glyph.sizes[size] || '40px'
@@ -16,7 +16,7 @@ Glyph.propTypes = {
   /*
   * Glyph type
   */
-  glyphType: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   /*
   * Glyph size
   */
