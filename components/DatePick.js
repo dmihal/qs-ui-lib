@@ -22,7 +22,7 @@ const DatePick = ({ selected, handleChange, width }) => (
         height: 16px;
         vertical-align: middle;
         content: '';
-        background: ${ 'url(/' + require('../assets/icons/icon-calendar.svg') + ')'};
+        background: ${ 'url(/' + require('../assets/glyphs/glyph-calendar.svg') + ')'};
         left: calc(100% - 20px - 10px);
         bottom: 14px;
       }

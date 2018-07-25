@@ -76,7 +76,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
               height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               line-height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               padding: 0;
-              background: ${ `url( ` + require('../assets/icons/icon-carousel-arrow.svg') + `)` }  no-repeat center center;
+              background: ${ `url( ` + require('../assets/glyphs/glyph-carousel-arrow.svg') + `)` }  no-repeat center center;
             `) : ''
         }
         ${

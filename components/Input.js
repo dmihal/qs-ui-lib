@@ -59,7 +59,7 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
           display: block;
           vertical-align: middle;
           content: '';
-          background: ${ search ? 'url(/' + require('../assets/icons/icon-search.svg') + ')' : null };
+          background: ${ search ? 'url(/' + require('../assets/glyphs/glyph-search.svg') + ')' : null };
           width: 14px;
           height: 14px;
           position: absolute;
