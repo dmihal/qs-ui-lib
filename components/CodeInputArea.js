@@ -31,34 +31,38 @@ class CodeInputArea extends Component {
 
   constructor(props) {
     super();
-    this.state = {
-      value: 'pragma',
-    };
+    this.state = {value: sampleCode};
   }
 
   render() {
     return (
       <div className="CodeInputArea">
         <CodeMirror
-          value={sampleCode}
+          value={this.state.value}
           options={{
             mode: 'xml',
-            theme: 'material',
             lineNumbers: true
           }}
+          onBeforeChange={(editor, data, value) => {
+            this.setState({value});
+          }}
           onChange={(editor, data, value) => {
+            console.log('controlled', {value});
           }}
         />
       <style jsx global>
         {codeMirrorCSS}
       </style>
       <style jsx global>{`
+        .CodeMirror * {
+          font-family: monospace !important;
+          font-size: 12px !important;
+        }
         .CodeMirror-gutter { background: #f2f4f9; }
         .CodeMirror-linenumber { color: #052892; font-weight: bold; }
         pre.CodeMirror-line { padding-left: 20px; }
       `}
       </style>
-      
     </div>
     );
   }
