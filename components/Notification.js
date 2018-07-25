@@ -7,19 +7,14 @@ const iconReducer = (type) => {
   switch (type) {
     case 'success':
       return (<Icon type='icon-success' size='small' />)
-      break;
     case 'wait':
       return (<Icon type='icon-wait' size='small' />)
-      break;
     case 'alert':
       return (<Icon type='icon-alert' size='small' />)
-      break;
     case 'error':
       return (<Icon type='icon-error' size='small' />)
-      break;
     case 'warning':
       return (<Icon type='icon-warning' size='small' />)
-      break;
   }
 }
 
