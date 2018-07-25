@@ -31,22 +31,23 @@ class CodeInputArea extends Component {
 
   constructor(props) {
     super();
-    this.state = {
-      value: 'pragma',
-    };
+    this.state = {value: sampleCode};
   }
 
   render() {
     return (
       <div className="CodeInputArea">
         <CodeMirror
-          value={sampleCode}
+          value={this.state.value}
           options={{
             mode: 'xml',
-            theme: 'material',
             lineNumbers: true
           }}
+          onBeforeChange={(editor, data, value) => {
+            this.setState({value});
+          }}
           onChange={(editor, data, value) => {
+            console.log('controlled', {value});
           }}
         />
       <style jsx global>
@@ -58,7 +59,6 @@ class CodeInputArea extends Component {
         pre.CodeMirror-line { padding-left: 20px; }
       `}
       </style>
-      
     </div>
     );
   }
