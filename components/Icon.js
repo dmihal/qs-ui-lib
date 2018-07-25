@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Icon = ({ iconType, size }) => (
+const Icon = ({ type, size }) => (
     <img
-      alt={'icon ' + iconType}
-      src={require('../assets/icons/'+iconType+'.svg')}
+      alt={'icon ' + type}
+      src={require('../assets/icons/'+type+'.svg')}
       style={{
         'width': Icon.sizes[size] || '40px',
         'height': Icon.sizes[size] || '40px'
@@ -16,7 +16,7 @@ Icon.propTypes = {
   /*
   * Icon type
   */
-  iconType: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
   /*
   * Icon size
   */
