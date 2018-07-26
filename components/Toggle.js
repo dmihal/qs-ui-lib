@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import { Colors } from '../vars.js';
 
-const Toggle = ({toggleID}) => (
+const Toggle = ({toggleID, size}) => (
   <React.Fragment>
     <input type="checkbox" name={toggleID} id={toggleID} />
     <label htmlFor={toggleID}></label>
@@ -17,8 +17,8 @@ const Toggle = ({toggleID}) => (
         position: relative;
         box-shadow: inset 0 0 0px 1px #d5d5d5;
         text-indent: -5000px;
-        height: 30px;
-        width: 50px;
+        height: ${ size === 'small' ? '15px' : '30px' };
+        width: ${ size === 'small' ? '30px' : '50px' };
         border-radius: 15px;
         cursor: pointer;
       }
@@ -27,8 +27,8 @@ const Toggle = ({toggleID}) => (
         content: "";
         position: absolute;
         display: block;
-        height: 30px;
-        width: 30px;
+        height: ${ size === 'small' ? '15px' : '30px' };
+        width: ${ size === 'small' ? '15px' : '30px' };
         top: 0;
         left: 0;
         border-radius: 15px;
@@ -42,8 +42,8 @@ const Toggle = ({toggleID}) => (
         content: "";
         position: absolute;
         display: block;
-        height: 30px;
-        width: 30px;
+        height: ${ size === 'small' ? '15px' : '30px' };
+        width: ${ size === 'small' ? '15px' : '30px' };
         top: 0;
         left: 0px;
         border-radius: 15px;
@@ -54,12 +54,12 @@ const Toggle = ({toggleID}) => (
         transition: .25s ease-in-out;
       }
       input:checked + label:before {
-        width: 50px;
+        width: ${ size === 'small' ? '30px' : '50px' };
         background: ${Colors.Royal};
       }
       
       input:checked + label:after {
-        left: 20px;
+        left: ${ size === 'small' ? '15px' : '20px' };
         box-shadow: inset 0 0 0 1px ${Colors.Royal}, 0 2px 4px rgba(0,0,0,.2);
       }
     `}</style>
