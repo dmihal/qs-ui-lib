@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Accordian = ({ children, title }) => (
-  <details onClick={()=> {this.open = 'true'}}>
+  <details className="Accordian">
     <summary>{title}</summary>
     <div className="details-content">
       {children}

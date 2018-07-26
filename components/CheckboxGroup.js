@@ -78,15 +78,16 @@ const CheckboxGroup = ({ nameID, options, error }) => (
         &:checked + label:after,
         &:not(:checked) + label:after {
           content: '';
-          width: 11px;
-          height: 9px;
+          width: 15px;
+          height: 16px;
           position: absolute;
-          top: 4px;
-          left: 3px;
+          top: 2px;
+          left: 1px;
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
           background-image: ${ error ? 'none' : 'url(/' + require('../assets/glyphs/glyph-check.svg') + ')' };
+          background-size: contain;
         }
         &:not(:checked) + label:after {
           opacity: 0;
