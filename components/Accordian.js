@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Accordian = ({ children, title }) => (
-  <details>
+  <details onClick={()=> {this.open = 'true'}}>
     <summary>{title}</summary>
     <div className="details-content">
       {children}
     </div>
     <style jsx>{`
       details { 
-        padding: 20px;
-        width: 635px;
+        padding: 0;
+        max-width: 635px;
         border-radius: 2px;
         background-color: #ffffff;
         border: solid 1px #e4e4e4;
@@ -21,8 +21,8 @@ const Accordian = ({ children, title }) => (
       summary:focus { outline: none !important; }
 
       summary {
+        padding: 20px 40px 20px 0;
         position: relative;
-        left: -1rem;
         
         font-size: 16px;
         font-weight: bold;
@@ -36,8 +36,8 @@ const Accordian = ({ children, title }) => (
         content: '';
         display: block;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 20px;
+        top: 20px;
         width: 20px;
         height: 10px;
         line-height: 1;
@@ -50,7 +50,7 @@ const Accordian = ({ children, title }) => (
         }
       
       .details-content { 
-        margin: 20px 0 0 20px;
+        margin: 0 0 20px 20px;
         font-size: 14px;
         font-weight: normal;
         font-style: normal;
