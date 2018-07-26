@@ -16,6 +16,10 @@ const LayoutGrid = ({ children, offset }) => (
         justify-content: space-between;
         width: 100%;
         
+        /* 
+          TODO: For some reason global flags are needed?
+          Shouldn't nesting "just work"?
+        */
         > :global(*) {
           ${
             children.length > 1
@@ -57,7 +61,17 @@ const LayoutGrid = ({ children, offset }) => (
             ? offset === 'right' ? 'width: '+LayoutSizes[3]+';' : ''
             : ''
           }
-        }        
+        }     
+      }
+      @media (width <= 500px) {
+        flex-direction: column;
+        /* 
+          This is nutty but it worked
+          Probably some sort of transpiling madness PR needed to submit upstream 
+        */
+        :global(*[class*="LayoutGrid"] *) { width: 100% !important }
+        :global(*[class*="LayoutGrid"] *:first-child) { width: 100% !important; }
+        :global(*[class*="LayoutGrid"] *:nth-child(2)) { width: 100% !important; }
       }
     `}</style>
   </div>

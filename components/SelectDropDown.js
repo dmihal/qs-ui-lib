@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
-import 'react-select/dist/react-select.css';
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
+import ReactSelect from 'react-select/dist/react-select.css';
+import { MarginPaddingSize, Colors } from '../vars.js';
 
 class SelectDropDown extends React.Component {
   constructor () {
@@ -12,11 +12,16 @@ class SelectDropDown extends React.Component {
     }
   }
   handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
+    this.setState({ selectedOption })
+
+    if(this.props.handleChange) {
+      this.props.handleChange(selectedOption)
+    }
+    
 		// selectedOption can be null when the `x` (close) button is clicked
-		if (selectedOption) {
-    	console.log(`Selected: ${selectedOption.label}`);
-		}
+		// if (selectedOption) {
+    // 	console.log(`Selected: ${selectedOption.label}`);
+		// }
   }
   render() {
   	const { selectedOption } = this.state;
@@ -32,6 +37,9 @@ class SelectDropDown extends React.Component {
             { value: 'two', label: 'Two' },
           ]}
         />
+        <style jsx global>
+          {ReactSelect}
+        </style>
         <style jsx>{`
           :global(.Select-control) {
             height: ${MarginPaddingSize[5]};

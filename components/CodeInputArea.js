@@ -4,7 +4,7 @@ import {Controlled as CodeMirror} from 'react-codemirror2'
 
 import codeMirrorCSS from 'codemirror/lib/codemirror.css'
 
-const sampleCode =
+const sampleCodeInternal =
 `pragma solidity ^0.4.15;
 
 // Proof of Existence contract, version 1
@@ -27,16 +27,26 @@ contract ProofOfExistence1 {
 }`
 
 class CodeInputArea extends Component {
-  static propTypes = {}
+  static propTypes = {
+    code: PropTypes.string.isRequired
+  }
 
   constructor(props) {
     super();
-    this.state = {value: sampleCode};
+    this.state = {
+      value: props.code || sampleCodeInternal
+    };
+  }
+
+  handleChange = (editor, data, value) => {
+    this.props.handleChange
+      ? this.props.handleChange(value, data, editor)
+      : console.log('controlled', {value})
   }
 
   render() {
     return (
-      <div className="CodeInputArea">
+      <React.Fragment>
         <CodeMirror
           value={this.state.value}
           options={{
@@ -47,7 +57,7 @@ class CodeInputArea extends Component {
             this.setState({value});
           }}
           onChange={(editor, data, value) => {
-            console.log('controlled', {value});
+            this.handleChange(editor, data, value)
           }}
         />
       <style jsx global>
@@ -63,11 +73,11 @@ class CodeInputArea extends Component {
         pre.CodeMirror-line { padding-left: 20px; }
       `}
       </style>
-    </div>
+    </React.Fragment>
     );
   }
 }
 
-CodeInputArea.defaultProps = {}
+// CodeInputArea.defaultProps = {}
 
 export default CodeInputArea

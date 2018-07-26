@@ -23,7 +23,7 @@ const Accordian = ({ children, title }) => (
       summary {
         position: relative;
         left: -1rem;
-        background: ${'url('+ require('../assets/glyphs/glyph-arrow.svg') +')'} no-repeat right center;
+        
         font-size: 16px;
         font-weight: bold;
         font-style: normal;
@@ -32,13 +32,22 @@ const Accordian = ({ children, title }) => (
         letter-spacing: normal;
         color: #1e2837;
       }
+      summary::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 20px;
+        height: 10px;
+        line-height: 1;
+        background: ${'url('+ require('../assets/glyphs/glyph-arrow.svg') +')'} no-repeat center center;
+      }
       summary::-webkit-details-marker { color: transparent; }
 
-      {/*
-        TODO: Rotate background image
-        details[open] summary {
-        background
-      }*/}
+        details[open] summary::after {
+          transform: rotate(90deg);
+        }
       
       .details-content { 
         margin: 20px 0 0 20px;

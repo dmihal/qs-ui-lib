@@ -14,16 +14,7 @@ const PatternBorder = ({ children }) => (
   </div>
 )
 
-PatternBorder.propTypes = {
-  /**
-   * Child Elements
-   */
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired
-}
-
+PatternBorder.propTypes = {}
 PatternBorder.defaultProps = {}
 
 export default PatternBorder

@@ -29,8 +29,9 @@ import MyComponent from '../components/qs-up-library/MyComponent'
 ------------
 
 How to start locally for development:
-
+(pre-reqs: node/npm, nvm, git)
 ```
+nvm use
 git clone git://github.com/quantstamp/qs-ui-library.git
 cd qs-ui-library
 npm i

@@ -1,3 +1,3 @@
 ```jsx
-<DatePick onChange={()=>{}} />
+<DatePick handleChange={(date) => { console.log(date)} }/>
 ```

@@ -9,6 +9,7 @@ const Table = ({ data, tableTitle, direction }) => (
         direction === 'horizontal'
         ? (
           <table>
+            <tbody>
             {
               Object.keys(data).map((key) => {
                 return (
@@ -19,6 +20,7 @@ const Table = ({ data, tableTitle, direction }) => (
                 )
               })
             }
+            </tbody>
           </table>
         )
         : (
@@ -28,7 +30,7 @@ const Table = ({ data, tableTitle, direction }) => (
                 {
                   Object.keys(data).map((key) => {
                     return (
-                      <th>{key}</th>
+                      <th key={key}>{key}</th>
                     )
                   })
                 }
@@ -39,7 +41,7 @@ const Table = ({ data, tableTitle, direction }) => (
                 {
                   Object.keys(data).map((key) => {
                     return (
-                      <td>{data[key]}</td>
+                      <td key={data[key]}>{data[key]}</td>
                     )
                   })
                 }
@@ -90,7 +92,6 @@ const Table = ({ data, tableTitle, direction }) => (
           letter-spacing: normal;
           color: #1e2837;
         }
-        ${ direction === 'horizontal'}
       }
     `}</style>
   </div>
@@ -98,12 +99,17 @@ const Table = ({ data, tableTitle, direction }) => (
 
 Table.propTypes = {
   /**
-   * Child Elements
+   * Data Obj
    */
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired
+  data: PropTypes.object.isRequired, 
+  /**
+   * Table Title
+   */
+  tableTitle: PropTypes.string.isRequired,
+  /**
+   * Direction
+   */
+  direction: PropTypes.string
 }
 
 Table.defaultProps = {}
