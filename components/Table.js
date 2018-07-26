@@ -41,7 +41,11 @@ const Table = ({ data, tableTitle, direction }) => (
                 {
                   Object.keys(data).map((key) => {
                     return (
-                      <td key={data[key]}>{data[key]}</td>
+                      <td key={data[key]}>{
+                        typeof data[key] === 'object'
+                          ? (data[key].map((deepKey) => {return (<span key={deepKey +'nested'}>{deepKey}</span>)}))
+                          : data[key]
+                      }</td>
                     )
                   })
                 }
@@ -91,6 +95,7 @@ const Table = ({ data, tableTitle, direction }) => (
           line-height: 1.38;
           letter-spacing: normal;
           color: #1e2837;
+          vertical-align: top;
         }
       }
     `}</style>

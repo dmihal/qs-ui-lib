@@ -38,7 +38,7 @@ const RadioGroup = ({ nameID, options, error }) => (
           &.error {
             input:checked + label:before,
             input:not(:checked) + label:before {
-              border: 1px solid ${Colors.Cinnabar};
+              border: 2px solid ${Colors.Cinnabar};
               background: rgba(227, 66, 52, 0.1);
               cursor: not-allowed;
             }
