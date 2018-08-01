@@ -30,7 +30,7 @@ describe('CheckboxGroup', () => {
 describe('CodeInputArea', () => {
   it('Is editable', () => {    
     cy.visit(getLocation('CodeInputArea'))
-    // FAILING
+    // TODO - FAILING Input text
     // cy.get('.CodeMirror-code div:nth-child(1) pre.CodeMirror-line').type(' WELCOME TO CAPITALISM')
   })
 })
