@@ -1,7 +1,7 @@
 {
   "name": "qs-ui-library",
   "description": "Quantstamp's canonical UI-Library",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": true,
   "homepage": "https://www.quantstamp.com",
   "author": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/quantstamp/qs-ui-library.git"
+    "url": "https://github.com/quantstamp/qs-ui-library.git"
   },
   "license": "MIT",
   "engines": {
@@ -22,7 +22,9 @@
     "styleguide:build": "styleguidist build",
     "styleguide:deploy": "npm run styleguide:build && cd styleguide && now && cd ..",
     "start": "micro",
-    "dev": "scripts/dev.sh"
+    "dev": "scripts/dev.sh",
+    "travis-deploy-once": "travis-deploy-once",
+    "semantic-release": "semantic-release"
   },
   "postcss": {
     "plugins": {
@@ -89,7 +91,8 @@
     "gulp-shell": "^0.6.5",
     "html-webpack-plugin": "^3.2.0",
     "react-styleguidist": "^7.0.17",
-    "semantic-release": "^15.8.1",
-    "webpack": "^4.12.0"
+    "semantic-release": "^15.9.3",
+    "webpack": "^4.12.0",
+    "travis-deploy-once": "^5.0.1"
   }
 }

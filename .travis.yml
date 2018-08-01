@@ -43,3 +43,7 @@ script:
   ## like this without having to
   ## configure environment variables
   ## - cypress run --record --key <your_record_key>
+
+after_success:
+  ## Version bumping
+  - npx semantic-release
