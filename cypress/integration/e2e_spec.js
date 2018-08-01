@@ -83,7 +83,7 @@ describe('Modal', () => {
       // Any case - test for blur close
       // TODO - Write Blur based tests
       // const currentToggle = triggerToggleSelector(val)
-      // CYPRESS VISIBLITY CONSIDERSATIONS
+      // CYPRESS VISIBLITY DOCS
       // https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#An-element-is-considered-hidden-if
       // https://docs.cypress.io/guides/references/assertions.html#Visibility 
     })
