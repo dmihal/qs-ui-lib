@@ -103,7 +103,8 @@
     "analyzeCommits": "@semantic-release/commit-analyzer",
     "prepare": "@semantic-release/npm",
     "publish": [
-      "@semantic-release/npm"
+      "@semantic-release/npm",
+      "@semantic-release/github"
     ]
   }
 }
