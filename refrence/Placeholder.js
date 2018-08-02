@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
  * Image placeholders
  *
  * This is an complex placeholder that fetches images
- * based on what attributes you feed into it
+ * based on what attributes you feed into it.
  */
 
 const Placeholder = ({ subject, width, height }) => {
