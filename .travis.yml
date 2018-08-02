@@ -32,11 +32,11 @@ before_script:
   ## we use the '&' ampersand which tells
   ## travis to run this process in the background
   ## else it would block execution and hang travis
-  - npx styleguidist server &
+  - npm start
 
 script:
   ## now run cypress headlessly
-  - npx cypress run
+  - npm test
 
   ## alternatively we could specify
   ## a specific record key to use
@@ -46,4 +46,4 @@ script:
 
 after_success:
   ## Version bumping
-  - npx semantic-release
+  - npm run release

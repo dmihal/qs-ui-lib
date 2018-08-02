@@ -21,8 +21,9 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "styleguide:deploy": "npm run styleguide:build && cd styleguide && now && cd ..",
-    "start": "micro",
-    "dev": "scripts/dev.sh",
+    "start": "npx styleguidist server &",
+    "test": "npx cypress run",
+    "release": "npx semantic-release",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
