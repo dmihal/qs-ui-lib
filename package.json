@@ -1,7 +1,7 @@
 {
   "name": "qs-ui-library",
   "description": "Quantstamp's canonical UI-Library",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "homepage": "https://www.quantstamp.com",
   "author": {
     "name": "Jeff Scott Ward",
@@ -103,7 +103,8 @@
     "analyzeCommits": "@semantic-release/commit-analyzer",
     "prepare": "@semantic-release/npm",
     "publish": [
-      "@semantic-release/npm"
+      "@semantic-release/npm",
+      "@semantic-release/github"
     ]
   }
 }
