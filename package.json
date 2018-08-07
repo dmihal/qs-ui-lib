@@ -1,7 +1,7 @@
 {
   "name": "qs-ui-library",
   "description": "Quantstamp's canonical UI-Library",
-  "version": "0.0.2-development",
+  "version": "0.0.3-development",
   "homepage": "https://www.quantstamp.com",
   "author": {
     "name": "Jeff Scott Ward",

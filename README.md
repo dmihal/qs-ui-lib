@@ -1,23 +1,23 @@
 # Quantstamp Component Library and Style Guide
 powered by webpack flavored React Styleguidist
-
+![](https://quantstamp.com/assets/logo-website-dc3b71626c62e8a01d8767a293e104e968c43940060c9a0f7ca2d5e258c29def.svg)
 ![](https://d3vv6lp55qjaqc.cloudfront.net/items/0U313M3L0p120g2Y1y3J/Image%202016-04-12%20at%207.25.03%20PM.png)
 
-This repo is configured to be toolset friendly with [Next.js](https://github.com/zeit/next.js/) using [styled-jsx](https://github.com/zeit/styled-jsx) for the CSS. 
-
-The idea being to clone down this repo into your project's component folder to make use of company wide React components.
-
 #### How to import into a Next.js project:
+
+*NOTE: THIS WILL BE DEPRECATED FOR NPM SOON*
+
 From your Next.js project folder
 ```bash
-cd components
-git clone git://github.com/quantstamp/qs-ui-library.git
+npm i qs-ui-library --save
+# or
+yarn add qs-ui-library
 ```
 
 Then to source the component in your page or top level component
 ```js
 // File: pages/mypage.js
-import MyComponent from '../components/qs-up-library/MyComponent'
+import { MyComponent } from 'qs-ui-library'
 
 |
 |
