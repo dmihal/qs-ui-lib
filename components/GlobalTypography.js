@@ -1,8 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-// import { GlobalTypeBase } from '../globals/type-base.js';
 import { Colors, Typography, MarginPaddingSize } from '../vars.js';
-
 /**
  * This is a global style baseline that is meant to be imported
  * at the top layer of your app
@@ -52,8 +49,5 @@ const GlobalTypography = () => (
     html { background: inherit; }
   `}</style>
 )
-
-GlobalTypography.propTypes = {}
-GlobalTypography.defaultProps = {}
 
 export default GlobalTypography
