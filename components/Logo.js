@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { Colors, MarginPaddingSize } from '../vars.js';
 import { Typography } from '../vars.js';
 
-const quantstampLogo             = require('../assets/logos/quantstamp-logo.svg');
-const quantstampLogoDark         = require('../assets/logos/quantstamp-logo-dark.svg');
-const quantstampLogoVertical     = require('../assets/logos/quantstamp-logo-vertical.svg');
-const quantstampLogoVerticalDark = require('../assets/logos/quantstamp-logo-vertical-dark.svg');
-const quantstampLogoProduct      = require('../assets/logos/quantstamp-logo-product.svg');
-const quantstampLogoProductDark  = require('../assets/logos/quantstamp-logo-product-dark.svg');
+const quantstampLogo             = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo.svg.js');
+const quantstampLogoDark         = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-dark.svg.js');
+const quantstampLogoVertical     = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-vertical.svg.js');
+const quantstampLogoVerticalDark = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-vertical-dark.svg.js');
+const quantstampLogoProduct      = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-product.svg.js');
+const quantstampLogoProductDark  = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-product-dark.svg.js');
 
 const Logo = ({ type, theme, productName, width, height }) => (
   <div className="Logo">

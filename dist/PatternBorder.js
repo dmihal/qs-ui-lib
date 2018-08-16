@@ -23,11 +23,11 @@ var PatternBorder = function PatternBorder(_ref) {
   return _react2.default.createElement(
     'div',
     {
-      className: 'jsx-2553260426' + ' ' + 'PatternBorder'
+      className: 'jsx-2210278470' + ' ' + 'PatternBorder'
     },
     _react2.default.createElement(_style2.default, {
-      styleId: '2553260426',
-      css: '.PatternBorder.jsx-2553260426{width:100%;height:20px;opacity:0.7;background:' + ('url(' + require('../assets/misc/pattern.svg') + ')') + ' repeat;}'
+      styleId: '2210278470',
+      css: '.PatternBorder.jsx-2210278470{width:100%;height:20px;opacity:0.7;background:' + ('url(' + require('qs-ui-library-asset-inliner/inlined/misc/pattern.svg.js') + ')') + ' repeat;}'
     })
   );
 };

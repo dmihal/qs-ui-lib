@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Glyph = ({ type, size }) => (
     <img
       alt={'Glyph ' + type}
-      src={require('../assets/glyphs/'+type+'.svg')}
+      src={require('qs-ui-library-asset-inliner/inlined/glyphs/'+type+'.svg.js')}
       style={{
         'width': Glyph.sizes[size] || '40px',
         'height': Glyph.sizes[size] || '40px'

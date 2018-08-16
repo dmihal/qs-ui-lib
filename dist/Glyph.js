@@ -19,7 +19,7 @@ var Glyph = function Glyph(_ref) {
       size = _ref.size;
   return _react2.default.createElement('img', {
     alt: 'Glyph ' + type,
-    src: require('../assets/glyphs/' + type + '.svg'),
+    src: require('qs-ui-library-asset-inliner/inlined/glyphs/' + type + '.svg.js'),
     style: {
       'width': Glyph.sizes[size] || '40px',
       'height': Glyph.sizes[size] || '40px'

@@ -44,7 +44,7 @@ class DatePick extends React.Component {
             height: 16px;
             vertical-align: middle;
             content: '';
-            background: ${ 'url(/' + require('../assets/glyphs/glyph-calendar.svg') + ')'};
+            background: ${ 'url(/' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-calendar.svg.js') + ')'};
             left: calc(100% - 20px);
             bottom: 14px;
           }

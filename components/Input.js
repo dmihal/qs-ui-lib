@@ -59,7 +59,7 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
           display: block;
           vertical-align: middle;
           content: '';
-          background: ${ search ? 'url(/' + require('../assets/glyphs/glyph-search.svg') + ')' : null };
+          background: ${ search ? 'url(/' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-search.svg.js') + ')' : null };
           width: 14px;
           height: 14px;
           position: absolute;

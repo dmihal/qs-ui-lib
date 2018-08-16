@@ -84,7 +84,7 @@ var Modal = function (_Component) {
               'label',
               { htmlFor: 'modal-trigger-' + this.props.modalID, className: _style2.default.dynamic([['3255877856', [_vars.Colors.White, _vars.MarginPaddingSize[3], _vars.Typography.typePrimaryWeight.normal, this.props.fullscreen ? '' : 'position: relative']]]) + ' ' + 'close'
               },
-              _react2.default.createElement('img', { src: require('../assets/glyphs/glyph-close-x.svg'), alt: 'close button', className: _style2.default.dynamic([['3255877856', [_vars.Colors.White, _vars.MarginPaddingSize[3], _vars.Typography.typePrimaryWeight.normal, this.props.fullscreen ? '' : 'position: relative']]])
+              _react2.default.createElement('img', { src: require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-close-x.svg.js'), alt: 'close button', className: _style2.default.dynamic([['3255877856', [_vars.Colors.White, _vars.MarginPaddingSize[3], _vars.Typography.typePrimaryWeight.normal, this.props.fullscreen ? '' : 'position: relative']]])
               })
             ),
             _react2.default.createElement(

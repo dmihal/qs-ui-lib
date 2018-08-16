@@ -62,7 +62,7 @@ export default class Modal extends Component {
             )}
           >
             <label htmlFor={'modal-trigger-' + this.props.modalID} className="close">
-              <img src={require('../assets/glyphs/glyph-close-x.svg')} alt="close button" />
+              <img src={require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-close-x.svg.js')} alt="close button" />
             </label>
             <h2>{this.state.title}</h2>
             {this.props.children}

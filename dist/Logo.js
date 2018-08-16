@@ -20,12 +20,12 @@ var _vars = require('../vars.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var quantstampLogo = require('../assets/logos/quantstamp-logo.svg');
-var quantstampLogoDark = require('../assets/logos/quantstamp-logo-dark.svg');
-var quantstampLogoVertical = require('../assets/logos/quantstamp-logo-vertical.svg');
-var quantstampLogoVerticalDark = require('../assets/logos/quantstamp-logo-vertical-dark.svg');
-var quantstampLogoProduct = require('../assets/logos/quantstamp-logo-product.svg');
-var quantstampLogoProductDark = require('../assets/logos/quantstamp-logo-product-dark.svg');
+var quantstampLogo = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo.svg.js');
+var quantstampLogoDark = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-dark.svg.js');
+var quantstampLogoVertical = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-vertical.svg.js');
+var quantstampLogoVerticalDark = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-vertical-dark.svg.js');
+var quantstampLogoProduct = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-product.svg.js');
+var quantstampLogoProductDark = require('qs-ui-library-asset-inliner/inlined/logos/quantstamp-logo-product-dark.svg.js');
 
 var Logo = function Logo(_ref) {
   var type = _ref.type,

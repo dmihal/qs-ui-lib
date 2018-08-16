@@ -69,6 +69,7 @@
     "postcss-nested": "^3.0.0",
     "print-env": "^0.1.2",
     "prop-types": "^15.6.1",
+    "qs-ui-library-asset-inliner": "^1.0.1",
     "rc-slider": "^8.6.1",
     "rc-tooltip": "^3.7.2",
     "react": "^16.4.0",

@@ -71,8 +71,8 @@ const LinkCTA = ({ children, label, onDark }) => (
             margin-left: ${MarginPaddingSize[5]};
             background: ${ 
               !!onDark
-                ? 'url( ' + require('../assets/glyphs/glyph-double-arrow-color-malibu.svg') + ')' 
-                : 'url( ' + require('../assets/glyphs/glyph-double-arrow.svg') + ')' 
+                ? 'url( ' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-double-arrow-color-malibu.svg.js') + ')' 
+                : 'url( ' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-double-arrow.svg.js') + ')' 
             } no-repeat;
             background-position-x: right;
           }

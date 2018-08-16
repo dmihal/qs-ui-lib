@@ -48,7 +48,7 @@ var Banner = function Banner(_ref) {
     _react2.default.createElement(
       'div',
       {
-        className: _style2.default.dynamic([['667660778', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'Banner'
+        className: _style2.default.dynamic([['205829244', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'Banner'
       },
       _react2.default.createElement(
         _LayoutGrid2.default,
@@ -56,19 +56,19 @@ var Banner = function Banner(_ref) {
         _react2.default.createElement(
           'div',
           {
-            className: _style2.default.dynamic([['667660778', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'banner-left'
+            className: _style2.default.dynamic([['205829244', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'banner-left'
           },
           _react2.default.createElement(
             'h1',
             {
-              className: _style2.default.dynamic([['667660778', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]])
+              className: _style2.default.dynamic([['205829244', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]])
             },
             title
           ),
           secondayTitle ? _react2.default.createElement(
             'h1',
             {
-              className: _style2.default.dynamic([['667660778', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]])
+              className: _style2.default.dynamic([['205829244', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]])
             },
             secondayTitle
           ) : null
@@ -76,7 +76,7 @@ var Banner = function Banner(_ref) {
         _react2.default.createElement(
           'div',
           {
-            className: _style2.default.dynamic([['667660778', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'banner-right'
+            className: _style2.default.dynamic([['205829244', [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]]]) + ' ' + 'banner-right'
           },
           ctaBtnText && ctaBtnAction ? _react2.default.createElement(
             _Button2.default,
@@ -86,9 +86,9 @@ var Banner = function Banner(_ref) {
         )
       ),
       _react2.default.createElement(_style2.default, {
-        styleId: '667660778',
-        css: '.Banner.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:vertical;-ms-flex-direction:vertical;flex-direction:vertical;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:240px;padding:0 ' + _vars.MarginPaddingSize[2] + ';background-color:' + (altStyle ? 'none' : _vars.Colors.Mirage) + ';background-image:' + (altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')') + ';background-position:bottom;background-size:100% auto;background-size:cover;background-repeat:no-repeat;' + (altStyle ? 'background-color: none; background-image: none;' : null) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector,.Banner.__jsx-style-dynamic-selector h2.__jsx-style-dynamic-selector{margin:0;}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector{color:' + (altStyle ? _vars.Colors.Mirage : _vars.Colors.White) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector+h1.__jsx-style-dynamic-selector{color:' + (altStyle ? _vars.Colors.Slate : _vars.Colors.White) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector{font-weight:normal;}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector+h1.__jsx-style-dynamic-selector{font-weight:100;}.Banner.__jsx-style-dynamic-selector .banner-right.__jsx-style-dynamic-selector{text-align:right;}',
-        dynamic: [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('../assets/backgrounds/waves-bg.svg') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]
+        styleId: '205829244',
+        css: '.Banner.__jsx-style-dynamic-selector{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:vertical;-ms-flex-direction:vertical;flex-direction:vertical;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;height:240px;padding:0 ' + _vars.MarginPaddingSize[2] + ';background-color:' + (altStyle ? 'none' : _vars.Colors.Mirage) + ';background-image:' + (altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')') + ';background-position:bottom;background-size:100% auto;background-size:cover;background-repeat:no-repeat;' + (altStyle ? 'background-color: none; background-image: none;' : null) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector,.Banner.__jsx-style-dynamic-selector h2.__jsx-style-dynamic-selector{margin:0;}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector{color:' + (altStyle ? _vars.Colors.Mirage : _vars.Colors.White) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector+h1.__jsx-style-dynamic-selector{color:' + (altStyle ? _vars.Colors.Slate : _vars.Colors.White) + ';}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector{font-weight:normal;}.Banner.__jsx-style-dynamic-selector h1.__jsx-style-dynamic-selector+h1.__jsx-style-dynamic-selector{font-weight:100;}.Banner.__jsx-style-dynamic-selector .banner-right.__jsx-style-dynamic-selector{text-align:right;}',
+        dynamic: [_vars.MarginPaddingSize[2], altStyle ? 'none' : _vars.Colors.Mirage, altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')', altStyle ? _vars.Colors.Mirage : _vars.Colors.White, altStyle ? _vars.Colors.Slate : _vars.Colors.White, altStyle ? 'background-color: none; background-image: none;' : null]
       })
     )
   );

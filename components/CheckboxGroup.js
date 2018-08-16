@@ -44,7 +44,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
             }
             input:checked + label:after,
             input:not(:checked) + label:after {
-              background-image: ${ 'url(/' + require('../assets/glyphs/glyph-check.svg') + ')' };
+              background-image: ${ 'url(/' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-check.svg.js') + ')' };
             }
         }
       }
@@ -86,7 +86,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
-          background-image: ${ error ? 'none' : 'url(/' + require('../assets/glyphs/glyph-check.svg') + ')' };
+          background-image: ${ error ? 'none' : 'url(/' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-check.svg.js') + ')' };
           background-size: contain;
         }
         &:not(:checked) + label:after {

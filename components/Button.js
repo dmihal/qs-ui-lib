@@ -76,7 +76,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
               height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               line-height: ${ size !== "small" ? size || MarginPaddingSize[3] : MarginPaddingSize[3] };
               padding: 0;
-              background: ${ `url( ` + require('../assets/glyphs/glyph-carousel-arrow.svg') + `)` }  no-repeat center center;
+              background: ${ `url( ` + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-carousel-arrow.svg.js') + `)` }  no-repeat center center;
             `) : ''
         }
         ${

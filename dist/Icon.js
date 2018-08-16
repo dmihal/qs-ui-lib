@@ -19,7 +19,7 @@ var Icon = function Icon(_ref) {
       size = _ref.size;
   return _react2.default.createElement('img', {
     alt: 'icon ' + type,
-    src: require('../assets/icons/' + type + '.svg'),
+    src: require('qs-ui-library-asset-inliner/inlined/icons/' + type + '.svg.js'),
     style: {
       'width': Icon.sizes[size] || '40px',
       'height': Icon.sizes[size] || '40px'
