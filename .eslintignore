@@ -1,0 +1,7 @@
+/coverage
+/es
+/lib
+/styleguide
+jest.config.js
+jest.setup.js
+styleguide.config.js
