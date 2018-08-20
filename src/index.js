@@ -32,7 +32,7 @@ import RadioGroup from './components/RadioGroup'
 import SelectDropDown from './components/SelectDropDown'
 import SlideBar from './components/SlideBar'
 import Table from './components/Table'
-import TextArea from './components/TextArea'
+import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
 
 export {
@@ -70,6 +70,6 @@ export {
   SelectDropDown,
   SlideBar,
   Table,
-  TextArea,
+  Textarea,
   Toggle,
  }
