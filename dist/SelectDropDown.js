@@ -22,10 +22,6 @@ var _reactSelect = require('react-select');
 
 var _reactSelect2 = _interopRequireDefault(_reactSelect);
 
-var _reactSelect3 = require('react-select/dist/react-select.css');
-
-var _reactSelect4 = _interopRequireDefault(_reactSelect3);
-
 var _vars = require('../vars.js');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
