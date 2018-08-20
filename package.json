@@ -24,7 +24,7 @@
     "start": "npx styleguidist server &",
     "test": "npx cypress run",
     "release": "npx semantic-release",
-    "transpile": "babel src -d dist --copy-files",
+    "transpile": "babel components -d dist",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release"
   },
