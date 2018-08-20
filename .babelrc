@@ -1,18 +1,16 @@
 {
-    "env": {
-        "es": {
-            "presets": [["zillow", { "modules": false }]]
-        }
-    },
-    "presets": ["zillow"],
-    "plugins": [
-        [
-            "styled-jsx/babel",
-            {
-                "plugins": [
-                    "styled-jsx-plugin-postcss"
-                ]
-            }
+  "presets": ["env","react"],
+  "plugins": [
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    [
+      "styled-jsx/babel",
+      {
+        "plugins": [
+          "styled-jsx-plugin-postcss"
         ]
+      }
     ]
+  ]
 }
+

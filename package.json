@@ -1,6 +1,6 @@
 {
   "name": "qs-ui-library",
-  "version": "0.0.24-development",
+  "version": "0.0.25-development",
   "description": "Quantstamp UI Library",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -35,12 +35,6 @@
       "pre-commit": ""
     }
   },
-  "postcss": {
-    "plugins": {
-      "postcss-nested": "^3.0.0",
-      "postcss-media-minmax": "^@3.0.0"
-    }
-  },
   "dependencies": {
     "codemirror": "^5.39.2",
     "moment": "^2.22.2",
@@ -63,6 +57,9 @@
   },
   "devDependencies": {
     "babel-preset-zillow": "^1.0.0-rc.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
     "create-react-styleguide": "0.0.17",
     "cypress": "^3.1.0",
     "enzyme": "^3.4.1",
