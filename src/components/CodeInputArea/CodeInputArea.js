@@ -26,7 +26,9 @@ contract ProofOfExistence1 {
 
 class CodeInputArea extends Component {
   static propTypes = {
-    code: PropTypes.string.isRequired
+    code: PropTypes.string.isRequired,
+    styleOverrides: PropTypes.string,
+    className: PropTypes.string
   }
 
   constructor(props) {
@@ -51,6 +53,7 @@ class CodeInputArea extends Component {
             mode: 'xml',
             lineNumbers: true
           }}
+          className={this.props.className}
           onBeforeChange={(editor, data, value) => {
             this.setState({value});
           }}
@@ -417,6 +420,9 @@ class CodeInputArea extends Component {
         pre.CodeMirror-line { padding-left: 20px; }
       `}
       </style>
+      <style>{`
+        ${this.props.styleOverrides}
+      `}</style>
     </React.Fragment>
     );
   }

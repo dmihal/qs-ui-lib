@@ -21,7 +21,11 @@ contract ProofOfExistence1 {
   }
 }`;
 
-<CodeInputArea code={sampleCode} handleChange={(value, data, editor) => { 
+<CodeInputArea
+  code={sampleCode}
+  className="X123"
+  styleOverrides={`.X123 * { background: #eee; }`}
+  handleChange={(value, data, editor) => { 
   console.log(value)
   console.log(data) 
   console.log(editor) 
