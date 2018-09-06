@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import DatePicker from 'react-datepicker';
-import moment from 'moment';
+import React from 'react'
+import PropTypes from 'prop-types'
+import DatePicker from 'react-datepicker'
+import moment from 'moment'
 
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import { Typography, Colors, MarginPaddingSize } from '../vars.js'
 
 class DatePick extends React.Component {
   constructor (props) {
@@ -12,9 +12,10 @@ class DatePick extends React.Component {
   }
  
   handleChange = (date) => {
-    this.props.handleChange
-      ? (this.props.handleChange(date))
-      : this.setState({startDate: date})
+    this.setState({startDate: date})
+    if(this.props.handleChange){
+      this.props.handleChange(date)
+    }
   }
  
   render() {
@@ -94,6 +95,9 @@ class DatePick extends React.Component {
           .react-datepicker-wrapper {
             display: inline-block;
           }
+          .react-datepicker-wrapper * {
+            cursor: pointer;
+          }
           
           .react-datepicker {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -101,7 +105,7 @@ class DatePick extends React.Component {
             background-color: #fff;
             color: #000;
             border: 1px solid #aeaeae;
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             display: inline-block;
             position: relative;
           }
@@ -115,11 +119,11 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker--time-only .react-datepicker__time {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
           }
           
           .react-datepicker--time-only .react-datepicker__time-box {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
           }
           
           .react-datepicker__triangle {
@@ -208,6 +212,11 @@ class DatePick extends React.Component {
             padding: 0;
             border: 0.45rem solid transparent;
             z-index: 1;
+            height: 0;
+            color: transparent;
+          }
+          .react-datepicker__navigation:focus {
+            outline: none;
           }
           
           .react-datepicker__navigation--previous {
@@ -286,7 +295,7 @@ class DatePick extends React.Component {
           .react-datepicker__time-container--with-today-button {
             display: inline;
             border: 1px solid #aeaeae;
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             position: absolute;
             right: -72px;
             top: 0;
@@ -356,7 +365,7 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker__week-number.react-datepicker__week-number--clickable:hover {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             background-color: #f0f0f0;
           }
           
@@ -381,7 +390,7 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker__day:hover {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             background-color: #f0f0f0;
           }
           
@@ -390,7 +399,7 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker__day--highlighted {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             background-color: #3dcc4a;
             color: #fff;
           }
@@ -408,7 +417,7 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker__day--selected, .react-datepicker__day--in-selecting-range, .react-datepicker__day--in-range {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             background-color: #216ba5;
             color: #fff;
           }
@@ -418,7 +427,7 @@ class DatePick extends React.Component {
           }
           
           .react-datepicker__day--keyboard-selected {
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             background-color: #2a87d0;
             color: #fff;
           }
@@ -454,7 +463,7 @@ class DatePick extends React.Component {
           .react-datepicker__month-read-view,
           .react-datepicker__month-year-read-view {
             border: 1px solid transparent;
-            border-radius: 0.3rem;
+            border-radius: 0rem;
           }
           
           .react-datepicker__year-read-view:hover,
@@ -493,7 +502,7 @@ class DatePick extends React.Component {
             top: 30px;
             z-index: 1;
             text-align: center;
-            border-radius: 0.3rem;
+            border-radius: 0rem;
             border: 1px solid #aeaeae;
           }
           
@@ -670,7 +679,7 @@ class DatePick extends React.Component {
         `}</style>
         <style jsx>{`
           :global(.react-datepicker-wrapper) {
-            width: ${this.props.width || '282px'};
+            width: ${this.props.width || 'auto'};
           }
           :global(.react-datepicker) {
             border-radius: 0;
@@ -686,12 +695,12 @@ class DatePick extends React.Component {
             vertical-align: middle;
             content: '';
             background: ${ 'url(' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-calendar.svg.js') + ')'};
-            left: calc(100% - 20px);
+            left: calc(100% - 30px);
             bottom: 14px;
           }
           :global(.react-datepicker__input-container > *) {
             display: block;
-            width: 100%;
+            width: 266px;
             font-size: ${Typography.fontSize[3]};
             color: ${Colors.Mirage};
             border: solid 1px ${Colors.Gallery};
@@ -761,8 +770,8 @@ class DatePick extends React.Component {
 }
 
 DatePick.propTypes = {
-  // selected: PropTypes.func,
-  // handleChange: PropTypes.func,
+  selected: PropTypes.func,
+  handleChange: PropTypes.func,
 }
 
 DatePick.defaultProps = {}

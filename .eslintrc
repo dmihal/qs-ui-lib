@@ -1,5 +1,4 @@
 {
-  "extends": "plugin:zillow/recommended",
   "overrides": [{
     "files": [ "**/*.test.js"],
     "env": {

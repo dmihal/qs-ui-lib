@@ -1,3 +1,3 @@
 ```jsx
-<DatePick handleChange={(date) => { console.log(date)} }/>
+<DatePick handleChange={(date) => { console.log(date.year()) }}/>
 ```
