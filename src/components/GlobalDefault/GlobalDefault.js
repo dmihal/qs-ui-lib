@@ -7,8 +7,8 @@ import { Colors } from '../vars.js';
 const GlobalDefault = () => (
   <style jsx global>{`
     *,
-    ::before,
-    ::after { box-sizing: border-box !important; }
+    *::before,
+    *::after { box-sizing: border-box !important; }
           
     ul, li {
       list-style: none;

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
+import GlobalFonts from '../GlobalFonts'
 
 import { Typography, Colors, MarginPaddingSize } from '../vars.js'
 
@@ -680,12 +681,17 @@ class DatePick extends React.Component {
         <style jsx>{`
           :global(.react-datepicker-wrapper) {
             width: ${this.props.width || 'auto'};
+            box-sizing: border-box;
+          }
+          :global(.react-datepicker-wrapper *) {
+            box-sizing: border-box;
           }
           :global(.react-datepicker) {
             border-radius: 0;
             border: 1px solid #c4cdd5;
           }
           :global(.react-datepicker__input-container) {width: 100%;}
+          :global(.react-datepicker__input-container input) {width: 282px;}
           :global(.react-datepicker__input-container::after) {
             content: '';
             display: block;
@@ -700,7 +706,6 @@ class DatePick extends React.Component {
           }
           :global(.react-datepicker__input-container > *) {
             display: block;
-            width: 266px;
             font-size: ${Typography.fontSize[3]};
             color: ${Colors.Mirage};
             border: solid 1px ${Colors.Gallery};
@@ -708,6 +713,7 @@ class DatePick extends React.Component {
             padding: calc(${MarginPaddingSize[5]}) calc(${MarginPaddingSize[5]});
             outline: none;
             position: relative;
+            box-sizing: border-box;
           }
           :global(.react-datepicker__header) {
             background: ${Colors.White};
@@ -726,6 +732,7 @@ class DatePick extends React.Component {
             height: ${MarginPaddingSize[3]};
             line-height: ${MarginPaddingSize[3]};
             font-size: ${Typography.fontSize[3]};
+            box-sizing: border-box;
           }
           :global(.react-datepicker__day-name) {
             line-height: ${Typography.fontSize[4]};
