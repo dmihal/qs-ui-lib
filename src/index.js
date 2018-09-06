@@ -34,6 +34,8 @@ import SlideBar from './components/SlideBar'
 import Table from './components/Table'
 import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
+import VerifiedSeal from './components/VerifiedSeal'
+import VerifiedSealBanner from './components/VerifiedSealBanner'
 
 export {
   Accordian,
@@ -72,4 +74,6 @@ export {
   Table,
   Textarea,
   Toggle,
+  VerifiedSeal,
+  VerifiedSealBanner,
  }

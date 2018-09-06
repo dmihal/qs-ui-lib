@@ -42,7 +42,7 @@
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
     "prop-types": "^15.6.2",
-    "qs-ui-library-asset-inliner": "^1.0.1",
+    "qs-ui-library-asset-inliner": "^1.0.2",
     "rc-slider": "^8.6.1",
     "rc-tooltip": "^3.7.2",
     "react-codemirror2": "^5.1.0",
@@ -56,6 +56,7 @@
     "react": "16.x"
   },
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
