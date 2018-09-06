@@ -4,7 +4,9 @@ import PropTypes from 'prop-types'
 const _______ = ({ children }) => (
   <div className="_______">
     <style jsx>{`
-      
+      .________ {
+
+      }
     `}</style>
   </div>
 )
@@ -19,6 +21,8 @@ _______.propTypes = {
   ]).isRequired
 }
 
-_______.defaultProps = {}
+_______.defaultProps = {
+
+}
 
 export default _______

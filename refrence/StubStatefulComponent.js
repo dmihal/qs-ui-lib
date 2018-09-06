@@ -24,7 +24,12 @@ class _______ extends Component {
   render() {
     return (
       <React.Fragment>
-        <SomeImportedComponent value={this.state.value} onChange={(someVal) => {this.handleChange(someVal)}} />
+        <SomeImportedComponent
+          value={this.state.value}
+          onChange={(someVal) => {
+            this.handleChange(someVal)}
+          }
+        />
       </React.Fragment>
     );
   }

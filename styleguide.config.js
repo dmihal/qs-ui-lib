@@ -1,9 +1,5 @@
-// const path = require('path');
-// const createStyleguideConfig = require('create-react-styleguide').createStyleguideConfig;
-
-// module.exports = createStyleguideConfig()
-
 const { createConfig, babel, postcss } = require('webpack-blocks')
+
 module.exports = {
   title: 'Quantstamp Style Guide',
   components: 'src/components/**/[A-Z]*.js',

@@ -1,10 +1,7 @@
 {
   "overrides": [{
     "files": [ "**/*.test.js"],
-    "env": {
-        "jest": true,
-        "jest/globals": true
-    },
-    "plugins": ["jest"]
+    "env": {},
+    "plugins": []
   }]
 }
