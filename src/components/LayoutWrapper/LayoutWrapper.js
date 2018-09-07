@@ -11,8 +11,8 @@ const LayoutWrapper = ({ children, documentationStylesOnly }) => (
     <style jsx>{`
       .LayoutWrapper {
         margin: auto;
-        max-width: ${LayoutSizes[0]};
-        padding: 0 ${MarginPaddingSize[2]};
+        max-width: ${LayoutSizes[5]};
+        padding: 0 ${MarginPaddingSize[3]};
         width: 100%;
       } 
       ${documentationStylesOnly}

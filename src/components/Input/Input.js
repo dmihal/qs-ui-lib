@@ -14,13 +14,13 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
         display: inline-block;
         min-width: 100px;
         position: relative;
-        padding-bottom: calc(${MarginPaddingSize[4]}/2);
+        padding-bottom: calc(${MarginPaddingSize[1]}/2);
 
         label {
           display: block;
           font-size: ${Typography.fontSize[4]};
           color: ${Colors.Slate};
-          margin-bottom: calc(${MarginPaddingSize[5]}/2);
+          margin-bottom: calc(${MarginPaddingSize[0]}/2);
 
           &.error {
             color: ${Colors.Cinnabar}
@@ -34,7 +34,7 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
           color: ${ error ? Colors.Cinnabar : Colors.Mirage};
           border: solid 1px ${Colors.Gallery};
           border-color: ${ error ? Colors.Cinnabar : Colors.Gallery };
-          padding: calc(${MarginPaddingSize[5]}) calc(${MarginPaddingSize[5]});
+          padding: calc(${MarginPaddingSize[0]}) calc(${MarginPaddingSize[0]});
           outline: none;
           position: relative;
           border-radius: 2px;

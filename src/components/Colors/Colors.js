@@ -81,20 +81,20 @@ const Colors = () => (
         width: 850px;
       }
       .Legend {
-        width: ${MarginPaddingSize[1]};
-        padding: 0 ${MarginPaddingSize[5]} ${MarginPaddingSize[5]} 0;
+        width: ${MarginPaddingSize[4]};
+        padding: 0 ${MarginPaddingSize[0]} ${MarginPaddingSize[0]} 0;
       }
       i {
         font-size: ${Typography.fontSize[4]}
       }
 
       h4 {
-        margin-bottom: ${MarginPaddingSize[5]};
+        margin-bottom: ${MarginPaddingSize[0]};
       }
 
       .Circle {
-        width: ${MarginPaddingSize[2]};
-        height: ${MarginPaddingSize[2]};
+        width: ${MarginPaddingSize[3]};
+        height: ${MarginPaddingSize[3]};
         border-radius: 50%;
 
         &.Royal {

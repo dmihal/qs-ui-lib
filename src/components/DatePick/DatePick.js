@@ -710,7 +710,7 @@ class DatePick extends React.Component {
             color: ${Colors.Mirage};
             border: solid 1px ${Colors.Gallery};
             border-color: ${ Colors.Gallery };
-            padding: calc(${MarginPaddingSize[5]}) calc(${MarginPaddingSize[5]});
+            padding: calc(${MarginPaddingSize[0]}) calc(${MarginPaddingSize[0]});
             outline: none;
             position: relative;
             box-sizing: border-box;
@@ -728,9 +728,9 @@ class DatePick extends React.Component {
           :global(.react-datepicker__navigation--next){border-left-color: rgba(90, 106, 122, 1.0);}
           :global(.react-datepicker__day-name, .react-datepicker__day, .react-datepicker__time-name) {
             margin: 0;
-            width: ${MarginPaddingSize[3]};
-            height: ${MarginPaddingSize[3]};
-            line-height: ${MarginPaddingSize[3]};
+            width: ${MarginPaddingSize[2]};
+            height: ${MarginPaddingSize[2]};
+            line-height: ${MarginPaddingSize[2]};
             font-size: ${Typography.fontSize[3]};
             box-sizing: border-box;
           }

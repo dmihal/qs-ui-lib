@@ -62,7 +62,7 @@ const Logo = ({ type, theme, productName, width, height }) => (
           font-size: ${Typography.fontSize[3]};
           top: -1px;
           position: relative;
-          margin-left: calc(${MarginPaddingSize[5]} / 2);
+          margin-left: calc(${MarginPaddingSize[0]} / 2);
           
           ${
             theme === 'onLight'

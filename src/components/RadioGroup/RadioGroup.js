@@ -24,7 +24,7 @@ const RadioGroup = ({ nameID, options, error }) => (
     </form>
     <style jsx>{`
       .radio-choice-wrap {
-          margin-bottom: ${MarginPaddingSize[4]};
+          margin-bottom: ${MarginPaddingSize[1]};
 
           &.disabled {
             input:checked + label:before,

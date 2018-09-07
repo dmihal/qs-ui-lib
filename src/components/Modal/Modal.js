@@ -137,7 +137,7 @@ export default class Modal extends Component {
           }
           
           h2{
-            margin-bottom: ${MarginPaddingSize[3]};
+            margin-bottom: ${MarginPaddingSize[2]};
             font-weight: ${Typography.typePrimaryWeight.normal};
           }
           

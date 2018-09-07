@@ -50,7 +50,7 @@ const LinkCTA = ({ children, label, onDark }) => (
         }
 
         .description-box {
-          padding: 0 ${MarginPaddingSize[5]};
+          padding: 0 ${MarginPaddingSize[0]};
           font-size: ${Typography.fontSize[4]};
           color: ${ !!onDark === true ? Colors.Malibu : '' };
           @media (width <= 500px) {
@@ -66,9 +66,9 @@ const LinkCTA = ({ children, label, onDark }) => (
             position: relative;
             left: 0px;
             transition: inherit;
-            width: calc(${MarginPaddingSize[5]}*2);
-            height: ${MarginPaddingSize[5]};
-            margin-left: ${MarginPaddingSize[5]};
+            width: calc(${MarginPaddingSize[0]}*2);
+            height: ${MarginPaddingSize[0]};
+            margin-left: ${MarginPaddingSize[0]};
             background: ${ 
               !!onDark
                 ? 'url( ' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-double-arrow-color-malibu.svg.js') + ')' 

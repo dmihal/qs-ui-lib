@@ -29,7 +29,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           flex-direction: vertical;
           align-items: center;
           height: 240px;
-          padding: 0 ${MarginPaddingSize[2]};
+          padding: 0 ${MarginPaddingSize[3]};
           
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
           background-image: ${ altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')' };

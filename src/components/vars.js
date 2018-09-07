@@ -41,5 +41,12 @@ export const Typography = {
 // -----------------------------------------------------------------------------
 // LAYOUT
 // -----------------------------------------------------------------------------
-export const LayoutSizes = ['1440px', '1200px', '960px', '600px', '460px', '320px']
-export const MarginPaddingSize = ['240px', '120px', '80px', '40px', '20px', '10px']
+
+//   export const LayoutSizes = ['1440px', '1200px', '960px', '600px', '460px', '320px']
+  // export const LayoutSizes = [      0,       1,      2,      3,      4,      5]
+  
+  export const LayoutSizes = ['320px', '460px', '600px', '960px', '1200px', '1440px']
+  // export const LayoutSizes = [      5,       4,      3,      2,      1,      0]
+  // export const LayoutSizes = [      0,       1,      2,      3,      4,      5]
+
+  export const MarginPaddingSize = ['10px', '20px', '40px', '80px', '120px', '240px']

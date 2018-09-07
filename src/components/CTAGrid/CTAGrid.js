@@ -15,7 +15,7 @@ const CTAGrid = ({ children }) => (
         
         > :global(*) {
           border: 1px solid #eee;
-          min-height: ${MarginPaddingSize[2]};
+          min-height: ${MarginPaddingSize[3]};
           border-right: none;
         }
 

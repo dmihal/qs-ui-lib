@@ -5,6 +5,12 @@ module.exports = {
   components: 'src/components/**/[A-Z]*.js',
   theme: { 
     maxWidth: '1600px',
+    // color: {
+    //   baseBackground: '#1C1C1C',
+    //   sidebarBackground: '#2A2A2A',
+    //   ribbonBackground: '#464646',
+    //   codeBackground: '#FFFFFF'
+    // },
     fontSize: {
       base: 16,
       text: 16,
@@ -17,5 +23,19 @@ module.exports = {
       h6: 16,
     }
   },
+  // styles: {
+  //   Preview: {
+  //     backgroundColor: '#FFFFFF'
+  //   },
+  //   Preview: {
+  //     preview: { backgroundColor: '#FFFFFF' }
+  //   },
+  //   ReactExample: {
+  //     backgroundColor: '#FFFFFF'
+  //   },
+  //   ReactExample: {
+  //     reactexample: { backgroundColor: '#FFFFFF' }
+  //   }
+  // },
   webpackConfig: createConfig([babel(), postcss()])
 }

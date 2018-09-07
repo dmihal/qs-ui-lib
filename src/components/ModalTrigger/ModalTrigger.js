@@ -14,7 +14,7 @@ const ModalTrigger = ({ children, modalID }) => (
         border-style: solid;
         color: ${Colors.Royal};
 
-        padding: 6px calc(${MarginPaddingSize[3]}/2);
+        padding: 6px calc(${MarginPaddingSize[2]}/2);
         font-size: ${Typography.fontSize[3]};
 
         background: ${Colors.Royal};

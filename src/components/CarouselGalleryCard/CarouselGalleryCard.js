@@ -20,7 +20,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
       .CarouselGalleryCard {
         width: 470px;
         height: 450px;
-        padding: ${MarginPaddingSize[3]};
+        padding: ${MarginPaddingSize[2]};
         background: ${Colors.White};
         box-shadow: 0 5px 20px 0 rgba(63, 63, 68, 0.1);
         border-radius: 2px;
@@ -41,11 +41,11 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
         .CarouselGalleryCard-header {
           display: flex;
           width: 100%;
-          padding: 0 ${MarginPaddingSize[4]} ${MarginPaddingSize[4]} 0;
+          padding: 0 ${MarginPaddingSize[1]} ${MarginPaddingSize[1]} 0;
           
           img {
             display: block;
-            margin-right: ${MarginPaddingSize[4]};
+            margin-right: ${MarginPaddingSize[1]};
             max-width: 120px;
             height: 120px;
           }
@@ -56,7 +56,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
             justify-content: flex-end;
         
             h3 {
-              margin-bottom: ${MarginPaddingSize[5]};
+              margin-bottom: ${MarginPaddingSize[1]};
             }
 
             * {

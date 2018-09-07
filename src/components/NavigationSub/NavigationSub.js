@@ -27,7 +27,7 @@ const NavigationSub = ({ children }) => (
             justify-content: center;
 
             > :global(*) { 
-              padding: 0 ${MarginPaddingSize[2]};
+              padding: 0 ${MarginPaddingSize[3]};
             }
           }
         }

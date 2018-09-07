@@ -41,7 +41,7 @@ const NavigationTop = ({ children }) => (
             height: 100%;
 
             > :global(*) { 
-              padding: 0 ${MarginPaddingSize[4]};
+              padding: 0 ${MarginPaddingSize[1]};
               display: flex;
               flex-direction: column;
               align-items: center;

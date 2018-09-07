@@ -467,7 +467,7 @@ class SelectDropDown extends React.Component {
         `}</style>
         <style jsx>{`
           :global(.Select-control) {
-            height: ${MarginPaddingSize[5]};
+            height: ${MarginPaddingSize[0]};
             border-radius: 2px;
             background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
             border: solid 1px #c4cdd5;

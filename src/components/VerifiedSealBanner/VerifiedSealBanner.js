@@ -29,12 +29,12 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
     }
     <style jsx>{`
       .VerifiedSealBanner {
-        padding: ${MarginPaddingSize[4]};
+        padding: ${MarginPaddingSize[1]};
         max-width: 420px;
         font-family: ${Typography.typePrimaryStack};
 
         .sealImg {
-          padding: ${MarginPaddingSize[4]};
+          padding: ${MarginPaddingSize[1]};
           width: 130px;
           height: 130px;
         }
@@ -46,7 +46,7 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
           background: #edeff7;
 
           .info-box {
-            padding-right: ${MarginPaddingSize[4]};
+            padding-right: ${MarginPaddingSize[1]};
           }
 
           &.vertical {
@@ -60,7 +60,7 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
             }
 
             .info-box {
-              padding-bottom: ${MarginPaddingSize[4]};
+              padding-bottom: ${MarginPaddingSize[1]};
               padding-right: 0;
             }
           }

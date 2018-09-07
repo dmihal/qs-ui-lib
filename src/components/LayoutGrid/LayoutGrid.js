@@ -11,7 +11,7 @@ const LayoutGrid = ({ children, offset }) => (
     <style jsx>{`
       .LayoutGrid {
         margin: auto;
-        max-width: ${LayoutSizes[2]};
+        max-width: ${LayoutSizes[3]};
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -23,7 +23,7 @@ const LayoutGrid = ({ children, offset }) => (
         > :global(*) {
           ${
             children.length > 1
-              ? 'width: calc( ('+LayoutSizes[2]+'/'+children.length+') - ('+MarginPaddingSize[3]+'/'+children.length+') );'
+              ? 'width: calc( ('+LayoutSizes[3]+'/'+children.length+') - ('+MarginPaddingSize[2]+'/'+children.length+') );'
               : 'width: 100%;'
           }
 
@@ -31,11 +31,11 @@ const LayoutGrid = ({ children, offset }) => (
             offset
               ? 
               offset === 'left'
-                ? '&:first-child { width: ' + LayoutSizes[3] + '};'+
-                  '&:nth-child(2) { width: ' + LayoutSizes[5] + '};'
+                ? '&:first-child { width: ' + LayoutSizes[2] + '};'+
+                  '&:nth-child(2) { width: ' + LayoutSizes[0] + '};'
                 : offset === 'right'
-                  ? '&:first-child { width: ' + LayoutSizes[5] + '};'+
-                    '&:nth-child(2) { width: ' + LayoutSizes[3] + '};'
+                  ? '&:first-child { width: ' + LayoutSizes[0] + '};'+
+                    '&:nth-child(2) { width: ' + LayoutSizes[2] + '};'
                   : ''
                 : ''
           }
@@ -43,22 +43,22 @@ const LayoutGrid = ({ children, offset }) => (
 
         > :global(*:first-child) {
           ${ offset && children.length === 2
-              ? offset === 'left' ? 'width: '+LayoutSizes[3]+';' : ''
+              ? offset === 'left' ? 'width: '+LayoutSizes[2]+';' : ''
               : ''
           }
           ${ offset && children.length === 2
-            ? offset === 'right' ? 'width: '+LayoutSizes[5]+';' : ''
+            ? offset === 'right' ? 'width: '+LayoutSizes[0]+';' : ''
             : ''
           }
         }
 
         > :global(*:nth-child(2)) {
           ${ offset && children.length === 2
-              ? offset === 'left' ? 'width: '+LayoutSizes[5]+';' : ''
+              ? offset === 'left' ? 'width: '+LayoutSizes[0]+';' : ''
               : ''
           }
           ${ offset && children.length === 2
-            ? offset === 'right' ? 'width: '+LayoutSizes[3]+';' : ''
+            ? offset === 'right' ? 'width: '+LayoutSizes[2]+';' : ''
             : ''
           }
         }     

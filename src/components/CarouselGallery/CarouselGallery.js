@@ -23,14 +23,14 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
                   bgColor={'rgba(215, 214, 215, 1.0)'}
                   type="left"
                   onClick={previousSlide}
-                  size={MarginPaddingSize[2]}
+                  size={MarginPaddingSize[3]}
                   styleOverrides={"border: none !important;"}
                   />
                 <Button
                   bgColor={'rgba(215, 214, 215, 1.0)'}
                   type="right"
                   onClick={nextSlide}
-                  size={MarginPaddingSize[2]}
+                  size={MarginPaddingSize[3]}
                   styleOverrides={"border: none !important; border-left: 1px solid "+Colors.Alabaster+" !important;"}/>
                 <h3 className="CarouselGallery-label">{label}</h3>
               </React.Fragment>
@@ -67,7 +67,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
     }
     <style jsx>{`
       .CarouselGallery {
-        padding: ${ type === 'A' ? MarginPaddingSize[2]+" 0 0 0" : ''};
+        padding: ${ type === 'A' ? MarginPaddingSize[3]+" 0 0 0" : ''};
         position: relative;
         overflow: hidden;
 
@@ -77,7 +77,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
           height: 100%;
           width: 100%;
           top: 0;
-          left: calc( ${MarginPaddingSize[2]} * 3);
+          left: calc( ${MarginPaddingSize[3]} * 3);
           @media (width <= 500px) {
             left: 0;
           }
@@ -85,15 +85,15 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
 
         :global(.slider-control-topleft) {
           display: flex;
-          top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[2]+') !important' : ''};
-          left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
+          top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[3]+') !important' : ''};
+          left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[3]+' * 3) !important' : ''};
           @media (width <= 500px) {
             left: 0 !important;
           }
         }
 
         :global(.slider-control-bottomleft) {
-          left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[2]+' * 3) !important' : ''};
+          left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[3]+' * 3) !important' : ''};
           @media (width <= 500px) {
             left: 0 !important;
           }
@@ -107,8 +107,8 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
         .CarouselGallery-label,
         .CarouselGallery-bottomLabel {
           display: inline-block;
-          margin: 0 0 0 ${MarginPaddingSize[3]};
-          line-height: ${MarginPaddingSize[2]};
+          margin: 0 0 0 ${MarginPaddingSize[2]};
+          line-height: ${MarginPaddingSize[3]};
         }
       }
     `}</style>

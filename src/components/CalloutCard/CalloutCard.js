@@ -23,20 +23,20 @@ const CalloutCard = ({ img, title, linkText, link }) => (
         height: 100%;
         text-align: center;
         border: 1px solid #eee;
-        padding: ${MarginPaddingSize[4]} 0 0 0;
+        padding: ${MarginPaddingSize[1]} 0 0 0;
         border-radius: 2px;
         box-shadow: 0 1px 3px 0 rgba(63, 63, 68, 0.15);
 
         .callout-bottom {
           background: #f9f9f9;
-          padding: 12px 0 calc(${MarginPaddingSize[5]}) 0;
+          padding: 12px 0 calc(${MarginPaddingSize[0]}) 0;
           text-align: center;
           width: 100%;
         }
 
         h2 {
           margin-top: 10px !important;
-          margin-bottom: ${MarginPaddingSize[4]};
+          margin-bottom: ${MarginPaddingSize[1]};
           color: ${Colors.Royal};
           font-weight: normal;
         }
@@ -45,7 +45,7 @@ const CalloutCard = ({ img, title, linkText, link }) => (
           width: 70px;
           height: 70px;
           border: 1px solid #e4e4e4;
-          margin-bottom: ${MarginPaddingSize[5]};
+          margin-bottom: ${MarginPaddingSize[0]};
         }
 
       }
