@@ -8,11 +8,6 @@ import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 
 const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
   <button className="Button" disabled={type === 'disabled'}  onClick={onClick}>
-    {/* { type === 'left' || 
-      type === 'right'
-        ? `➜` 
-        : null
-    } */}
     {children}
     <style jsx>{`
       .Button {
@@ -29,7 +24,14 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         font-size: ${Typography.fontSize[3]};
         max-height: ${MarginPaddingSize[2]};
         min-width: 140px;
+        min-height: 40px;
         border-radius: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        :global(img) {display: inline-block;}
+        :global(img + *) {margin-left: 5px;}
+        :global(* + img) {margin-right: 5px;}
         &:hover {
           color: ${Colors.PoloBlue};
         }
@@ -71,6 +73,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
           type === 'left' || type === 'right'
             ? (`
               min-width: 0px;
+              min-height: 0;
               max-height: none;
               width: ${ size !== "small" ? size || MarginPaddingSize[2] : MarginPaddingSize[2] };
               height: ${ size !== "small" ? size || MarginPaddingSize[2] : MarginPaddingSize[2] };
@@ -92,6 +95,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
               font-size: ${Typography.fontSize[4]};
               max-height: 22px;
               min-width: auto;
+              min-height: 0;
               line-height: 1;
             `) : ''
         }

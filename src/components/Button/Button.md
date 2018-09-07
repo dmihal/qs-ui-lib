@@ -3,6 +3,14 @@ Default Button
 <Button>Default</Button>
 ```
 
+Default Button w/ Image
+```jsx
+<Button>
+  <Glyph type='glyph-report' size='small'/>
+  <span> Report</span>
+</Button>
+```
+
 Primary Button
 ```jsx
 <Button type="primary">Primary</Button>
