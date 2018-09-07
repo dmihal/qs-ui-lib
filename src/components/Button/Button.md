@@ -7,7 +7,7 @@ Default Button w/ Image
 ```jsx
 <Button>
   <Glyph type='glyph-report' size='small'/>
-  <span> Report</span>
+  <span>Report</span>
 </Button>
 ```
 
