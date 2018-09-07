@@ -15,7 +15,7 @@ Warning Button
 
 Disabled Button
 ```jsx
-<Button type="disabled" disabled>Disabled</Button>
+<Button type="disabled">Disabled</Button>
 ```
 
 Left Button

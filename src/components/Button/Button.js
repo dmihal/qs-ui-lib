@@ -7,7 +7,7 @@ import { Typography, Colors , MarginPaddingSize } from '../vars.js';
 // Buttons Tabs
 
 const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
-  <button className="Button" disabled={disabled}  onClick={onClick}>
+  <button className="Button" disabled={type === 'disabled'}  onClick={onClick}>
     {/* { type === 'left' || 
       type === 'right'
         ? `➜` 
