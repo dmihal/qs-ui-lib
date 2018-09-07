@@ -31,7 +31,7 @@ import PatternBorder from './components/PatternBorder'
 import RadioGroup from './components/RadioGroup'
 import SelectDropDown from './components/SelectDropDown'
 import SlideBar from './components/SlideBar'
-import Table from './components/Table'
+import SimpleTable from './components/SimpleTable'
 import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
 import VerifiedSeal from './components/VerifiedSeal'
@@ -71,7 +71,7 @@ export {
   RadioGroup,
   SelectDropDown,
   SlideBar,
-  Table,
+  SimpleTable,
   Textarea,
   Toggle,
   VerifiedSeal,

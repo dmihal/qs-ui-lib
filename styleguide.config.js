@@ -21,7 +21,7 @@ module.exports = {
       h4: 16,
       h5: 16,
       h6: 16,
-    }
+    },
   },
   // styles: {
   //   Preview: {

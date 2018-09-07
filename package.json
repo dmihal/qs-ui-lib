@@ -48,6 +48,7 @@
     "react-codemirror2": "^5.1.0",
     "react-datepicker": "^1.6.0",
     "react-select": "^2.0.0",
+    "react-table": "^6.8.6",
     "sanitize.css": "^5.0.0",
     "styled-jsx": "^3.0.2",
     "styled-jsx-plugin-postcss": "^0.1.3"

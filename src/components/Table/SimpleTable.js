@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Table = ({ data, tableTitle, direction }) => (
-  <div className='Table'>
+const SimpleTable = ({ data, tableTitle, direction }) => (
+  <div className='SimpleTable'>
     <div className='table-wrapper'>
       <div className='table-title'>{tableTitle}</div>
       {
@@ -55,9 +55,8 @@ const Table = ({ data, tableTitle, direction }) => (
         )
       }
     </div>
-
     <style jsx>{`
-      .Table {
+      .SimpleTable {
         * { text-align: left; }
       }
       .table-title {
@@ -102,13 +101,13 @@ const Table = ({ data, tableTitle, direction }) => (
   </div>
 )
 
-Table.propTypes = {
+SimpleTable.propTypes = {
   /**
    * Data Obj
    */
   data: PropTypes.object.isRequired, 
   /**
-   * Table Title
+   * SimpleTable Title
    */
   tableTitle: PropTypes.string.isRequired,
   /**
@@ -117,6 +116,6 @@ Table.propTypes = {
   direction: PropTypes.string
 }
 
-Table.defaultProps = {}
+SimpleTable.defaultProps = {}
 
-export default Table
+export default SimpleTable

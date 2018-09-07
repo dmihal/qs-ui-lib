@@ -1,6 +1,6 @@
 ```jsx
-<Table 
-  tableTitle="Table Title"
+<SimpleTable 
+  tableTitle="SimpleTable Title"
   direction="horizontal"
   data={
     {
@@ -13,8 +13,8 @@
 ```
 
 ```jsx
-<Table
-  tableTitle="Table Title"
+<SimpleTable
+  tableTitle="SimpleTable Title"
   direction="vertical"
   data={
     {
