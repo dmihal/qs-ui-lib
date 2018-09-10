@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { LayoutSizes, MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { LayoutSizes, MarginPaddingSize } from '../vars'
 
 /**
  * This is a column layout block

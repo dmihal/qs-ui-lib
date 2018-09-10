@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import { MarginPaddingSize, Colors } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '../Button'
+import { MarginPaddingSize, Colors } from '../vars'
 
 import Carousel from 'nuka-carousel';
 

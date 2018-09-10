@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Colors } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Colors } from '../vars'
 
 const Toggle = ({toggleID, size}) => (
   <React.Fragment>

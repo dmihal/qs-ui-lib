@@ -1,9 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import LayoutWrapper from '../LayoutWrapper';
-import Logo from '../Logo';
-
-import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { MarginPaddingSize } from '../vars'
+import LayoutWrapper from '../LayoutWrapper'
+import Logo from '../Logo'
 
 const NavigationTop = ({ children }) => (
   <React.Fragment>

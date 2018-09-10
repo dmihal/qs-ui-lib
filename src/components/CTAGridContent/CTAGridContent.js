@@ -1,7 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import LinkText from '../LinkText'
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { MarginPaddingSize, Colors, Typography } from '../vars'
 
 const CTAGridContent = ({ children, align }) => (
   <div className="CTAGridContent">

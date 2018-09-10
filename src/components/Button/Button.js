@@ -1,10 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors , MarginPaddingSize } from '../vars.js';
-
-// TODO:
-// ICONS Left & Right
-// Buttons Tabs
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Typography, Colors , MarginPaddingSize } from '../vars'
+import { glyphcarouselarrow } from '../../../asset-inliner'
 
 const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
   <button className="Button" disabled={type === 'disabled'}  onClick={onClick}>
@@ -79,7 +76,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
               height: ${ size !== "small" ? size || MarginPaddingSize[2] : MarginPaddingSize[2] };
               line-height: ${ size !== "small" ? size || MarginPaddingSize[2] : MarginPaddingSize[2] };
               padding: 0;
-              background: ${ `url( ` + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-carousel-arrow.svg.js') + `)` }  no-repeat center center;
+              background: ${ `url( ` + glyphcarouselarrow + `)` }  no-repeat center center;
             `) : ''
         }
         ${

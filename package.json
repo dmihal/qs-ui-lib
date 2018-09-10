@@ -13,6 +13,10 @@
     "STYLEGUIDE.md"
   ],
   "scripts": {
+    "asset-dev": "npx nodemon --exec 'npm run regen' /asset-inliner/src/index.js",
+    "asset-inline": "node asset-inliner/src/index.js --inline",
+    "asset-recycle": "node asset-inliner/src/index.js --recycle",
+    "asset-regen": "npm run recycle && npm run inline",
     "build": "create-react-styleguide script build",
     "build:watch": "create-react-styleguide script build:watch",
     "build:styleguide": "create-react-styleguide script build:styleguide",
@@ -42,7 +46,6 @@
     "postcss-media-minmax": "^3.0.0",
     "postcss-nested": "^3.0.0",
     "prop-types": "^15.6.2",
-    "qs-ui-library-asset-inliner": "^1.0.2",
     "rc-slider": "^8.6.1",
     "rc-tooltip": "^3.7.2",
     "react-codemirror2": "^5.1.0",
@@ -70,7 +73,11 @@
     "husky": "^1.0.0-rc.13",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "webpack-blocks": "^1.0.0"
+    "webpack-blocks": "^1.0.0",
+    "base64-img": "^1.0.4",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.8.2",
+    "nodemon": "^1.18.3"
   },
   "author": {
     "name": "Jeff Scott Ward",

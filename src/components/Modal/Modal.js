@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-
-import { LayoutSizes, Colors, MarginPaddingSize, Typography } from '../vars.js';
-
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { Colors, MarginPaddingSize, Typography } from '../vars'
+import { glyphclosex } from '../../../asset-inliner'
 
 export default class Modal extends Component {
   
@@ -62,7 +61,7 @@ export default class Modal extends Component {
             )}
           >
             <label htmlFor={'modal-trigger-' + this.props.modalID} className="close">
-              <img src={require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-close-x.svg.js')} alt="close button" />
+              <img src={glyphclosex} alt="close button" />
             </label>
             <h2>{this.state.title}</h2>
             {this.props.children}

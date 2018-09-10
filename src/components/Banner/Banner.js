@@ -1,11 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import LayoutGrid from '../LayoutGrid';
-import GlobalTypography from '../GlobalTypography';
-import GlobalReset from '../GlobalReset';
-import Button from '../Button';
+import React from 'react'
+import PropTypes from 'prop-types'
+import LayoutGrid from '../LayoutGrid'
+import Button from '../Button'
+import { bgwaves } from '../../../asset-inliner'
 
-import { LayoutSizes, MarginPaddingSize, Colors } from '../vars.js';
+import { MarginPaddingSize, Colors } from '../vars'
 
 const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>
@@ -32,7 +31,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           padding: 0 ${MarginPaddingSize[3]};
           
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
-          background-image: ${ altStyle ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/backgrounds/waves-bg.svg.js') + ')' };
+          background-image: ${ altStyle ? 'none' : 'url(' + bgwaves + ')' };
           background-position: bottom;
           background-size: 100% auto;
           background-size: cover;

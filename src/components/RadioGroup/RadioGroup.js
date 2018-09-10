@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Colors, MarginPaddingSize } from '../vars'
 
 const RadioGroup = ({ nameID, options, error }) => (
   <React.Fragment>

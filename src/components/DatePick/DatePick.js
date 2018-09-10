@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import DatePicker from 'react-datepicker'
 import moment from 'moment'
-import GlobalFonts from '../GlobalFonts'
+import { glyphcalendar } from '../../../asset-inliner'
 
-import { Typography, Colors, MarginPaddingSize } from '../vars.js'
+import { Typography, Colors, MarginPaddingSize } from '../vars'
 
 class DatePick extends React.Component {
   constructor (props) {
@@ -700,7 +700,7 @@ class DatePick extends React.Component {
             height: 16px;
             vertical-align: middle;
             content: '';
-            background: ${ 'url(' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-calendar.svg.js') + ')'};
+            background: ${ 'url(' + glyphcalendar + ')'};
             left: calc(100% - 30px);
             bottom: 14px;
           }

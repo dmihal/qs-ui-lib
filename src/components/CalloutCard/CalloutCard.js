@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import LinkText from '../LinkText'
-import { LayoutSizes, MarginPaddingSize, Colors, Typography } from '../vars.js';
+import { MarginPaddingSize, Colors } from '../vars'
 
-const CalloutCard = ({ img, title, linkText, link }) => (
+const CalloutCard = ({ img, title, linkText }) => (
   <div className="CalloutCard">
     <img src={img} alt="call out card"/>
     <h2>{title}</h2>

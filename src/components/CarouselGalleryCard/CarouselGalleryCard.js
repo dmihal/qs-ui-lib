@@ -1,8 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-import { MarginPaddingSize, Colors } from '../vars.js';
-
+import React from 'react'
+import PropTypes from 'prop-types'
+import { MarginPaddingSize, Colors } from '../vars'
 
 const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
   <figure className="CarouselGalleryCard">

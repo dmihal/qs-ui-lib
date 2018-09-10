@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors , MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Typography, Colors } from '../vars'
 
 const LinkText = ({ children, arrow, inverse, activeState }) => (
   <span className="LinkText">

@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Colors, MarginPaddingSize } from '../vars'
+import { glyphcheck } from '../../../asset-inliner'
 
 const CheckboxGroup = ({ nameID, options, error }) => (
   <React.Fragment>
@@ -44,7 +45,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
             }
             input:checked + label:after,
             input:not(:checked) + label:after {
-              background-image: ${ 'url(' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-check.svg.js') + ')' };
+              background-image: ${ 'url(' + glyphcheck + ')' };
             }
         }
       }
@@ -86,7 +87,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
-          background-image: ${ error ? 'none' : 'url(' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-check.svg.js') + ')' };
+          background-image: ${ error ? 'none' : 'url(' + glyphcheck + ')' };
           background-size: contain;
         }
         &:not(:checked) + label:after {

@@ -1,6 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors, MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Typography, Colors, MarginPaddingSize } from '../vars'
+import { glyphsearch } from '../../../asset-inliner'
 
 const Input = ({ type, label, placeholder, search, required, error, disabled }) => (
   <div className="input-wrapper">
@@ -59,7 +60,7 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
           display: block;
           vertical-align: middle;
           content: '';
-          background: ${ search ? 'url(' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-search.svg.js') + ')' : null };
+          background: ${ search ? 'url(' + glyphsearch + ')' : null };
           width: 14px;
           height: 14px;
           position: absolute;

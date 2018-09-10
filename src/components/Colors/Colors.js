@@ -1,6 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Typography, Colors as ColorVars , MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import { Typography, Colors as ColorVars , MarginPaddingSize } from '../vars'
 
 /**
  * This is a color legend that is meant to be 

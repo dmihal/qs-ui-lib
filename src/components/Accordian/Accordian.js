@@ -1,5 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { glypharrow } from '../../../asset-inliner'
 
 const Accordian = ({ children, title }) => (
   <details className="Accordian">
@@ -41,7 +42,7 @@ const Accordian = ({ children, title }) => (
         width: 20px;
         height: 10px;
         line-height: 1;
-        background: ${'url('+ require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-arrow.svg.js') +')'} no-repeat center center;
+        background: ${'url('+ glypharrow +')'} no-repeat center center;
       }
       summary::-webkit-details-marker { color: transparent; }
 

@@ -1,10 +1,10 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const VerifiedSeal = ({ type, size }) => (
     <img
       alt={'seal ' + type}
-      src={require('qs-ui-library-asset-inliner/inlined/seals/'+type+'.svg.js')}
+      src={require('../../../asset-inliner/inlined/seals/seal-'+type+'.svg.js')}
       style={{
         'width': VerifiedSeal.sizes[size] || '160px',
         'height': VerifiedSeal.sizes[size] || '160px'

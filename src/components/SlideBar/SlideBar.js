@@ -18,9 +18,6 @@ class SlideBar extends Component {
 
   constructor(props) {
     super();
-    // this.state = {
-    //   value: props.SOMEPROP 
-    // };
   }
 
   handleDrag = (sliderData) => {

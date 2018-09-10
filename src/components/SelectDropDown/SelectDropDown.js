@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Select from 'react-select';
-import { MarginPaddingSize, Colors } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Select from 'react-select'
+import { MarginPaddingSize, Colors } from '../vars'
 
 class SelectDropDown extends React.Component {
   constructor () {
@@ -16,11 +16,6 @@ class SelectDropDown extends React.Component {
     if(this.props.handleChange) {
       this.props.handleChange(selectedOption)
     }
-    
-		// selectedOption can be null when the `x` (close) button is clicked
-		// if (selectedOption) {
-    // 	console.log(`Selected: ${selectedOption.label}`);
-		// }
   }
   render() {
   	const { selectedOption } = this.state;

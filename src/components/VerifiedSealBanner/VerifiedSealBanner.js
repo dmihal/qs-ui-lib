@@ -1,14 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import LinkText from '../LinkText'
-import { MarginPaddingSize, Typography } from '../vars';
+import { MarginPaddingSize, Typography } from '../vars'
+import { sealblue } from '../../../asset-inliner'
 
 const VerifiedSealBanner = ({ type, title, date, url }) => (
   <div className={"VerifiedSealBanner"}>
     <div className={"VerifiedSealBannerInner " + type}>   
       <img className="sealImg"
         alt={'seal ' + 'blue'}
-        src={require('qs-ui-library-asset-inliner/inlined/seals/'+'blue'+'.svg.js')}/>
+        src={sealblue}/>
       <div className="info-box">
         <h1 className="title">{title}</h1>
         <span className="date">{'Verified on ' + date}</span>

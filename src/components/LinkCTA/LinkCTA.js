@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import { Typography, Colors , MarginPaddingSize } from '../vars.js';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Typography, Colors , MarginPaddingSize } from '../vars'
+import { glyphdoublearrow, glyphdoublearrowcolormalibu } from '../../../asset-inliner'
 
 const LinkCTA = ({ children, label, onDark }) => (
   <div className="LinkCTA">
@@ -71,8 +71,8 @@ const LinkCTA = ({ children, label, onDark }) => (
             margin-left: ${MarginPaddingSize[0]};
             background: ${ 
               !!onDark
-                ? 'url( ' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-double-arrow-color-malibu.svg.js') + ')' 
-                : 'url( ' + require('qs-ui-library-asset-inliner/inlined/glyphs/glyph-double-arrow.svg.js') + ')' 
+                ? 'url( ' + glyphdoublearrowcolormalibu + ')' 
+                : 'url( ' + glyphdoublearrow + ')' 
             } no-repeat;
             background-position-x: right;
           }
