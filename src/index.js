@@ -32,6 +32,8 @@ import RadioGroup from './components/RadioGroup'
 import SelectDropDown from './components/SelectDropDown'
 import SlideBar from './components/SlideBar'
 import SimpleTable from './components/SimpleTable'
+import Table from './components/Table'
+import Tabs from './components/Tabs'
 import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
 import VerifiedSeal from './components/VerifiedSeal'
@@ -72,6 +74,8 @@ export {
   SelectDropDown,
   SlideBar,
   SimpleTable,
+  Table,
+  Tabs,
   Textarea,
   Toggle,
   VerifiedSeal,
