@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Typography, Colors , MarginPaddingSize } from '../vars'
 import { glyphcarouselarrow } from '../../../asset-inliner'
 
-const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onClick }) => (
+const Button = ({ children, type, size, bgColor, styleOverrides, onClick, activeHighlight }) => (
   <button className="Button" disabled={type === 'disabled'}  onClick={onClick}>
     {children}
     <style jsx>{`
@@ -13,7 +13,7 @@ const Button = ({ children, type, size, disabled, bgColor, styleOverrides, onCli
         text-align: center;
         border-width: 1px;
         border-style: solid;
-        border-color: #c4cdd5;
+        border-color: ${ !activeHighlight ? '#c4cdd5' : Colors.Royal };
         color: ${Colors.Royal};
         background-color: ${ bgColor || Colors.White };
         padding: 0 calc(${MarginPaddingSize[2]}/2);
@@ -193,7 +193,11 @@ Button.propTypes = {
   /**
    * BGColor
    */
-  bgColor: PropTypes.string
+  bgColor: PropTypes.string,
+  /**
+   * activeHightlight
+   */
+  activeHighlight: PropTypes.bool,
 }
 
 Button.defaultProps = {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import SomeImportedComponent from 'SomeImportedComponent';
+import SomeImportedComponent from './SomeImportedComponent'
 
 class _______ extends Component {
   static propTypes = {
@@ -9,10 +9,10 @@ class _______ extends Component {
   }
 
   constructor(props) {
-    super();
+    super()
     this.state = {
       value: props.SOMEPROP 
-    };
+    }
   }
 
   handleChange = (someVal) => {
