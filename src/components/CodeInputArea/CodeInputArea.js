@@ -44,6 +44,26 @@ class CodeInputArea extends Component {
       : console.log('controlled', {value})
   }
 
+  componentDidMount = () => {
+    let cm = document.querySelector('.cm-hook')
+    let cmTA = document.querySelector('.cm-hook textarea')
+    cmTA.style = "opacity: 0;"
+
+    let looper = (collection) => {
+      collection.childNodes.forEach(item => {
+        console.log({item})
+        if(item.nodeName !== 'TEXTAREA'){
+          item.style = item.style + " background: transparent;"
+        } else {
+          item.parentNode.style="height: 0"
+        }
+        looper(item) 
+      })
+    }
+
+    looper(cm)
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -53,9 +73,9 @@ class CodeInputArea extends Component {
             mode: 'xml',
             lineNumbers: true
           }}
-          className={this.props.className}
+          className={'cm-hook ' + this.props.className}
           onBeforeChange={(editor, data, value) => {
-            this.setState({value});
+            this.setState({value})
           }}
           onChange={(editor, data, value) => {
             this.handleChange(editor, data, value)
@@ -415,14 +435,65 @@ class CodeInputArea extends Component {
           font-family: monospace !important;
           font-size: 12px !important;
         }
-        .CodeMirror-gutter { background: #f2f4f9; }
-        .CodeMirror-linenumber { color: #052892; font-weight: bold; }
-        pre.CodeMirror-line { padding-left: 20px; }
+        
+        .CodeMirror-gutter {
+          background: #f2f4f9;
+        }
+        
+        .CodeMirror-linenumber { 
+          color: #052892;
+          font-weight: bold;
+        }
+        
+        pre.CodeMirror-line { 
+          padding-left: 60px;
+        }
+        .CodeMirror pre {
+          z-index: 4;
+          line-height: 1.8;
+        }
+        .CodeMirror-sizer,
+        .CodeMirror-gutter-wrapper,
+        .CodeMirror-linenumber {
+          left: 0 !important;
+          margin-left: 0 !important;
+          width: auto !important;
+          min-width: 30px !important;
+        }
+        .CodeMirror-linenumber.CodeMirror-gutter-elt {
+          padding-right: 10px;
+          border-right: 1px solid #ccc;
+          background: #f2f4f9;
+          line-height: 1;
+        }
+        .CodeMirror-lines{
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+        .CodeMirror-gutters {
+          display: none;
+        }
+        
+        .CodeMirror-scroll {
+          overflow: auto;
+          overflow-y: scroll !important;
+          margin-bottom: 0 !important;
+        }
+        .CodeMirror::-webkit-scrollbar {
+          display: none;
+        }
+
+        .CodeMirror-linenumber.CodeMirror-gutter-elt,
+        .CodeMirror-line {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
       `}
       </style>
-      <style>{`
+      {/* <style>{`
         ${this.props.styleOverrides}
-      `}</style>
+      `}</style> */}
     </React.Fragment>
     );
   }
