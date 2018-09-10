@@ -20,6 +20,8 @@ const CTAGridContent = ({ children, align }) => (
         .inner-wrap {
           text-align: ${ align === 'left' ? "left" : "center" };
           padding: ${MarginPaddingSize[3]} 0;
+          display: flex;
+          flex-direction: column;
 
           > :global(h2) {
             text-align: ${ align === 'left' ? "left" : "center" };
