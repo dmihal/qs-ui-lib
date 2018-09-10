@@ -491,9 +491,9 @@ class CodeInputArea extends Component {
 
       `}
       </style>
-      {/* <style>{`
+      <style>{`
         ${this.props.styleOverrides}
-      `}</style> */}
+      `}</style>
     </React.Fragment>
     );
   }
