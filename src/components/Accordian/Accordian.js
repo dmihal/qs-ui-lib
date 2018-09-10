@@ -19,7 +19,9 @@ const Accordian = ({ children, title }) => (
       }
       
       details:focus, 
-      summary:focus { outline: none !important; }
+      summary:focus { 
+        outline: none !important;
+      }
 
       summary {
         padding: 20px 40px 20px 0;
@@ -33,6 +35,7 @@ const Accordian = ({ children, title }) => (
         letter-spacing: normal;
         color: #1e2837;
       }
+
       summary::after {
         content: '';
         display: block;
@@ -44,11 +47,14 @@ const Accordian = ({ children, title }) => (
         line-height: 1;
         background: ${'url('+ glypharrow +')'} no-repeat center center;
       }
-      summary::-webkit-details-marker { color: transparent; }
 
-        details[open] summary::after {
-          transform: rotate(90deg);
-        }
+      summary::-webkit-details-marker { 
+        color: transparent;
+      }
+
+      details[open] summary::after {
+        transform: rotate(90deg);
+      }
       
       .details-content { 
         margin: 0 0 20px 20px;
@@ -73,7 +79,5 @@ Accordian.propTypes = {
     PropTypes.array
   ]).isRequired
 }
-
-Accordian.defaultProps = {}
 
 export default Accordian

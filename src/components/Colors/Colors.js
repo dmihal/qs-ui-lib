@@ -150,6 +150,5 @@ const Colors = () => (
 )
 
 Colors.propTypes = {}
-Colors.defaultProps = {}
 
 export default Colors

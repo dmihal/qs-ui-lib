@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Button from '../Button'
 import { MarginPaddingSize, Colors } from '../vars'
 
-import Carousel from 'nuka-carousel';
+import Carousel from 'nuka-carousel'
 
 const CarouselGallery = ({ children, type, label, bottomLabel }) => (
   <div className="CarouselGallery">
@@ -118,7 +118,5 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
 CarouselGallery.propTypes = {
   children: PropTypes.array.isRequired
 }
-
-CarouselGallery.defaultProps = {}
 
 export default CarouselGallery

@@ -50,6 +50,4 @@ FilterTable.propTypes = {
   ]),
 }
 
-FilterTable.defaultProps = {}
-
 export default FilterTable

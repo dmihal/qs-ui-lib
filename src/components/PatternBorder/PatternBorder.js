@@ -16,6 +16,5 @@ const PatternBorder = ({ children }) => (
 )
 
 PatternBorder.propTypes = {}
-PatternBorder.defaultProps = {}
 
 export default PatternBorder

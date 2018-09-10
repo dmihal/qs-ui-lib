@@ -100,6 +100,4 @@ Input.propTypes = {
   disabled: PropTypes.bool,
 }
 
-Input.defaultProps = {}
-
 export default Input

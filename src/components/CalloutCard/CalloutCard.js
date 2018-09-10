@@ -53,8 +53,11 @@ const CalloutCard = ({ img, title, linkText }) => (
   </div>
 )
 
-CalloutCard.propTypes = {}
-
-CalloutCard.defaultProps = {}
+CalloutCard.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  linkText: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+}
 
 export default CalloutCard

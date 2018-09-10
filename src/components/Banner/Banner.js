@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import LayoutGrid from '../LayoutGrid'
 import Button from '../Button'
-import { bgwaves } from '../../../asset-inliner'
-
 import { MarginPaddingSize, Colors } from '../vars'
+import { bgwaves } from '../../../asset-inliner'
 
 const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) => (
   <React.Fragment>
@@ -15,7 +14,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           { secondayTitle ? <h1>{secondayTitle}</h1> : null }
         </div>
         <div className="banner-right">
-          { 
+          {
             ctaBtnText && ctaBtnAction 
               ? <Button onClick={ctaBtnAction}>{ctaBtnText}</Button> 
               : null 
@@ -29,7 +28,6 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           align-items: center;
           height: 240px;
           padding: 0 ${MarginPaddingSize[3]};
-          
           background-color: ${ altStyle ? 'none' : Colors.Mirage };
           background-image: ${ altStyle ? 'none' : 'url(' + bgwaves + ')' };
           background-position: bottom;
@@ -45,9 +43,7 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
           h1 { font-weight: normal }
           h1+h1 { font-weight: 100 }
 
-          .banner-right {
-            text-align: right;
-          }
+          .banner-right { text-align: right; }
 
           ${
             altStyle
@@ -62,29 +58,25 @@ const Banner = ({ title, altStyle, secondayTitle, ctaBtnText, ctaBtnAction }) =>
 
 Banner.propTypes = {
   /**
-   * Banner header text
+   * Banner title
    */
   title: PropTypes.string.isRequired,
   /**
-   * Banner header text
+   * Banner inverted style
    */
   altStyle: PropTypes.string,
   /**
-   * Banner header text
+   * Banner sub-title
    */
   secondayTitle: PropTypes.string,
   /**
-   * Banner header text
+   * Banner button text
    */
   ctaBtnText: PropTypes.string,
   /**
-   * Banner header text
+   * Banner button functionality
    */
   ctaBtnAction: PropTypes.func
-}
-
-Banner.defaultProps = {
-  title: 'FILL IN PAGE BANNER TITLE'
 }
 
 export default Banner

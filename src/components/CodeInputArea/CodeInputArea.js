@@ -428,6 +428,4 @@ class CodeInputArea extends Component {
   }
 }
 
-// CodeInputArea.defaultProps = {}
-
 export default CodeInputArea

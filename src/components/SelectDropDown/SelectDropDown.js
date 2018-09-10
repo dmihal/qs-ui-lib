@@ -500,6 +500,4 @@ SelectDropDown.propTypes = {
   options: PropTypes.array
 }
 
-SelectDropDown.defaultProps = {}
-
 export default SelectDropDown

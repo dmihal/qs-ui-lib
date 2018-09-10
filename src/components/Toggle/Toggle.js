@@ -67,6 +67,5 @@ const Toggle = ({toggleID, size}) => (
 )
 
 Toggle.propTypes = {}
-Toggle.defaultProps = {}
 
 export default Toggle

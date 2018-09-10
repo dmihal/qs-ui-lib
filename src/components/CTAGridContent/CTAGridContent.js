@@ -18,20 +18,20 @@ const CTAGridContent = ({ children, align }) => (
         height: 100%;
 
         .inner-wrap {
-          text-align: ${ align === 'left' ? "left" : "center" };
+          text-align: ${ align === 'left' ? 'left' : 'center' };
           padding: ${MarginPaddingSize[3]} 0;
           display: flex;
           flex-direction: column;
 
           > :global(h2) {
-            text-align: ${ align === 'left' ? "left" : "center" };
+            text-align: ${ align === 'left' ? 'left' : 'center' };
             margin-bottom: ${MarginPaddingSize[0]};
             color: ${Colors.Royal};
             font-weight: ${Typography.typePrimaryWeight.normal};
           }
           
           > :global(p) {
-            text-align: ${ align === 'left' ? "left" : "center" };
+            text-align: ${ align === 'left' ? 'left' : 'center' };
             margin-bottom: ${MarginPaddingSize[0]};
           }
 
@@ -44,8 +44,8 @@ const CTAGridContent = ({ children, align }) => (
   </div>
 )
 
-CTAGridContent.propTypes = {}
-
-CTAGridContent.defaultProps = {}
+CTAGridContent.propTypes = {
+  align: PropTypes.string
+}
 
 export default CTAGridContent

@@ -82,6 +82,4 @@ CarouselGalleryCard.propTypes = {
   children: PropTypes.object.isRequired,
 }
 
-CarouselGalleryCard.defaultProps = {}
-
 export default CarouselGalleryCard

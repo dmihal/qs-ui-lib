@@ -122,6 +122,4 @@ RadioGroup.propTypes = {
   disabled: PropTypes.bool,
 }
 
-RadioGroup.defaultProps = {}
-
 export default RadioGroup

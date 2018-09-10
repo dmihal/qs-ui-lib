@@ -124,6 +124,4 @@ CheckboxGroup.propTypes = {
   disabled: PropTypes.bool,
 }
 
-CheckboxGroup.defaultProps = {}
-
 export default CheckboxGroup

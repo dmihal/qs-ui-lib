@@ -6,8 +6,8 @@ const Glyph = ({ type, size }) => (
       alt={'Glyph ' + type}
       src={require('../../../asset-inliner/inlined/glyphs/'+type+'.svg.js')}
       style={{
-        'width': Glyph.sizes[size] || '40px',
-        'height': Glyph.sizes[size] || '40px'
+        'width': Glyph.sizes[size] || Glyph.sizes['large'],
+        'height': Glyph.sizes[size] || Glyph.sizes['large']
       }}
     />
 )
@@ -21,10 +21,6 @@ Glyph.propTypes = {
   * Glyph size
   */
   size: PropTypes.oneOf(['small', 'large']).isRequired
-}
-
-Glyph.defaultProps = {
-  size: 'small'
 }
 
 Glyph.sizes = {

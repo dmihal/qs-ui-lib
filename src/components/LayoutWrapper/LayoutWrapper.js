@@ -31,6 +31,4 @@ LayoutWrapper.propTypes = {
   ]).isRequired
 }
 
-LayoutWrapper.defaultProps = {}
-
 export default LayoutWrapper

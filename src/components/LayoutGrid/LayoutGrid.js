@@ -86,17 +86,9 @@ LayoutGrid.propTypes = {
     PropTypes.array
   ]).isRequired,
   /**
-   * Columns total
-   */
-  columns: PropTypes.oneOf([1, 2, 3, 4]),
-  /**
    * LayoutGrid offset
    */
   offset: PropTypes.oneOf(['left', 'right'])
-}
-
-LayoutGrid.defaultProps = {
-  columns: 1
 }
 
 export default LayoutGrid

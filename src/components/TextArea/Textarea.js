@@ -79,6 +79,4 @@ Textarea.propTypes = {
   disabled: PropTypes.bool,
 }
 
-Textarea.defaultProps = {}
-
 export default Textarea

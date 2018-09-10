@@ -44,6 +44,4 @@ ModalTrigger.propTypes = {
   modalID: PropTypes.string.isRequired
 }
 
-ModalTrigger.defaultProps = {}
-
 export default ModalTrigger

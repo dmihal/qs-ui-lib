@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const VerifiedSeal = ({ type, size }) => (
+const VerifiedSeal = ({ type }) => (
     <img
       alt={'seal ' + type}
       src={require('../../../asset-inliner/inlined/seals/seal-'+type+'.svg.js')}
       style={{
-        'width': VerifiedSeal.sizes[size] || '160px',
-        'height': VerifiedSeal.sizes[size] || '160px'
+        'width': VerifiedSeal.sizes['large'],
+        'height': VerifiedSeal.sizes['large']
       }}
     />
 )
@@ -17,14 +17,6 @@ VerifiedSeal.propTypes = {
   * VerifiedSeal type
   */
   type: PropTypes.string.isRequired,
-  /*
-  * VerifiedSeal size
-  */
-  size: PropTypes.oneOf(['small', 'large']).isRequired
-}
-
-VerifiedSeal.defaultProps = {
-  size: 'large'
 }
 
 VerifiedSeal.sizes = {

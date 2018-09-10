@@ -781,6 +781,4 @@ DatePick.propTypes = {
   handleChange: PropTypes.func,
 }
 
-DatePick.defaultProps = {}
-
 export default DatePick

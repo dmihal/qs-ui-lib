@@ -6,8 +6,8 @@ const Icon = ({ type, size }) => (
       alt={'icon ' + type}
       src={require('../../../asset-inliner/inlined/icons/'+type+'.svg.js')}
       style={{
-        'width': Icon.sizes[size] || '40px',
-        'height': Icon.sizes[size] || '40px'
+        'width': Icon.sizes[size] || Icon.sizes['small'],
+        'height': Icon.sizes[size] || Icon.sizes['small']
       }}
     />
 )
@@ -21,10 +21,6 @@ Icon.propTypes = {
   * Icon size
   */
   size: PropTypes.oneOf(['small', 'large']).isRequired
-}
-
-Icon.defaultProps = {
-  size: 'small'
 }
 
 Icon.sizes = {

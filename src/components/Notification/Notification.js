@@ -82,6 +82,4 @@ Notification.propTypes = {
   subheader: PropTypes.string
 }
 
-Notification.defaultProps = {}
-
 export default Notification

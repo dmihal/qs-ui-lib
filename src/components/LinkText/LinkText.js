@@ -50,6 +50,4 @@ LinkText.propTypes = {
   activeState: PropTypes.bool
 }
 
-LinkText.defaultProps = {}
-
 export default LinkText

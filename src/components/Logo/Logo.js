@@ -111,13 +111,17 @@ Logo.propTypes = {
    */
   productName: PropTypes.string,
   /**
+   * Product text color
+   */
+  productColor: PropTypes.string,
+  /**
    * Width
    */
   width: PropTypes.string,
   /**
    * Height
    */
-  height: PropTypes.string
+  height: PropTypes.string,
 }
 
 Logo.defaultProps = {

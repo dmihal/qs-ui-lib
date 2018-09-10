@@ -29,12 +29,8 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
         :global(img) {display: inline-block;}
         :global(img + *) {margin-left: 5px;}
         :global(* + img) {margin-right: 5px;}
-        &:hover {
-          color: ${Colors.PoloBlue};
-        }
-        &:focus{
-          outline: none;
-        }
+        &:hover {color: ${Colors.PoloBlue};}
+        &:focus{outline: none;}
       }
     `}</style>
     <style jsx>{`      
@@ -162,20 +158,18 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
       }
     `}</style>
     <style jsx>{`
-      .Button {
-        ${styleOverrides}
-      }
+      .Button { ${styleOverrides} }
     `}</style>
   </button>
 )
 
 Button.propTypes = {
   /**
-   * Button style
+   * Button type
    */
   type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
   /**
-   * Button style
+   * Button text or images
    */
   children: PropTypes.oneOfType([
     PropTypes.object,
@@ -187,21 +181,17 @@ Button.propTypes = {
    */
   size: PropTypes.string,
   /**
-   * Icon image
+   * Button icon
    */
   icon: PropTypes.string,
   /**
-   * BGColor
+   * Button custom bg color
    */
   bgColor: PropTypes.string,
   /**
-   * activeHightlight
+   * Button highlight for tavs
    */
   activeHighlight: PropTypes.bool,
-}
-
-Button.defaultProps = {
-  type: 'default'
 }
 
 export default Button

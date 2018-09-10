@@ -38,6 +38,4 @@ CTAGrid.propTypes = {
   ]).isRequired
 }
 
-CTAGrid.defaultProps = {}
-
 export default CTAGrid

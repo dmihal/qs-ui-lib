@@ -109,6 +109,4 @@ LinkCTA.propTypes = {
   label: PropTypes.string,
 }
 
-LinkCTA.defaultProps = {}
-
 export default LinkCTA

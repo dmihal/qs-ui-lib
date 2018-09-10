@@ -116,6 +116,4 @@ SimpleTable.propTypes = {
   direction: PropTypes.string
 }
 
-SimpleTable.defaultProps = {}
-
 export default SimpleTable
