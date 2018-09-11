@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const SimpleTable = ({ data, tableTitle, direction }) => (
   <div className='SimpleTable'>
@@ -57,8 +57,11 @@ const SimpleTable = ({ data, tableTitle, direction }) => (
     </div>
     <style jsx>{`
       .SimpleTable {
-        * { text-align: left; }
+        * {
+          text-align: left;
+        }
       }
+
       .table-title {
         background: #e6e9f4;
         font-size: 18px;
@@ -70,11 +73,20 @@ const SimpleTable = ({ data, tableTitle, direction }) => (
         color: #052892;
         padding: 10px 20px;
       }
+
       .table-wrapper {
         display: flex;
         flex-direction: column;
-        table { border-collapse: collapse; }
-        th,td { border: solid 1px #eeeeee; padding: 20px;}
+
+        table {
+          border-collapse: collapse;
+        }
+
+        th,td {
+          border: solid 1px #eeeeee;
+          padding: 20px;
+        }
+
         th {
           width: 194px;
           background-color: #f9f9f9;
@@ -86,6 +98,7 @@ const SimpleTable = ({ data, tableTitle, direction }) => (
           letter-spacing: normal;
           color: #1e2837;
         }
+
         td {
           font-size: 16px;
           font-weight: 300;

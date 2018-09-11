@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Icon from '../Icon';
-import LinkText from '../LinkText';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Icon from '../Icon'
+import LinkText from '../LinkText'
 
 const iconReducer = (type) => {
   switch (type) {
@@ -32,7 +32,6 @@ const Notification = ({ type, headline, subheader, link }) => (
       </div>
     </div>
     <style jsx>{`
-      
       .Notification {
         display: flex;
         width: 674px;
@@ -52,13 +51,24 @@ const Notification = ({ type, headline, subheader, link }) => (
         justify-content: center;
       }
       
-      h4, h5 { display: inline-block; margin: 0; font-family: sans-serif;}
+      h4,
+      h5 {
+        display: inline-block;
+        margin: 0;
+        font-family: sans-serif;
+      }
       
-      h4 { font-size: 16px; font-weight: 500; }
-      h5 { font-size: 14px; font-weight: normal;}
+      h4 {
+        font-size: 16px;
+        font-weight: 500;
+        color: #1e2837;
+      }
 
-      h4 { color: #1e2837; }
-      h5 { color: #708090; }
+      h5 {
+        font-size: 14px;
+        font-weight: normal;
+        color: #708090;
+      }
     `}</style>
   </div>
 )

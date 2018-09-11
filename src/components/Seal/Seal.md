@@ -1,23 +1,23 @@
 ```jsx
 <div>
-  <VerifiedSeal type='blue'/>
+  <Seal type='blue'/>
 </div>
 ```
 
 ```jsx
 <div>
-  <VerifiedSeal type='grey'/>
+  <Seal type='grey'/>
 </div>
 ```
 
 ```jsx
 <div>
-  <VerifiedSeal type='blue-inverted'/>
+  <Seal type='blue-inverted'/>
 </div>
 ```
 
 ```jsx
 <div style={{background: 'black', padding: '20px'}}>
-  <VerifiedSeal type='white'/>
+  <Seal type='white'/>
 </div>
 ```

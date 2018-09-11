@@ -8,6 +8,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
     {children}
     <style jsx>{`
       .Button {
+        
         /* DEFAULT - Unchanging Styles */
         cursor: pointer;
         text-align: center;
@@ -26,15 +27,31 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
         display: flex;
         align-items: center;
         justify-content: center;
-        :global(img) {display: inline-block;}
-        :global(img + *) {margin-left: 5px;}
-        :global(* + img) {margin-right: 5px;}
-        &:hover {color: ${Colors.PoloBlue};}
-        &:focus{outline: none;}
+
+        :global(img) {
+          display: inline-block;
+        }
+
+        :global(img + *) {
+          margin-left: 5px;
+        }
+
+        :global(* + img) {
+          margin-right: 5px;
+        }
+
+        &:hover {
+          color: ${Colors.PoloBlue};
+        }
+
+        &:focus{
+          outline: none;
+        }
       }
     `}</style>
     <style jsx>{`      
       .Button {        
+        
         /* DEFAULT - Type Overides*/
         ${
           type === 'primary'
@@ -44,6 +61,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
               color: ${Colors.White};
             `) : ''
         }
+        
         ${
           type === 'warning'
             ? (`
@@ -53,6 +71,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
               cursor: default;
             `) : ''
         }
+
         ${
           type === 'disabled'
             ? (`
@@ -62,6 +81,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
               cursor: not-allowed;
             `) : ''
         }
+
         ${
           type === 'left' || type === 'right'
             ? (`
@@ -75,6 +95,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
               background: ${ `url( ` + glyphcarouselarrow + `)` }  no-repeat center center;
             `) : ''
         }
+
         ${
           type === 'left'
             ? (`transform:rotateY(180deg);`) : ''
@@ -95,6 +116,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
         
         /* HOVER - Type Overides*/
         &:hover {
+
           ${
             type === 'primary'
               ? (`
@@ -103,10 +125,12 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
                 color: ${Colors.White};
               `) : ''
           }
+
           ${
             type === 'primary' && size === 'small'
               ? (`border-color: #5068b2;`) : ''
           }
+
           ${
             type === 'warning'
               ? (`
@@ -115,6 +139,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
                 color: ${Colors.White};
               `) : ''
           }
+
           ${
             type === 'disabled'
               ? (`
@@ -129,6 +154,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
         /* ACTIVE - Type Overides*/
         &:active {
           color: ${Colors.ResolutionBlue};
+
           ${
             type === 'primary'
               ? (`
@@ -137,6 +163,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
                 color: ${Colors.White};
               `) : ''
           }
+
           ${
             type === 'warning'
               ? (`
@@ -145,6 +172,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
                 color: ${Colors.White};
               `) : ''
           }
+
           ${
             type === 'disabled'
               ? (`

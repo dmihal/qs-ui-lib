@@ -12,10 +12,8 @@ const ModalTrigger = ({ children, modalID }) => (
         border-width: 1px;
         border-style: solid;
         color: ${Colors.Royal};
-
         padding: 6px calc(${MarginPaddingSize[2]}/2);
         font-size: ${Typography.fontSize[3]};
-
         background: ${Colors.Royal};
         border-color: ${Colors.Royal};
         color: ${Colors.White};
@@ -25,6 +23,7 @@ const ModalTrigger = ({ children, modalID }) => (
           border-color: ${Colors.PoloBlue};
           color: ${Colors.White};
         }
+        
         &:focus{
           outline: none;
         }

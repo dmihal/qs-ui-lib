@@ -12,6 +12,7 @@ const Toggle = ({toggleID, size}) => (
         max-width: 0;
         opacity: 0;
       }
+
       input + label {
         display: inline-block;
         position: relative;
@@ -53,6 +54,7 @@ const Toggle = ({toggleID, size}) => (
         -webkit-transition: .25s ease-in-out;
         transition: .25s ease-in-out;
       }
+
       input:checked + label:before {
         width: ${ size === 'small' ? '30px' : '50px' };
         background: ${Colors.Royal};
@@ -66,6 +68,15 @@ const Toggle = ({toggleID, size}) => (
   </React.Fragment>
 )
 
-Toggle.propTypes = {}
+Toggle.propTypes = {
+  /*
+  * UUID
+  */
+  toggleID: PropTypes.string.isRequired,
+  /*
+  * Size value
+  */
+  size: PropTypes.string
+}
 
 export default Toggle

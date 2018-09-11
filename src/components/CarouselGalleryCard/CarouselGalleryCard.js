@@ -24,6 +24,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
         border-radius: 2px;
         border-color: #c4cdd5;
         margin: 0;
+        
         @media (width <= 500px) {
           height: auto;
           max-height: 430px;
@@ -66,9 +67,6 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
               }
             }
           }
-        }
-        .CarouselGalleryCard-header-content { 
-
         }
       }
     `}</style>

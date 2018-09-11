@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import LayoutGrid from '../LayoutGrid'
 
-import { MarginPaddingSize, Colors } from '../vars';
+import { MarginPaddingSize } from '../vars'
 
 const NavigationSub = ({ children }) => (
   <React.Fragment>

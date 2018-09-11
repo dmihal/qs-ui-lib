@@ -6,8 +6,7 @@ const LinkText = ({ children, arrow, inverse, activeState }) => (
   <span className="LinkText">
     { arrow ? (<div className="arrow-right"></div>) : null }
     {children}
-    <style jsx>{`
-      
+    <style jsx>{` 
       .LinkText { 
         color: ${Colors.Royal};
         font-size: ${Typography.fontSize[4]};

@@ -1,8 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { bgpattern } from '../../../asset-inliner'
 
-const PatternBorder = ({ children }) => (
+const PatternBorder = () => (
   <div className="PatternBorder">
     <style jsx>{`
       .PatternBorder {
@@ -14,7 +13,5 @@ const PatternBorder = ({ children }) => (
     `}</style>
   </div>
 )
-
-PatternBorder.propTypes = {}
 
 export default PatternBorder

@@ -37,7 +37,7 @@ import Tabs from './components/Tabs'
 import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
 import VerifiedSeal from './components/VerifiedSeal'
-import VerifiedSealBanner from './components/VerifiedSealBanner'
+import SealBanner from './components/SealBanner'
 
 export {
   Accordian,
@@ -79,5 +79,5 @@ export {
   Textarea,
   Toggle,
   VerifiedSeal,
-  VerifiedSealBanner,
+  SealBanner,
  }

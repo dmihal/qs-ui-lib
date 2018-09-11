@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import {Controlled as CodeMirror} from 'react-codemirror2'
+import { Controlled as CodeMirror } from 'react-codemirror2'
 
 const sampleCodeInternal =
 `pragma solidity ^0.4.15;
@@ -51,7 +51,6 @@ class CodeInputArea extends Component {
 
     let looper = (collection) => {
       collection.childNodes.forEach(item => {
-        console.log({item})
         if(item.nodeName !== 'TEXTAREA'){
           item.style = item.style + " background: transparent;"
         } else {
@@ -434,6 +433,7 @@ class CodeInputArea extends Component {
         .CodeMirror * {
           font-family: monospace !important;
           font-size: 12px !important;
+          box-sizing: initial !important;
         }
         
         .CodeMirror-gutter {
@@ -448,10 +448,12 @@ class CodeInputArea extends Component {
         pre.CodeMirror-line { 
           padding-left: 60px;
         }
+
         .CodeMirror pre {
           z-index: 4;
           line-height: 1.8;
         }
+
         .CodeMirror-sizer,
         .CodeMirror-gutter-wrapper,
         .CodeMirror-linenumber {
@@ -488,7 +490,6 @@ class CodeInputArea extends Component {
           padding-top: 5px;
           padding-bottom: 5px;
         }
-
       `}
       </style>
       <style>{`

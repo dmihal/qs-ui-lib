@@ -2,14 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Glyph = ({ type, size }) => (
-    <img
-      alt={'Glyph ' + type}
-      src={require('../../../asset-inliner/inlined/glyphs/'+type+'.svg.js')}
-      style={{
-        'width': Glyph.sizes[size] || Glyph.sizes['large'],
-        'height': Glyph.sizes[size] || Glyph.sizes['large']
-      }}
-    />
+  <img
+    alt={'Glyph ' + type}
+    src={require('../../../asset-inliner/inlined/glyphs/'+type+'.svg.js')}
+    style={{
+      'width': Glyph.sizes[size] || Glyph.sizes['large'],
+      'height': Glyph.sizes[size] || Glyph.sizes['large']
+    }}
+  />
 )
 
 Glyph.propTypes = {

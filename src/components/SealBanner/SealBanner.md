@@ -1,6 +1,6 @@
 ```jsx
 <div>
-  <VerifiedSealBanner
+  <SealBanner
     type='horizontal'
     title='Mainframe Token Contract'
     date="July 12, 2018"
@@ -10,7 +10,7 @@
 
 ```jsx
 <div>
-  <VerifiedSealBanner
+  <SealBanner
     type='vertical'
     title='Mainframe Token Contract'
     date="July 12, 2018"

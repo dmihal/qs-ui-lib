@@ -4,9 +4,9 @@ import LinkText from '../LinkText'
 import { MarginPaddingSize, Typography } from '../vars'
 import { sealblue } from '../../../asset-inliner'
 
-const VerifiedSealBanner = ({ type, title, date, url }) => (
-  <div className={"VerifiedSealBanner"}>
-    <div className={"VerifiedSealBannerInner " + type}>   
+const SealBanner = ({ type, title, date, url }) => (
+  <div className={"SealBanner"}>
+    <div className={"SealBannerInner " + type}>   
       <img className="sealImg"
         alt={'seal ' + 'blue'}
         src={sealblue}/>
@@ -29,7 +29,7 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
         : null
     }
     <style jsx>{`
-      .VerifiedSealBanner {
+      .SealBanner {
         padding: ${MarginPaddingSize[1]};
         max-width: 420px;
         font-family: ${Typography.typePrimaryStack};
@@ -40,7 +40,7 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
           height: 130px;
         }
 
-        .VerifiedSealBannerInner {
+        .SealBannerInner {
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -67,8 +67,6 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
           }
         }
 
-        
-
         .title {
           font-size: 18px;
           margin: 0;
@@ -88,12 +86,14 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
       .tail-feather {
         display: flex;
       }
+
       .triangle-topleft {
         width: 0;
         height: 0;
         border-top: 100px solid #edeff7;
         border-right: 100px solid transparent;
       }
+
       .triangle-topright {
         width: 0;
         height: 0;
@@ -104,23 +104,23 @@ const VerifiedSealBanner = ({ type, title, date, url }) => (
   </div>
 )
 
-VerifiedSealBanner.propTypes = {
+SealBanner.propTypes = {
   /*
-  * VerifiedSealBanner type
+  * SealBanner type
   */
   type: PropTypes.string.isRequired,
   /*
-  * VerifiedSealBanner type
+  * SealBanner type
   */
   title: PropTypes.string.isRequired,
   /*
-  * VerifiedSealBanner type
+  * SealBanner type
   */
   date: PropTypes.string.isRequired,
   /*
-  * VerifiedSealBanner type
+  * SealBanner type
   */
   url: PropTypes.string.isRequired,  
 }
 
-export default VerifiedSealBanner
+export default SealBanner

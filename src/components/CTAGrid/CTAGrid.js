@@ -22,7 +22,6 @@ const CTAGrid = ({ children }) => (
         > :global(*:last-child) {
           border-right: 1px solid #eee;
         }
-
       }
     `}</style>
   </div>

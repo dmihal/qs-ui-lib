@@ -54,9 +54,21 @@ const CalloutCard = ({ img, title, linkText }) => (
 )
 
 CalloutCard.propTypes = {
+  /**
+   * Image
+   */
   img: PropTypes.string.isRequired,
+  /**
+   * Title
+   */
   title: PropTypes.string.isRequired,
+  /**
+   * Link text
+   */
   linkText: PropTypes.string.isRequired,
+  /**
+   * Link URL
+   */
   link: PropTypes.string.isRequired,
 }
 

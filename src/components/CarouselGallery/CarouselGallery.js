@@ -78,6 +78,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
           width: 100%;
           top: 0;
           left: calc( ${MarginPaddingSize[3]} * 3);
+          
           @media (width <= 500px) {
             left: 0;
           }
@@ -87,6 +88,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
           display: flex;
           top: ${ type === 'A' ? 'calc(-2px + '+'-'+MarginPaddingSize[3]+') !important' : ''};
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[3]+' * 3) !important' : ''};
+
           @media (width <= 500px) {
             left: 0 !important;
           }
@@ -94,6 +96,7 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
 
         :global(.slider-control-bottomleft) {
           left: ${ type === 'A' ? 'calc( '+MarginPaddingSize[3]+' * 3) !important' : ''};
+
           @media (width <= 500px) {
             left: 0 !important;
           }
@@ -116,6 +119,9 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
 )
 
 CarouselGallery.propTypes = {
+  /**
+   * Children
+   */
   children: PropTypes.array.isRequired
 }
 

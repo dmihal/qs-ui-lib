@@ -25,36 +25,43 @@ const CheckboxGroup = ({ nameID, options, error }) => (
     </form>
     <style jsx>{`
       .checkbox-choice-wrap {
-          margin-bottom: ${MarginPaddingSize[1]};
+        margin-bottom: ${MarginPaddingSize[1]};
 
-          &.disabled {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              cursor: not-allowed;
-            }
+        &.disabled {
+
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            cursor: not-allowed;
           }
-          &.deactive label::after {
-            filter: saturate(0%) opacity(20%);
+        }
+
+        &.deactive label::after {
+          filter: saturate(0%) opacity(20%);
+        }
+
+        &.error {
+          
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            border: 1px solid ${Colors.Cinnabar};
+            background: rgba(227, 66, 52, 0.1);
+            cursor: not-allowed;
           }
-          &.error {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              border: 1px solid ${Colors.Cinnabar};
-              background: rgba(227, 66, 52, 0.1);
-              cursor: not-allowed;
-            }
-            input:checked + label:after,
-            input:not(:checked) + label:after {
-              background-image: ${ 'url(' + glyphcheck + ')' };
-            }
+          
+          input:checked + label:after,
+          input:not(:checked) + label:after {
+            background-image: ${ 'url(' + glyphcheck + ')' };
+          }
         }
       }
+      
       [type="checkbox"] {
         &:checked,
         &:not(:checked) {
           position: absolute;
           left: -9999px;
         }
+
         &:checked + label,
         &:not(:checked) + label {
           position: relative;
@@ -64,6 +71,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           display: inline-block;
           color: #666;
         }
+
         &:checked + label:before,
         &:not(:checked) + label:before {
           content: '';
@@ -76,6 +84,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 2px;
           background: #fff;
         }
+
         &:checked + label:after,
         &:not(:checked) + label:after {
           content: '';
@@ -90,11 +99,13 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           background-image: ${ error ? 'none' : 'url(' + glyphcheck + ')' };
           background-size: contain;
         }
+
         &:not(:checked) + label:after {
           opacity: 0;
           -webkit-transform: scale(0);
           transform: scale(0);
         }
+
         &:checked + label:after {
           opacity: 1;
           -webkit-transform: scale(1);

@@ -79,10 +79,12 @@ const Colors = () => (
         flex-wrap: wrap;
         width: 850px;
       }
+
       .Legend {
         width: ${MarginPaddingSize[4]};
         padding: 0 ${MarginPaddingSize[0]} ${MarginPaddingSize[0]} 0;
       }
+      
       i {
         font-size: ${Typography.fontSize[4]}
       }
@@ -99,48 +101,63 @@ const Colors = () => (
         &.Royal {
           background: ${ColorVars.Royal}
         }
+
         &.Malibu {
           background: ${ColorVars.Malibu}
         }
+
         &.PoloBlue {
           background: ${ColorVars.PoloBlue}
         }
+
         &.Slate {
           background: ${ColorVars.Slate}
         }
+
         &.Gallery {
           background: ${ColorVars.Gallery}
         }
+
         &.Alabaster {
           background: ${ColorVars.Alabaster}
         }
+
         &.Mirage {
           background: ${ColorVars.Mirage}
         }
+
         &.LaPalma {
           background: ${ColorVars.LaPalma}
         }
+
         &.Atlantis {
           background: ${ColorVars.Atlantis}
         }
+
         &.Yellow {
           background: ${ColorVars.Yellow}
         }
+
         &.Crusta {
           background: ${ColorVars.Crusta}
         }
+
         &.Cinnabar {
           background: ${ColorVars.Cinnabar}
         }
+
         &.Lavender {
           background: ${ColorVars.Lavender}
         }
+
         &.Violet {
           background: ${ColorVars.Violet}
         }
+
         &.SanMarino {
           background: ${ColorVars.SanMarino}
         }
+
         &.ResolutionBlue {
           background: ${ColorVars.ResolutionBlue}
         }
@@ -148,7 +165,5 @@ const Colors = () => (
     `}</style>
   </div>
 )
-
-Colors.propTypes = {}
 
 export default Colors

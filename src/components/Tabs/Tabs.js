@@ -5,18 +5,30 @@ import Button from '../Button'
 
 class Tabs extends Component {
   static propTypes = {
+    /*
+    * Tab value list
+    */
     tabList: PropTypes.array.isRequired,
+    /*
+    * Default Active
+    */
     defaultActiveTab: PropTypes.string,
+    /*
+    * Event handler
+    */
     handleSelection: PropTypes.func.isRequired
   }
 
   constructor(props) {
     super()    
-    this.state = { activeTab: props.defaultActiveTab || '' }
+    this.state = {
+      activeTab: props.defaultActiveTab || ''
+    }
   }
 
   handleClick = (e,tabitemClick) => {
-    this.setState({activeTab: tabitemClick})    
+    this.setState({activeTab: tabitemClick})
+    
     if(this.props.handleSelection) {
       this.props.handleSelection(tabitemClick)
     }
@@ -40,7 +52,9 @@ class Tabs extends Component {
             )
           })  
         }
-        <style jsx>{`.Tabs {display: flex;}`}</style>
+        <style jsx>{`
+          .Tabs {display: flex;}
+        `}</style>
       </div>
     )
   }

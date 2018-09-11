@@ -45,6 +45,9 @@ const CTAGridContent = ({ children, align }) => (
 )
 
 CTAGridContent.propTypes = {
+  /*
+  * Alignment style
+  */
   align: PropTypes.string
 }
 

@@ -8,7 +8,6 @@ const LinkCTA = ({ children, label, onDark }) => (
     <div className="label">{label}</div>
     <div className="description-box">{children}</div>
     <style jsx>{`
-      
       .LinkCTA {
         display: inline-block;
         height: 100%;
@@ -18,6 +17,7 @@ const LinkCTA = ({ children, label, onDark }) => (
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
         border-radius: 2px;
+
         @media (width <= 500px) {
           width: 100%;
         }
@@ -34,6 +34,7 @@ const LinkCTA = ({ children, label, onDark }) => (
           text-align: center;
           border-color: ${ !!onDark === true ? 'black' : '' };
           font-size: 14px;
+
           @media (width <= 500px) {
             display: none;
           }
@@ -53,6 +54,7 @@ const LinkCTA = ({ children, label, onDark }) => (
           padding: 0 ${MarginPaddingSize[0]};
           font-size: ${Typography.fontSize[4]};
           color: ${ !!onDark === true ? Colors.Malibu : '' };
+          
           @media (width <= 500px) {
             display: flex;
             justify-content: space-between;

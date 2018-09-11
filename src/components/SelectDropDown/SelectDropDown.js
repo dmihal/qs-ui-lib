@@ -467,22 +467,28 @@ class SelectDropDown extends React.Component {
             background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
             border: solid 1px #c4cdd5;
           }
+
           :global(.Select-menu-outer > *) {
             background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
           }
+
           :global(.Select-menu-outer > * > *) {
             background-color: transparent;
           }
+
           :global(.Select-placeholder) {
             color: ${Colors.Mirage};
           }
+
           :global(.Select-menu-outer *) {
             color: ${Colors.Mirage};
           }
+
           :global(.Select--multi .Select-value-icon:hover) {
             background-color: inherit;
             color: ${Colors.Royal};
           }
+
           :global(.Select--multi .Select-value-icon:focus) {
             background-color: inherit;
             color: ${Colors.Royal};
@@ -495,8 +501,17 @@ class SelectDropDown extends React.Component {
 }
 
 SelectDropDown.propTypes = {
+  /*
+  * UUID 
+  */
   name: PropTypes.string,
+  /*
+  * Event Handler
+  */
   handleChange: PropTypes.func,
+  /*
+  * Dropdown options
+  */
   options: PropTypes.array
 }
 
