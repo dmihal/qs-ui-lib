@@ -1,6 +1,6 @@
 Fire this **RELATIVE** _default_ modal using the matching **XYZ trigger below**
 
-You may also fire it automatically upon render with the `fire` flag
+*You may also fire it automatically upon render with the `fire` flag*
 
 ```jsx
 <ModalTrigger modalID="XYZ">Open Modal XYZ</ModalTrigger>
