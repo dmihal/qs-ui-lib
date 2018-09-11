@@ -3,12 +3,14 @@ import PropTypes from 'prop-types'
 import { Typography, Colors , MarginPaddingSize } from '../vars'
 import { glyphcarouselarrow } from '../../../asset-inliner'
 
-const Button = ({ children, type, size, bgColor, styleOverrides, onClick, activeHighlight }) => (
-  <button className="Button" disabled={type === 'disabled'}  onClick={onClick}>
-    {children}
+const Button = ({ children, type, size, onClick, styleOverrides, activeHighlight }) => (
+  <button
+    className="Button"
+    disabled={type === 'disabled'}
+    onClick={onClick}>
+      {children}
     <style jsx>{`
       .Button {
-        
         /* DEFAULT - Unchanging Styles */
         cursor: pointer;
         text-align: center;
@@ -16,7 +18,7 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
         border-style: solid;
         border-color: ${ !activeHighlight ? '#c4cdd5' : Colors.Royal };
         color: ${Colors.Royal};
-        background-color: ${ bgColor || Colors.White };
+        background-color: ${ Colors.White };
         padding: 0 calc(${MarginPaddingSize[2]}/2);
         line-height: ${MarginPaddingSize[2]};
         font-size: ${Typography.fontSize[3]};
@@ -51,7 +53,6 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
     `}</style>
     <style jsx>{`      
       .Button {        
-        
         /* DEFAULT - Type Overides*/
         ${
           type === 'primary'
@@ -186,16 +187,14 @@ const Button = ({ children, type, size, bgColor, styleOverrides, onClick, active
       }
     `}</style>
     <style jsx>{`
-      .Button { ${styleOverrides} }
+      .Button { 
+        ${styleOverrides}
+      }
     `}</style>
   </button>
 )
 
 Button.propTypes = {
-  /**
-   * Button type
-   */
-  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
   /**
    * Button text or images
    */
@@ -205,20 +204,20 @@ Button.propTypes = {
     PropTypes.array
   ]),
   /**
+   * Button type
+   */
+  type: PropTypes.oneOf(['default', 'primary', 'warning', 'disabled', 'left', 'right']),
+  /**
    * Button size
    */
   size: PropTypes.string,
   /**
-   * Button icon
-   */
-  icon: PropTypes.string,
-  /**
-   * Button custom bg color
-   */
-  bgColor: PropTypes.string,
+   * StyleOverides
+   */  
+  styleOverrides: PropTypes.string,
   /**
    * Button highlight for tavs
-   */
+   */  
   activeHighlight: PropTypes.bool,
 }
 

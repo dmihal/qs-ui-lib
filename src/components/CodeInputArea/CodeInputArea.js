@@ -26,9 +26,10 @@ contract ProofOfExistence1 {
 
 class CodeInputArea extends Component {
   static propTypes = {
+    /* 
+    * Code string
+    */
     code: PropTypes.string.isRequired,
-    styleOverrides: PropTypes.string,
-    className: PropTypes.string
   }
 
   constructor(props) {
@@ -492,11 +493,8 @@ class CodeInputArea extends Component {
         }
       `}
       </style>
-      <style>{`
-        ${this.props.styleOverrides}
-      `}</style>
     </React.Fragment>
-    );
+    )
   }
 }
 

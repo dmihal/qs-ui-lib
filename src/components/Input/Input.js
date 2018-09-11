@@ -67,7 +67,6 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
           left: calc(100% - 20px - 5px);
           bottom: 24px;
         }
-
       }
     `}</style>
   </div>

@@ -5,6 +5,9 @@ import SomeImportedComponent from './SomeImportedComponent'
 
 class _______ extends Component {
   static propTypes = {
+    /* 
+    * Prop
+    */
     prop: PropTypes.TYPEOFPROP.isRequired
   }
 

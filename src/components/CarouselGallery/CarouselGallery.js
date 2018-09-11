@@ -52,12 +52,14 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
             renderCenterLeftControls={({ previousSlide }) => (
               <Button
                 type="left"
-                onClick={previousSlide}/>
+                onClick={previousSlide}
+                styleOverrides={`background-color: white;`}/>
             )}
             renderCenterRightControls={({ nextSlide }) => (
               <Button
                   type="right"
-                  onClick={nextSlide}/>
+                  onClick={nextSlide}
+                  styleOverrides={`background-color: white;`}/>
             )}
             renderBottomCenterControls={() => null}>
             {children}
