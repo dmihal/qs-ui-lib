@@ -14,7 +14,7 @@
 
 ![](https://quantstamp.com/assets/logo-website-dc3b71626c62e8a01d8767a293e104e968c43940060c9a0f7ca2d5e258c29def.svg)
 
-![](https://d3vv6lp55qjaqc.cloudfront.net/items/0U313M3L0p120g2Y1y3J/Image%202016-04-12%20at%207.25.03%20PM.png)
+![](https://i.imgur.com/JXTgx8h.png)
 
 #### How to import into a React project:
 
