@@ -138,14 +138,14 @@ class Modal extends Component {
           font-weight: ${Typography.typePrimaryWeight.normal};
         }
         
-          .modal .o-close {
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: -100;
-          }
+        .modal .o-close {
+          width: 100%;
+          height: 100%;
+          position: fixed;
+          left: 0;
+          top: 0;
+          z-index: -100;
+        }
         
         .modal input:checked ~ .o-close { z-index: 9998; }
         

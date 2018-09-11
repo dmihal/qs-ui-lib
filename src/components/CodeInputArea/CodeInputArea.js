@@ -491,6 +491,10 @@ class CodeInputArea extends Component {
           padding-top: 5px;
           padding-bottom: 5px;
         }
+
+        :global(*[class*="rsg"] .CodeMirror-scroll) {
+          padding-bottom: 0 !important;
+        }
       `}
       </style>
     </React.Fragment>

@@ -7,6 +7,7 @@ const ModalTrigger = ({ children, modalID }) => (
     {children}
     <style jsx>{`
       .toggleModal {
+        display: inline-block;
         cursor: pointer;
         text-align: center;
         border-width: 1px;

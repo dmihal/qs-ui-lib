@@ -132,3 +132,59 @@ describe('Modal', () => {
     })
   })
 })
+
+describe('ModalTrigger', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('ModalTrigger'))
+    
+  })
+})
+
+describe('RadioGroup', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('RadioGroup'))
+    
+  })
+})
+
+describe('SelectDropDown', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('SelectDropDown'))
+    
+  })
+})
+
+describe('SlideBar', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('SlideBar'))
+    
+  })
+})
+
+describe('FilterTable', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('FilterTable'))
+    
+  })
+})
+
+describe('Tabs', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('Tabs'))
+    
+  })
+})
+
+describe('Textarea', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('Textarea'))
+    
+  })
+})
+
+describe('Toggle', () => {
+  it('Can be ACTION', () => {
+    cy.visit(getLocation('Toggle'))
+
+  })
+})
