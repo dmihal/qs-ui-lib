@@ -21,7 +21,7 @@ class SelectDropDown extends React.Component {
   	const { selectedOption } = this.state;
 
     return (
-      <React.Fragment>
+      <div className="SelectDropDownWrapper">
         <Select
           name={name}
           value={selectedOption}
@@ -495,7 +495,7 @@ class SelectDropDown extends React.Component {
           }
         `}
         </style>
-      </React.Fragment>
+      </div>
     );
   }
 }

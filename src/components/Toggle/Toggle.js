@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Colors } from '../vars'
 
 const Toggle = ({toggleID, size}) => (
-  <React.Fragment>
+  <div className="Toggle">
     <input type="checkbox" name={toggleID} id={toggleID} />
     <label htmlFor={toggleID}></label>
     <style jsx>{`
@@ -65,7 +65,7 @@ const Toggle = ({toggleID, size}) => (
         box-shadow: inset 0 0 0 1px ${Colors.Royal}, 0 2px 4px rgba(0,0,0,.2);
       }
     `}</style>
-  </React.Fragment>
+  </div>
 )
 
 Toggle.propTypes = {

@@ -23,25 +23,17 @@ Icon - n/a
 Input - done
 LayoutGrid - n/a
 LayoutWrapper - n/a
-LinkCTA - STATUS
+LinkCTA - n/a
 LinkText - n/a
 Logo - n/a
 Modal - WIP
-ModalTrigger - STATUS
-NavigationSub - n/a
-NavigationTop - n/a
-Notification - n/a
-PatternBorder - n/a
-RadioGroup - STATUS
-SelectDropDown - STATUS
-SlideBar - STATUS
-SimpleTable - n/a
-FilterTable - STATUS
+SlideBar - WIP
+FilterTable - WIP
 Seal - n/a
-SealBanner - n.a
-Tabs - STATUS
-Textarea - STATUS
-Toggle - STATUS
+SealBanner - n/a
+Tabs - done
+Textarea - done
+Toggle - done
 */
 
 describe('Accordian', () => {
@@ -133,58 +125,63 @@ describe('Modal', () => {
   })
 })
 
-describe('ModalTrigger', () => {
-  it('Can be ACTION', () => {
-    cy.visit(getLocation('ModalTrigger'))
-    
-  })
-})
-
 describe('RadioGroup', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('RadioGroup'))
-    
+    cy.get('.radio-choice-wrap label').click({ multiple: true })
   })
 })
 
 describe('SelectDropDown', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('SelectDropDown'))
-    
+    cy.get('.SelectDropDownWrapper > div > div > div:first-child').click()
   })
 })
 
 describe('SlideBar', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('SlideBar'))
-    
+    // TODO
+    // cy.get('.rc-slider-handle')
+    //   .trigger('dragstart')
+    //   .trigger('mousemove', 400, 0 )
+    //   .trigger('drop', { clientX: 200, clientY: 0 })
   })
 })
 
 describe('FilterTable', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('FilterTable'))
-    
+    // TODO
   })
 })
 
 describe('Tabs', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('Tabs'))
-    
+    cy.pause()
+    cy.get('.Tabs button:nth-child(1)').click()
+    cy.get('.Tabs button:nth-child(2)').click()
+    cy.get('.Tabs button:nth-child(3)').click()
+    cy.get('.Tabs button:nth-child(4)').click()
+    cy.get('.Tabs button:nth-child(5)').click()
+    cy.get('.Tabs button:nth-child(6)').click()
   })
 })
 
 describe('Textarea', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('Textarea'))
-    
+    cy.get('.Textarea-wrapper textarea').each(($el) => {
+      cy.wrap($el).type('Testing')
+    })
   })
 })
 
 describe('Toggle', () => {
   it('Can be ACTION', () => {
     cy.visit(getLocation('Toggle'))
-
+    cy.get('.Toggle label').click({ multiple: true })
   })
 })

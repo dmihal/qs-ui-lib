@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Colors, MarginPaddingSize } from '../vars'
 import { glyphcheck } from '../../../asset-inliner'
 
-const CheckboxGroup = ({ nameID, options, error }) => (
+const CheckboxGroup = ({ nameID, options, error, direction }) => (
   <React.Fragment>
     <form>
       {
@@ -24,8 +24,16 @@ const CheckboxGroup = ({ nameID, options, error }) => (
       }
     </form>
     <style jsx>{`
+      form {
+        display: flex;
+        flex-direction: ${ direction || 'column' };
+      }
+
       .checkbox-choice-wrap {
-        margin-bottom: ${MarginPaddingSize[1]};
+        display: flex;
+        align-items: ${ direction === 'row' ? 'center' : '' };
+        margin-bottom: ${ !direction || direction === 'column' ? MarginPaddingSize[1] : '0' };
+        margin-right: ${ direction === 'row' ? MarginPaddingSize[1] : '0'};
 
         &.disabled {
 
@@ -67,7 +75,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           position: relative;
           padding-left: 28px;
           cursor: pointer;
-          line-height: 20px;
+          line-height: 1.2 !important;
           display: inline-block;
           color: #666;
         }

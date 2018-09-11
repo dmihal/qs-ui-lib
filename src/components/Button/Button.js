@@ -5,7 +5,7 @@ import { glyphcarouselarrow } from '../../../asset-inliner'
 
 const Button = ({ children, type, size, onClick, styleOverRideRule, styleOverRide, activeHighlight }) => (
   <button
-    className={"Button " + styleOverRideRule}
+    className={"Button " + (activeHighlight ? "tab-active ": '') + (styleOverRideRule ? styleOverRideRule : '')}
     disabled={type === 'disabled'}
     onClick={onClick}>
       {children}

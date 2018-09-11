@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import { MarginPaddingSize } from '../vars'
 
 import Button from '../Button'
 
@@ -40,20 +41,36 @@ class Tabs extends Component {
         {
           this.props.tabList.map((tabItem) => {
             return (
-              <div
-                className="ref-wrapper"
-                key={tabItem + Math.random()}>
-                <Button
-                  activeHighlight={this.state.activeTab === tabItem}  
-                  onClick={(someVal) => {this.handleClick(someVal, tabItem)}}>
-                  {tabItem}
-                </Button>
-              </div>
+              <Button
+                key={tabItem + Math.random()}
+                activeHighlight={this.state.activeTab === tabItem}
+                onClick={(someVal) => {this.handleClick(someVal, tabItem)}}>
+                {tabItem}
+              </Button>
             )
           })  
         }
         <style jsx>{`
-          .Tabs {display: flex;}
+          .Tabs {
+            display: flex;
+
+            :global(.Button) {
+              border-right-width: 0;
+            }
+            :global(*:last-child) {
+              border-right-width: 1px !important;
+            }
+            :global(.Button.tab-active) {
+              padding-left: calc(${MarginPaddingSize[1]} + 1px);
+            }
+            :global(.Button.tab-active + .Button) {
+              border-left-width: 0px;
+              padding-left: calc(${MarginPaddingSize[1]} + 1px);
+            }
+            :global(.Button.tab-active) {
+              border-right-width: 1px;
+            }
+          }
         `}</style>
       </div>
     )

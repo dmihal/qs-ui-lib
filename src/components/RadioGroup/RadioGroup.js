@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Colors, MarginPaddingSize } from '../vars'
 
-const RadioGroup = ({ nameID, options }) => (
+const RadioGroup = ({ nameID, options, direction }) => (
   <React.Fragment>
     <form>
       {
@@ -23,8 +23,16 @@ const RadioGroup = ({ nameID, options }) => (
       }
     </form>
     <style jsx>{`
-      .radio-choice-wrap {
-          margin-bottom: ${MarginPaddingSize[1]};
+      form {
+          display: flex;
+          flex-direction: ${ direction || 'column' };
+        }
+
+        .radio-choice-wrap {
+          display: flex;
+          align-items: ${ direction === 'row' ? 'center' : '' };
+          margin-bottom: ${ !direction || direction === 'column' ? MarginPaddingSize[1] : '0' };
+          margin-right: ${ direction === 'row' ? MarginPaddingSize[1] : '0'};
 
           &.disabled {
             input:checked + label:before,
