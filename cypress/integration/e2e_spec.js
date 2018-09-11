@@ -1,6 +1,49 @@
 var host = `http://localhost:6060/#!/`
 const getLocation = (component) => host+component
 
+/*
+Accordian - done
+Banner - n/a
+Button - n/a
+CalloutCard - n/a
+CarouselGallery - done
+CarouselGalleryCard - n/a
+CheckboxGroup - done
+CodeInputArea - WIP
+Colors - n/a
+CTAGrid - n/a
+CTAGridContent - n/a
+DatePick - WIP
+GlobalDefault - n/a
+GlobalFonts - n/a
+GlobalReset - n/a
+GlobalTypography - n/a
+Glyph - n/a
+Icon - n/a
+Input - done
+LayoutGrid - n/a
+LayoutWrapper - n/a
+LinkCTA - STATUS
+LinkText - n/a
+Logo - n/a
+Modal - WIP
+ModalTrigger - STATUS
+NavigationSub - n/a
+NavigationTop - n/a
+Notification - n/a
+PatternBorder - n/a
+RadioGroup - STATUS
+SelectDropDown - STATUS
+SlideBar - STATUS
+SimpleTable - n/a
+FilterTable - STATUS
+Seal - n/a
+SealBanner - n.a
+Tabs - STATUS
+Textarea - STATUS
+Toggle - STATUS
+*/
+
 describe('Accordian', () => {
   it('Is opened when clicked', () => {
     cy.visit(getLocation('Accordian'))

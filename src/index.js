@@ -32,11 +32,11 @@ import RadioGroup from './components/RadioGroup'
 import SelectDropDown from './components/SelectDropDown'
 import SlideBar from './components/SlideBar'
 import SimpleTable from './components/SimpleTable'
-import Table from './components/Table'
+import FilterTable from './components/FilterTable'
 import Tabs from './components/Tabs'
 import Textarea from './components/Textarea'
 import Toggle from './components/Toggle'
-import VerifiedSeal from './components/VerifiedSeal'
+import Seal from './components/Seal'
 import SealBanner from './components/SealBanner'
 
 export {
@@ -74,10 +74,10 @@ export {
   SelectDropDown,
   SlideBar,
   SimpleTable,
-  Table,
+  FilterTable,
   Tabs,
   Textarea,
   Toggle,
-  VerifiedSeal,
+  Seal,
   SealBanner,
  }
