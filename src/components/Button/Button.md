@@ -16,6 +16,24 @@ Primary Button
 <Button type="primary">Primary</Button>
 ```
 
+Primary Button (w/ styleOverride)
+
+\* 
+__Be sure to use__ 
+**!important**
+__to override styles__ 
+\*
+```jsx
+<Button 
+  type="primary"
+  styleOverRideRule="override-x1"
+  styleOverRide={`
+    .override-x1 { 
+      background: green !important;
+    }
+  `}>Primary</Button>
+```
+
 Warning Button
 ```jsx
 <Button type="warning">Warning</Button>

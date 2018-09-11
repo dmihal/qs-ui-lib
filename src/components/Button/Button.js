@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import { Typography, Colors , MarginPaddingSize } from '../vars'
 import { glyphcarouselarrow } from '../../../asset-inliner'
 
-const Button = ({ children, type, size, onClick, styleOverrides, activeHighlight }) => (
+const Button = ({ children, type, size, onClick, styleOverRideRule, styleOverRide, activeHighlight }) => (
   <button
-    className="Button"
+    className={"Button " + styleOverRideRule}
     disabled={type === 'disabled'}
     onClick={onClick}>
       {children}
@@ -186,11 +186,7 @@ const Button = ({ children, type, size, onClick, styleOverrides, activeHighlight
         }
       }
     `}</style>
-    <style jsx>{`
-      .Button { 
-        ${styleOverrides}
-      }
-    `}</style>
+    <style>{` ${styleOverRide} `}</style>
   </button>
 )
 
@@ -212,9 +208,13 @@ Button.propTypes = {
    */
   size: PropTypes.string,
   /**
+   * StyleOveride Rule
+   */  
+  styleOverRideRule: PropTypes.string,
+  /**
    * StyleOverides
    */  
-  styleOverrides: PropTypes.string,
+  styleOverRide: PropTypes.string,
   /**
    * Button highlight for tavs
    */  

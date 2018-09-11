@@ -24,14 +24,25 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
                   type="left"
                   onClick={previousSlide}
                   size={MarginPaddingSize[3]}
-                  styleOverrides={"border: none !important;"}
+                  styleOverRideRule={'override-1'}
+                  styleOverRide={`
+                    .override-1 { 
+                      border: none !important;
+                    }
+                  `}
                   />
                 <Button
                   bgColor={'rgba(215, 214, 215, 1.0)'}
                   type="right"
                   onClick={nextSlide}
                   size={MarginPaddingSize[3]}
-                  styleOverrides={"border: none !important; border-left: 1px solid "+Colors.Alabaster+" !important;"}/>
+                  styleOverRideRule={'override-2'}
+                  styleOverRide={`
+                    .override-2 {
+                      border: none !important;
+                      border-left: 1px solid ${Colors.Alabaster} !important;
+                    }
+                  `}/>
                 <h3 className="CarouselGallery-label">{label}</h3>
               </React.Fragment>
             )}
@@ -53,13 +64,23 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
               <Button
                 type="left"
                 onClick={previousSlide}
-                styleOverrides={`background-color: white;`}/>
+                styleOverRideRule={'override-3'}
+                styleOverRide={`
+                  .override-3 {
+                    background-color: white !important;
+                  }
+                `}/>
             )}
             renderCenterRightControls={({ nextSlide }) => (
               <Button
-                  type="right"
-                  onClick={nextSlide}
-                  styleOverrides={`background-color: white;`}/>
+                type="right"
+                onClick={nextSlide}
+                styleOverRideRule={'override-4'}
+                styleOverRide={`
+                  .override-4 {
+                    background-color: white !important;
+                  }
+                `}/>
             )}
             renderBottomCenterControls={() => null}>
             {children}
@@ -107,7 +128,6 @@ const CarouselGallery = ({ children, type, label, bottomLabel }) => (
         :global(.slider-frame) {
           overflow: visible !important;
         }
-        
 
         .CarouselGallery-label,
         .CarouselGallery-bottomLabel {
