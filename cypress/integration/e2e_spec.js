@@ -14,6 +14,7 @@ Colors - n/a
 CTAGrid - n/a
 CTAGridContent - n/a
 DatePick - WIP
+FilterTable - WIP
 GlobalDefault - n/a
 GlobalFonts - n/a
 GlobalReset - n/a
@@ -28,7 +29,7 @@ LinkText - n/a
 Logo - n/a
 Modal - WIP
 SlideBar - WIP
-FilterTable - WIP
+SimpleTable - n/a
 Seal - n/a
 SealBanner - n/a
 Tabs - done
