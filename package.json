@@ -1,7 +1,7 @@
 {
   "name": "qs-ui-library",
   "version": "0.0.32-development",
-  "description": "Quantstamp UI Library",
+  "description": "Quantstamp's Canonical UI Library",
   "main": "lib/index.js",
   "module": "es/index.js",
   "sideEffects": false,
@@ -10,7 +10,6 @@
     "es",
     "lib",
     "src",
-    "STYLEGUIDE.md"
   ],
   "scripts": {
     "asset-dev": "npx nodemon --exec 'npm run regen' /asset-inliner/src/index.js",
@@ -21,24 +20,18 @@
     "build:watch": "create-react-styleguide script build:watch",
     "build:styleguide": "create-react-styleguide script build:styleguide",
     "clean": "create-react-styleguide script clean",
-    "eslint": "create-react-styleguide script eslint",
-    "eslint:fix": "create-react-styleguide script eslint:fix",
-    "release": "npx semantic-release",
+    "lint": "create-react-styleguide script eslint",
+    "precommit": "pretty-quick --staged",
     "start": "create-react-styleguide script start",
-    "test": "create-react-styleguide script test",
     "test:ui": "npx cypress open",
     "test:ui-headless": "npx cypress run",
-    "test:coverage": "create-react-styleguide script test:coverage",
-    "test:update": "create-react-styleguide script test:update",
-    "test:watch": "create-react-styleguide script test:watch",
+    "test:coverage": "",
+    "test:update": "",
+    "test:watch": "",
+    "release": "npx semantic-release",
     "travis-deploy-once": "travis-deploy-once",
     "semantic-release": "semantic-release",
     "prepublishOnly": "create-react-styleguide script prepublishOnly"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": ""
-    }
   },
   "dependencies": {
     "codemirror": "^5.39.2",
@@ -61,24 +54,22 @@
     "react": "16.x"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.7.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "base64-img": "^1.0.4",
     "create-react-styleguide": "0.0.17",
     "cypress": "^3.1.0",
-    "enzyme": "^3.4.1",
-    "enzyme-adapter-react-16": "^1.2.0",
-    "enzyme-to-json": "^3.3.4",
-    "eslint-plugin-jest": "^21.21.0",
-    "husky": "^1.0.0-rc.13",
+    "husky": "^1.0.0-rc.14",
+    "minimist": "^1.2.0",
+    "nodemon": "^1.18.3",
+    "prettier": "1.14.2",
+    "pretty-quick": "^1.6.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "webpack-blocks": "^1.0.0",
-    "base64-img": "^1.0.4",
-    "minimist": "^1.2.0",
     "shelljs": "^0.8.2",
-    "nodemon": "^1.18.3"
+    "webpack-blocks": "^1.0.0"
   },
   "author": {
     "name": "Jeff Scott Ward",
