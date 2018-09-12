@@ -9,7 +9,7 @@
     "css",
     "es",
     "lib",
-    "src",
+    "src"
   ],
   "scripts": {
     "asset-dev": "npx nodemon --exec 'npm run regen' /asset-inliner/src/index.js",
