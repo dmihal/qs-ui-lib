@@ -6,7 +6,9 @@ import CarouselGallery from "./components/CarouselGallery";
 import CarouselGalleryCard from "./components/CarouselGalleryCard";
 import CheckboxGroup from "./components/CheckboxGroup";
 import CodeInputArea from "./components/CodeInputArea";
-import Colors from "./components/Colors";
+// import Colors from "./components/Colors";
+// import MarginPaddingSize from "./components/MarginPaddingSize";
+// import LayoutSizes from "./components/LayoutSizes";
 import CTAGrid from "./components/CTAGrid";
 import CTAGridContent from "./components/CTAGridContent";
 import DatePick from "./components/DatePick";
@@ -38,6 +40,7 @@ import Textarea from "./components/Textarea";
 import Toggle from "./components/Toggle";
 import Seal from "./components/Seal";
 import SealBanner from "./components/SealBanner";
+import { Colors, LayoutSizes, MarginPaddingSize } from "./components/vars";
 
 export {
   Accordian,
@@ -61,6 +64,8 @@ export {
   Input,
   LayoutGrid,
   LayoutWrapper,
+  LayoutSizes,
+  MarginPaddingSize,
   LinkCTA,
   LinkText,
   Logo,
