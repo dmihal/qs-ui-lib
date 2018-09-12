@@ -1,5 +1,5 @@
 import React from "react";
-import { bgpattern } from "../../../asset-inliner";
+import { bgpattern } from "../../asset-inliner";
 
 const PatternBorder = () => (
   <div className="PatternBorder">

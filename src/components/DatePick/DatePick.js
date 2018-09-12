@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import DatePicker from "react-datepicker";
 import moment from "moment";
-import { glyphcalendar } from "../../../asset-inliner";
+import { glyphcalendar } from "../../asset-inliner";
 
 import { Typography, Colors, MarginPaddingSize } from "../vars";
 

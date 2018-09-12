@@ -1,6 +1,6 @@
 {
   "name": "qs-ui-library",
-  "version": "0.0.34-development",
+  "version": "0.0.35-development",
   "description": "Quantstamp's Canonical UI Library",
   "main": "lib/index.js",
   "module": "es/index.js",

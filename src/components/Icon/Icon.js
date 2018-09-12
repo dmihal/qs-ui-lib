@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 const Icon = ({ type, size }) => (
   <img
     alt={"icon " + type}
-    src={require("../../../asset-inliner/inlined/icons/" + type + ".svg.js")}
+    src={require("../../asset-inliner/inlined/icons/" + type + ".svg.js")}
     style={{
       width: Icon.sizes[size] || Icon.sizes["small"],
       height: Icon.sizes[size] || Icon.sizes["small"]

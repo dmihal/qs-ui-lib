@@ -11,14 +11,14 @@ import { Colors, MarginPaddingSize, Typography } from "../vars";
 //   quantstampLogoVerticalDark,
 //   quantstampLogoProduct,
 //   quantstampLogoProductDark
-//  } from '../../../asset-inliner/index.js'
+//  } from '../../asset-inliner/index.js'
 
-const quantstampLogo = require("../../../asset-inliner/inlined/logos/quantstamp-logo.svg.js");
-const quantstampLogoDark = require("../../../asset-inliner/inlined/logos/quantstamp-logo-dark.svg.js");
-const quantstampLogoVertical = require("../../../asset-inliner/inlined/logos/quantstamp-logo-vertical.svg.js");
-const quantstampLogoVerticalDark = require("../../../asset-inliner/inlined/logos/quantstamp-logo-vertical-dark.svg.js");
-const quantstampLogoProduct = require("../../../asset-inliner/inlined/logos/quantstamp-logo-product.svg.js");
-const quantstampLogoProductDark = require("../../../asset-inliner/inlined/logos/quantstamp-logo-product-dark.svg.js");
+const quantstampLogo = require("../../asset-inliner/inlined/logos/quantstamp-logo.svg.js");
+const quantstampLogoDark = require("../../asset-inliner/inlined/logos/quantstamp-logo-dark.svg.js");
+const quantstampLogoVertical = require("../../asset-inliner/inlined/logos/quantstamp-logo-vertical.svg.js");
+const quantstampLogoVerticalDark = require("../../asset-inliner/inlined/logos/quantstamp-logo-vertical-dark.svg.js");
+const quantstampLogoProduct = require("../../asset-inliner/inlined/logos/quantstamp-logo-product.svg.js");
+const quantstampLogoProductDark = require("../../asset-inliner/inlined/logos/quantstamp-logo-product-dark.svg.js");
 
 // console.log(quantstampLogo)
 // console.log(quantstampLogoDark)

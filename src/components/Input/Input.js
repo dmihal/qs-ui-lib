@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors, MarginPaddingSize } from "../vars";
-import { glyphsearch } from "../../../asset-inliner";
+import { glyphsearch } from "../../asset-inliner";
 
 const Input = ({
   type,

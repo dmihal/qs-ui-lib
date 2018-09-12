@@ -4,7 +4,7 @@ import { Typography, Colors, MarginPaddingSize } from "../vars";
 import {
   glyphdoublearrow,
   glyphdoublearrowcolormalibu
-} from "../../../asset-inliner";
+} from "../../asset-inliner";
 
 const LinkCTA = ({ children, label, onDark }) => (
   <div className="LinkCTA">

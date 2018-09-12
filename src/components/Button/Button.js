@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors, MarginPaddingSize } from "../vars";
-import { glyphcarouselarrow } from "../../../asset-inliner";
+import { glyphcarouselarrow } from "../../asset-inliner";
 
 const Button = ({
   children,

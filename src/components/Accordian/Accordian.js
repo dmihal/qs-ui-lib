@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { glypharrow } from "../../../asset-inliner";
+import { glypharrow } from "../../asset-inliner";
 
 const Accordian = ({ children, title }) => (
   <details className="Accordian">

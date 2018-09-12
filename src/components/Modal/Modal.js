@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Colors, MarginPaddingSize, Typography } from "../vars";
-import { glyphclosex } from "../../../asset-inliner";
+import { glyphclosex } from "../../asset-inliner";
 
 class Modal extends Component {
   static propTypes = {

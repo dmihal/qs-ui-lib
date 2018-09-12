@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import LinkText from "../LinkText";
 import { MarginPaddingSize, Typography } from "../vars";
-import { sealblue } from "../../../asset-inliner";
+import { sealblue } from "../../asset-inliner";
 
 const SealBanner = ({ type, title, date, url }) => (
   <div className={"SealBanner"}>

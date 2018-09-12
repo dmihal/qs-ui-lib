@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import LayoutGrid from "../LayoutGrid";
 import Button from "../Button";
 import { MarginPaddingSize, Colors } from "../vars";
-import { bgwaves } from "../../../asset-inliner";
+import { bgwaves } from "../../asset-inliner";
 
 const Banner = ({
   title,

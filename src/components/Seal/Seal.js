@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 const Seal = ({ type }) => (
   <img
     alt={"seal " + type}
-    src={require("../../../asset-inliner/inlined/seals/seal-" +
-      type +
-      ".svg.js")}
+    src={require("../../asset-inliner/inlined/seals/seal-" + type + ".svg.js")}
     style={{
       width: Seal.sizes["large"],
       height: Seal.sizes["large"]

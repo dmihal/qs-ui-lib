@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Colors, MarginPaddingSize } from "../vars";
-import { glyphcheck } from "../../../asset-inliner";
+import { glyphcheck } from "../../asset-inliner";
 
 const CheckboxGroup = ({ nameID, options, error, direction }) => (
   <React.Fragment>
