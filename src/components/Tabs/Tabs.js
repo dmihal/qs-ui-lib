@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { MarginPaddingSize } from '../vars'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { MarginPaddingSize } from "../vars";
 
-import Button from '../Button'
+import Button from "../Button";
 
 class Tabs extends Component {
   static propTypes = {
@@ -18,38 +18,39 @@ class Tabs extends Component {
     * Event handler
     */
     handleSelection: PropTypes.func.isRequired
-  }
+  };
 
   constructor(props) {
-    super()    
+    super();
     this.state = {
-      activeTab: props.defaultActiveTab || ''
-    }
+      activeTab: props.defaultActiveTab || ""
+    };
   }
 
-  handleClick = (e,tabitemClick) => {
-    this.setState({activeTab: tabitemClick})
-    
-    if(this.props.handleSelection) {
-      this.props.handleSelection(tabitemClick)
+  handleClick = (e, tabitemClick) => {
+    this.setState({ activeTab: tabitemClick });
+
+    if (this.props.handleSelection) {
+      this.props.handleSelection(tabitemClick);
     }
-  }
+  };
 
   render() {
     return (
       <div className="Tabs">
-        {
-          this.props.tabList.map((tabItem) => {
-            return (
-              <Button
-                key={tabItem + Math.random()}
-                activeHighlight={this.state.activeTab === tabItem}
-                onClick={(someVal) => {this.handleClick(someVal, tabItem)}}>
-                {tabItem}
-              </Button>
-            )
-          })  
-        }
+        {this.props.tabList.map(tabItem => {
+          return (
+            <Button
+              key={tabItem + Math.random()}
+              activeHighlight={this.state.activeTab === tabItem}
+              onClick={someVal => {
+                this.handleClick(someVal, tabItem);
+              }}
+            >
+              {tabItem}
+            </Button>
+          );
+        })}
         <style jsx>{`
           .Tabs {
             display: flex;
@@ -73,8 +74,8 @@ class Tabs extends Component {
           }
         `}</style>
       </div>
-    )
+    );
   }
 }
 
-export default Tabs
+export default Tabs;

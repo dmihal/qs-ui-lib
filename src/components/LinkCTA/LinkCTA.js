@@ -1,7 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typography, Colors , MarginPaddingSize } from '../vars'
-import { glyphdoublearrow, glyphdoublearrowcolormalibu } from '../../../asset-inliner'
+import React from "react";
+import PropTypes from "prop-types";
+import { Typography, Colors, MarginPaddingSize } from "../vars";
+import {
+  glyphdoublearrow,
+  glyphdoublearrowcolormalibu
+} from "../../../asset-inliner";
 
 const LinkCTA = ({ children, label, onDark }) => (
   <div className="LinkCTA">
@@ -11,9 +14,9 @@ const LinkCTA = ({ children, label, onDark }) => (
       .LinkCTA {
         display: inline-block;
         height: 100%;
-        background: ${ !!onDark === true ? '#1e2837' : Colors.Gallery};
+        background: ${!!onDark === true ? "#1e2837" : Colors.Gallery};
         max-width: 400px;
-        color: ${ !!onDark === true ? Colors.Malibu : Colors.Royal};
+        color: ${!!onDark === true ? Colors.Malibu : Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
         border-radius: 2px;
@@ -25,14 +28,14 @@ const LinkCTA = ({ children, label, onDark }) => (
         .label {
           height: 21px;
           border-radius: 2px;
-          background-color: ${ !!onDark === true ? 'black' : Colors.Royal };
+          background-color: ${!!onDark === true ? "black" : Colors.Royal};
           color: white;
           padding: 4px 13px 0px 13px;
           font-weight: 300;
           font-style: normal;
           line-height: 1;
           text-align: center;
-          border-color: ${ !!onDark === true ? 'black' : '' };
+          border-color: ${!!onDark === true ? "black" : ""};
           font-size: 14px;
 
           @media (width <= 500px) {
@@ -42,8 +45,8 @@ const LinkCTA = ({ children, label, onDark }) => (
 
         :global(*) {
           display: inline-block;
-          -webkit-transition: all .5s;
-            -moz-transition: all .5s;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
         }
 
         :global(button) {
@@ -53,17 +56,17 @@ const LinkCTA = ({ children, label, onDark }) => (
         .description-box {
           padding: 0 ${MarginPaddingSize[0]};
           font-size: ${Typography.fontSize[4]};
-          color: ${ !!onDark === true ? Colors.Malibu : '' };
-          
+          color: ${!!onDark === true ? Colors.Malibu : ""};
+
           @media (width <= 500px) {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
           }
-          
+
           &::after {
-            content: '';
+            content: "";
             display: inline-block;
             position: relative;
             left: 0px;
@@ -71,15 +74,14 @@ const LinkCTA = ({ children, label, onDark }) => (
             width: calc(${MarginPaddingSize[0]}*2);
             height: ${MarginPaddingSize[0]};
             margin-left: ${MarginPaddingSize[0]};
-            background: ${ 
-              !!onDark
-                ? 'url( ' + glyphdoublearrowcolormalibu + ')' 
-                : 'url( ' + glyphdoublearrow + ')' 
-            } no-repeat;
+            background: ${!!onDark
+                ? "url( " + glyphdoublearrowcolormalibu + ")"
+                : "url( " + glyphdoublearrow + ")"}
+              no-repeat;
             background-position-x: right;
           }
         }
-        
+
         .arrow-right {
           display: inline-block;
           margin-right: 5px;
@@ -98,7 +100,7 @@ const LinkCTA = ({ children, label, onDark }) => (
       }
     `}</style>
   </div>
-)
+);
 
 LinkCTA.propTypes = {
   /**
@@ -108,7 +110,7 @@ LinkCTA.propTypes = {
   /**
    * LinkCTA arrow
    */
-  label: PropTypes.string,
-}
+  label: PropTypes.string
+};
 
-export default LinkCTA
+export default LinkCTA;

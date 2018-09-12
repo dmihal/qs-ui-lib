@@ -1,59 +1,51 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const SimpleTable = ({ data, tableTitle, direction }) => (
-  <div className='SimpleTable'>
-    <div className='table-wrapper'>
-      <div className='table-title'>{tableTitle}</div>
-      {
-        direction === 'horizontal'
-        ? (
-          <table>
-            <tbody>
-            {
-              Object.keys(data).map((key) => {
+  <div className="SimpleTable">
+    <div className="table-wrapper">
+      <div className="table-title">{tableTitle}</div>
+      {direction === "horizontal" ? (
+        <table>
+          <tbody>
+            {Object.keys(data).map(key => {
+              return (
+                <tr className="horizontal-row" key={data[key]}>
+                  <th>{key}</th>
+                  <td>{data[key]}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      ) : (
+        <table>
+          <thead>
+            <tr>
+              {Object.keys(data).map(key => {
+                return <th key={key}>{key}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {Object.keys(data).map(key => {
                 return (
-                  <tr className='horizontal-row' key={data[key]}>
-                    <th>{key}</th>
-                    <td>{data[key]}</td>
-                  </tr>
-                )
-              })
-            }
-            </tbody>
-          </table>
-        )
-        : (
-          <table>
-            <thead>
-              <tr>
-                {
-                  Object.keys(data).map((key) => {
-                    return (
-                      <th key={key}>{key}</th>
-                    )
-                  })
-                }
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {
-                  Object.keys(data).map((key) => {
-                    return (
-                      <td key={data[key]}>{
-                        typeof data[key] === 'object'
-                          ? (data[key].map((deepKey) => {return (<span key={deepKey +'nested'}>{deepKey}</span>)}))
-                          : data[key]
-                      }</td>
-                    )
-                  })
-                }
-              </tr>
-            </tbody>
-          </table>
-        )
-      }
+                  <td key={data[key]}>
+                    {typeof data[key] === "object"
+                      ? data[key].map(deepKey => {
+                          return (
+                            <span key={deepKey + "nested"}>{deepKey}</span>
+                          );
+                        })
+                      : data[key]}
+                  </td>
+                );
+              })}
+            </tr>
+          </tbody>
+        </table>
+      )}
     </div>
     <style jsx>{`
       .SimpleTable {
@@ -82,7 +74,8 @@ const SimpleTable = ({ data, tableTitle, direction }) => (
           border-collapse: collapse;
         }
 
-        th,td {
+        th,
+        td {
           border: solid 1px #eeeeee;
           padding: 20px;
         }
@@ -112,13 +105,13 @@ const SimpleTable = ({ data, tableTitle, direction }) => (
       }
     `}</style>
   </div>
-)
+);
 
 SimpleTable.propTypes = {
   /**
    * Data Obj
    */
-  data: PropTypes.object.isRequired, 
+  data: PropTypes.object.isRequired,
   /**
    * SimpleTable Title
    */
@@ -127,6 +120,6 @@ SimpleTable.propTypes = {
    * Direction
    */
   direction: PropTypes.string
-}
+};
 
-export default SimpleTable
+export default SimpleTable;

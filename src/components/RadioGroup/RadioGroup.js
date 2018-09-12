@@ -1,62 +1,69 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Colors, MarginPaddingSize } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { Colors, MarginPaddingSize } from "../vars";
 
 const RadioGroup = ({ nameID, options, direction }) => (
   <React.Fragment>
     <form>
-      {
-        options.map((option, index)=> {
-          return (
-            <div 
-              key={option.label+index}
-              className={
-                  "radio-choice-wrap" +
-                  (option.disabled ? ' disabled' : '' ) +
-                  (option.deactive ? ' deactive' : '' ) +
-                  (option.error ? ' error' : '' )}>
-                <input type="radio" id={option.label+index} name={nameID} disabled={option.disabled || option.error}/>
-                <label htmlFor={option.label+index}>{option.label}</label>
-            </div>
-          )
-        })
-      }
+      {options.map((option, index) => {
+        return (
+          <div
+            key={option.label + index}
+            className={
+              "radio-choice-wrap" +
+              (option.disabled ? " disabled" : "") +
+              (option.deactive ? " deactive" : "") +
+              (option.error ? " error" : "")
+            }
+          >
+            <input
+              type="radio"
+              id={option.label + index}
+              name={nameID}
+              disabled={option.disabled || option.error}
+            />
+            <label htmlFor={option.label + index}>{option.label}</label>
+          </div>
+        );
+      })}
     </form>
     <style jsx>{`
       form {
-          display: flex;
-          flex-direction: ${ direction || 'column' };
+        display: flex;
+        flex-direction: ${direction || "column"};
+      }
+
+      .radio-choice-wrap {
+        display: flex;
+        align-items: ${direction === "row" ? "center" : ""};
+        margin-bottom: ${!direction || direction === "column"
+          ? MarginPaddingSize[1]
+          : "0"};
+        margin-right: ${direction === "row" ? MarginPaddingSize[1] : "0"};
+
+        &.disabled {
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            cursor: not-allowed;
+          }
         }
 
-        .radio-choice-wrap {
-          display: flex;
-          align-items: ${ direction === 'row' ? 'center' : '' };
-          margin-bottom: ${ !direction || direction === 'column' ? MarginPaddingSize[1] : '0' };
-          margin-right: ${ direction === 'row' ? MarginPaddingSize[1] : '0'};
+        &.deactive label::after {
+          filter: saturate(0%) opacity(20%);
+        }
 
-          &.disabled {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              cursor: not-allowed;
-            }
+        &.error {
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            border: 2px solid ${Colors.Cinnabar};
+            background: rgba(227, 66, 52, 0.1);
+            cursor: not-allowed;
           }
 
-          &.deactive label::after {
-            filter: saturate(0%) opacity(20%);
+          input:checked + label:after,
+          input:not(:checked) + label:after {
+            background: ${Colors.Cinnabar};
           }
-
-          &.error {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              border: 2px solid ${Colors.Cinnabar};
-              background: rgba(227, 66, 52, 0.1);
-              cursor: not-allowed;
-            }
-
-            input:checked + label:after,
-            input:not(:checked) + label:after {
-              background: ${Colors.Cinnabar};
-            }
         }
       }
       [type="radio"] {
@@ -78,7 +85,7 @@ const RadioGroup = ({ nameID, options, direction }) => (
 
         &:checked + label:before,
         &:not(:checked) + label:before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
@@ -88,10 +95,10 @@ const RadioGroup = ({ nameID, options, direction }) => (
           border-radius: 100%;
           background: #fff;
         }
-        
+
         &:checked + label:after,
         &:not(:checked) + label:after {
-          content: '';
+          content: "";
           width: 10px;
           height: 10px;
           background: ${Colors.Royal};
@@ -117,7 +124,7 @@ const RadioGroup = ({ nameID, options, direction }) => (
       }
     `}</style>
   </React.Fragment>
-)
+);
 
 RadioGroup.propTypes = {
   /**
@@ -127,7 +134,7 @@ RadioGroup.propTypes = {
   /**
    * Radio ID
    */
-  options: PropTypes.array.isRequired,
-}
+  options: PropTypes.array.isRequired
+};
 
-export default RadioGroup
+export default RadioGroup;

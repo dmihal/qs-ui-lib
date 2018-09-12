@@ -1,26 +1,28 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const Seal = ({ type }) => (
-    <img
-      alt={'seal ' + type}
-      src={require('../../../asset-inliner/inlined/seals/seal-'+type+'.svg.js')}
-      style={{
-        'width': Seal.sizes['large'],
-        'height': Seal.sizes['large']
-      }}
-    />
-)
+  <img
+    alt={"seal " + type}
+    src={require("../../../asset-inliner/inlined/seals/seal-" +
+      type +
+      ".svg.js")}
+    style={{
+      width: Seal.sizes["large"],
+      height: Seal.sizes["large"]
+    }}
+  />
+);
 
 Seal.propTypes = {
   /*
   * Seal type
   */
-  type: PropTypes.string.isRequired,
-}
+  type: PropTypes.string.isRequired
+};
 
 Seal.sizes = {
-  large: '160px'
-}
+  large: "160px"
+};
 
-export default Seal
+export default Seal;

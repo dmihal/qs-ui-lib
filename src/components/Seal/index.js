@@ -1,1 +1,1 @@
-export { default } from './Seal'
+export { default } from "./Seal";

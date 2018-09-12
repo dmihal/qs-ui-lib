@@ -1,1 +1,1 @@
-export { default } from './GlobalReset'
+export { default } from "./GlobalReset";

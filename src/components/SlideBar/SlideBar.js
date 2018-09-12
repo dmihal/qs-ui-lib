@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import Slider from 'rc-slider'
-import Tooltip from 'rc-tooltip'
-import { Colors } from '../vars'
+import Slider from "rc-slider";
+import Tooltip from "rc-tooltip";
+import { Colors } from "../vars";
 
-const Handle = Slider.Handle
+const Handle = Slider.Handle;
 
 class SlideBar extends Component {
   static propTypes = {
@@ -21,23 +21,18 @@ class SlideBar extends Component {
     * Event Handler
     */
     handleDrag: PropTypes.func
-  }
+  };
 
   constructor(props) {
-    super()
+    super();
   }
 
-  handleDrag = (sliderData) => {
-    if(this.props.handleDrag) {
-      this.props.handleDrag(sliderData)
+  handleDrag = sliderData => {
+    if (this.props.handleDrag) {
+      this.props.handleDrag(sliderData);
     }
-    
-    const {
-      value,
-      dragging,
-      index,
-      ...restProps
-    } = sliderData
+
+    const { value, dragging, index, ...restProps } = sliderData;
 
     return (
       <Tooltip
@@ -45,11 +40,12 @@ class SlideBar extends Component {
         overlay={value}
         visible={dragging}
         placement="top"
-        key={index}>
+        key={index}
+      >
         <Handle value={value} {...restProps} />
       </Tooltip>
-    )
-  }
+    );
+  };
 
   render() {
     return (
@@ -58,7 +54,8 @@ class SlideBar extends Component {
           min={0}
           max={this.props.max}
           defaultValue={this.props.defaultValue}
-          handle={this.handleDrag} />
+          handle={this.handleDrag}
+        />
         <style jsx global>{`
           .rc-slider {
             position: relative;
@@ -67,7 +64,7 @@ class SlideBar extends Component {
             width: 100%;
             border-radius: 6px;
             -ms-touch-action: none;
-                touch-action: none;
+            touch-action: none;
             box-sizing: border-box;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
           }
@@ -102,7 +99,7 @@ class SlideBar extends Component {
             border: solid 2px #96dbfa;
             background-color: #fff;
             -ms-touch-action: pan-x;
-                touch-action: pan-x;
+            touch-action: pan-x;
           }
           .rc-slider-handle:hover {
             border-color: #57c5f7;
@@ -192,7 +189,7 @@ class SlideBar extends Component {
             margin-left: -5px;
             margin-bottom: -7px;
             -ms-touch-action: pan-y;
-                touch-action: pan-y;
+            touch-action: pan-y;
           }
           .rc-slider-vertical .rc-slider-mark {
             top: 0;
@@ -215,13 +212,13 @@ class SlideBar extends Component {
           }
           .rc-slider-tooltip-zoom-down-enter,
           .rc-slider-tooltip-zoom-down-appear {
-            animation-duration: .3s;
+            animation-duration: 0.3s;
             animation-fill-mode: both;
             display: block !important;
             animation-play-state: paused;
           }
           .rc-slider-tooltip-zoom-down-leave {
-            animation-duration: .3s;
+            animation-duration: 0.3s;
             animation-fill-mode: both;
             display: block !important;
             animation-play-state: paused;
@@ -320,17 +317,17 @@ class SlideBar extends Component {
             margin-top: -10px;
             width: 24px;
             height: 24px;
-            
+
             &:hover {
               border-color: ${Colors.PoloBlue};
             }
-            
+
             &:active {
               border-color: white;
               box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.15);
             }
           }
-          
+
           :global(.rc-slider-track) {
             background-color: ${Colors.Royal};
           }
@@ -340,4 +337,4 @@ class SlideBar extends Component {
   }
 }
 
-export default SlideBar
+export default SlideBar;

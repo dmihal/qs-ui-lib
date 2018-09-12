@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { MarginPaddingSize } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { MarginPaddingSize } from "../vars";
 
 const CTAGrid = ({ children }) => (
   <div className="CTAGrid">
@@ -12,7 +12,7 @@ const CTAGrid = ({ children }) => (
         justify-content: space-between;
         width: 100%;
         min-height: 200px;
-        
+
         > :global(*) {
           border: 1px solid #eee;
           min-height: ${MarginPaddingSize[3]};
@@ -25,16 +25,13 @@ const CTAGrid = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 
 CTAGrid.propTypes = {
   /**
    * CTAGrid block
    */
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired
-}
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
+};
 
-export default CTAGrid
+export default CTAGrid;

@@ -1,1 +1,1 @@
-export { default } from './CTAGridContent'
+export { default } from "./CTAGridContent";

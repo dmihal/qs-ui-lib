@@ -1,1 +1,1 @@
-export { default } from './GlobalDefault'
+export { default } from "./GlobalDefault";

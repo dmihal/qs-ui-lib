@@ -1,13 +1,29 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typography, Colors, MarginPaddingSize } from '../vars'
-import { glyphsearch } from '../../../asset-inliner'
+import React from "react";
+import PropTypes from "prop-types";
+import { Typography, Colors, MarginPaddingSize } from "../vars";
+import { glyphsearch } from "../../../asset-inliner";
 
-const Input = ({ type, label, placeholder, search, required, error, disabled }) => (
+const Input = ({
+  type,
+  label,
+  placeholder,
+  search,
+  required,
+  error,
+  disabled
+}) => (
   <div className="input-wrapper">
-    { label ? <label>{label} {required ? '*' : null }</label> : null }
-    { error ? <label className="error">{error}</label> : null }
-    <input type={type || "text"} placeholder={placeholder} disabled={disabled}/>
+    {label ? (
+      <label>
+        {label} {required ? "*" : null}
+      </label>
+    ) : null}
+    {error ? <label className="error">{error}</label> : null}
+    <input
+      type={type || "text"}
+      placeholder={placeholder}
+      disabled={disabled}
+    />
     <style jsx>{`
       .input-wrapper {
         border-radius: 2px;
@@ -15,26 +31,26 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
         display: inline-block;
         min-width: 100px;
         position: relative;
-        padding-bottom: calc(${MarginPaddingSize[1]}/2);
+        padding-bottom: calc(${MarginPaddingSize[1]} / 2);
 
         label {
           display: block;
           font-size: ${Typography.fontSize[4]};
           color: ${Colors.Slate};
-          margin-bottom: calc(${MarginPaddingSize[0]}/2);
+          margin-bottom: calc(${MarginPaddingSize[0]} / 2);
 
           &.error {
-            color: ${Colors.Cinnabar}
+            color: ${Colors.Cinnabar};
           }
         }
-        
+
         input {
           display: block;
           width: 100%;
           font-size: ${Typography.fontSize[3]};
-          color: ${ error ? Colors.Cinnabar : Colors.Mirage};
+          color: ${error ? Colors.Cinnabar : Colors.Mirage};
           border: solid 1px ${Colors.Gallery};
-          border-color: ${ error ? Colors.Cinnabar : Colors.Gallery };
+          border-color: ${error ? Colors.Cinnabar : Colors.Gallery};
           padding: calc(${MarginPaddingSize[0]}) calc(${MarginPaddingSize[0]});
           outline: none;
           position: relative;
@@ -46,21 +62,17 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
             font-weight: normal;
           }
 
-          &:active, 
+          &:active,
           &:focus {
-            border-color: ${ 
-              error 
-              ? Colors.Cinnabar 
-              : Colors.Royal 
-            };  
+            border-color: ${error ? Colors.Cinnabar : Colors.Royal};
           }
         }
 
         ::after {
           display: block;
           vertical-align: middle;
-          content: '';
-          background: ${ search ? 'url(' + glyphsearch + ')' : null };
+          content: "";
+          background: ${search ? "url(" + glyphsearch + ")" : null};
           width: 14px;
           height: 14px;
           position: absolute;
@@ -70,7 +82,7 @@ const Input = ({ type, label, placeholder, search, required, error, disabled }) 
       }
     `}</style>
   </div>
-)
+);
 
 Input.propTypes = {
   /**
@@ -90,13 +102,13 @@ Input.propTypes = {
    */
   required: PropTypes.bool,
   /**
-   * Error 
+   * Error
    */
   error: PropTypes.string,
   /**
-   * Disabled 
+   * Disabled
    */
-  disabled: PropTypes.bool,
-}
+  disabled: PropTypes.bool
+};
 
-export default Input
+export default Input;

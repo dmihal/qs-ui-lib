@@ -1,1 +1,1 @@
-export { default } from './PatternBorder'
+export { default } from "./PatternBorder";

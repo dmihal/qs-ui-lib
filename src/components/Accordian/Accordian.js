@@ -1,13 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { glypharrow } from '../../../asset-inliner'
+import React from "react";
+import PropTypes from "prop-types";
+import { glypharrow } from "../../../asset-inliner";
 
 const Accordian = ({ children, title }) => (
   <details className="Accordian">
     <summary>{title}</summary>
-    <div className="details-content">
-      {children}
-    </div>
+    <div className="details-content">{children}</div>
     <style jsx>{`
       details {
         padding: 0;
@@ -17,16 +15,16 @@ const Accordian = ({ children, title }) => (
         border: solid 1px #e4e4e4;
         cursor: pointer;
       }
-      
-      details:focus, 
-      summary:focus { 
+
+      details:focus,
+      summary:focus {
         outline: none !important;
       }
 
       summary {
         padding: 20px 40px 20px 0;
         position: relative;
-        
+
         font-size: 16px;
         font-weight: bold;
         font-style: normal;
@@ -37,7 +35,7 @@ const Accordian = ({ children, title }) => (
       }
 
       summary::after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         right: 20px;
@@ -45,18 +43,18 @@ const Accordian = ({ children, title }) => (
         width: 20px;
         height: 10px;
         line-height: 1;
-        background: ${'url('+ glypharrow +')'} no-repeat center center;
+        background: ${"url(" + glypharrow + ")"} no-repeat center center;
       }
 
-      summary::-webkit-details-marker { 
+      summary::-webkit-details-marker {
         color: transparent;
       }
 
       details[open] summary::after {
         transform: rotate(90deg);
       }
-      
-      .details-content { 
+
+      .details-content {
         margin: 0 0 20px 20px;
         font-size: 14px;
         font-weight: normal;
@@ -68,16 +66,13 @@ const Accordian = ({ children, title }) => (
       }
     `}</style>
   </details>
-)
+);
 
 Accordian.propTypes = {
   /**
    * Child Elements
    */
-  children: PropTypes.oneOfType([
-    PropTypes.object,
-    PropTypes.array
-  ]).isRequired
-}
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired
+};
 
-export default Accordian
+export default Accordian;

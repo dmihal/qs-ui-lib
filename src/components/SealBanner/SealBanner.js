@@ -1,33 +1,27 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import LinkText from '../LinkText'
-import { MarginPaddingSize, Typography } from '../vars'
-import { sealblue } from '../../../asset-inliner'
+import React from "react";
+import PropTypes from "prop-types";
+import LinkText from "../LinkText";
+import { MarginPaddingSize, Typography } from "../vars";
+import { sealblue } from "../../../asset-inliner";
 
 const SealBanner = ({ type, title, date, url }) => (
   <div className={"SealBanner"}>
-    <div className={"SealBannerInner " + type}>   
-      <img className="sealImg"
-        alt={'seal ' + 'blue'}
-        src={sealblue}/>
+    <div className={"SealBannerInner " + type}>
+      <img className="sealImg" alt={"seal " + "blue"} src={sealblue} />
       <div className="info-box">
         <h1 className="title">{title}</h1>
-        <span className="date">{'Verified on ' + date}</span>
+        <span className="date">{"Verified on " + date}</span>
         <a className="certificate-link" href={url} target="_blank">
           <LinkText>View the Certificate</LinkText>
         </a>
       </div>
     </div>
-    {
-      type === 'vertical'
-        ? (
-          <div className="tail-feather">
-            <div className="triangle-topleft"></div>
-            <div className="triangle-topright"></div>
-          </div>
-        )
-        : null
-    }
+    {type === "vertical" ? (
+      <div className="tail-feather">
+        <div className="triangle-topleft" />
+        <div className="triangle-topright" />
+      </div>
+    ) : null}
     <style jsx>{`
       .SealBanner {
         padding: ${MarginPaddingSize[1]};
@@ -82,7 +76,7 @@ const SealBanner = ({ type, title, date, url }) => (
           display: block;
         }
       }
-      
+
       .tail-feather {
         display: flex;
       }
@@ -102,7 +96,7 @@ const SealBanner = ({ type, title, date, url }) => (
       }
     `}</style>
   </div>
-)
+);
 
 SealBanner.propTypes = {
   /*
@@ -120,7 +114,7 @@ SealBanner.propTypes = {
   /*
   * SealBanner type
   */
-  url: PropTypes.string.isRequired,  
-}
+  url: PropTypes.string.isRequired
+};
 
-export default SealBanner
+export default SealBanner;

@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typography, Colors, MarginPaddingSize } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { Typography, Colors, MarginPaddingSize } from "../vars";
 
 const ModalTrigger = ({ children, modalID }) => (
-  <label htmlFor={'modal-trigger-' + modalID} className="toggleModal">
+  <label htmlFor={"modal-trigger-" + modalID} className="toggleModal">
     {children}
     <style jsx>{`
       .toggleModal {
@@ -13,7 +13,7 @@ const ModalTrigger = ({ children, modalID }) => (
         border-width: 1px;
         border-style: solid;
         color: ${Colors.Royal};
-        padding: 6px calc(${MarginPaddingSize[2]}/2);
+        padding: 6px calc(${MarginPaddingSize[2]} / 2);
         font-size: ${Typography.fontSize[3]};
         background: ${Colors.Royal};
         border-color: ${Colors.Royal};
@@ -24,14 +24,14 @@ const ModalTrigger = ({ children, modalID }) => (
           border-color: ${Colors.PoloBlue};
           color: ${Colors.White};
         }
-        
-        &:focus{
+
+        &:focus {
           outline: none;
         }
-      } 
+      }
     `}</style>
   </label>
-)
+);
 
 ModalTrigger.propTypes = {
   /**
@@ -42,6 +42,6 @@ ModalTrigger.propTypes = {
    * Wrapper layout block
    */
   modalID: PropTypes.string.isRequired
-}
+};
 
-export default ModalTrigger
+export default ModalTrigger;

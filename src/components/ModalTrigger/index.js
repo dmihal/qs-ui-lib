@@ -1,1 +1,1 @@
-export { default } from './ModalTrigger'
+export { default } from "./ModalTrigger";

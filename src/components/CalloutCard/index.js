@@ -1,1 +1,1 @@
-export { default } from './CalloutCard'
+export { default } from "./CalloutCard";

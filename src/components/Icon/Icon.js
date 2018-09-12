@@ -1,16 +1,16 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const Icon = ({ type, size }) => (
   <img
-    alt={'icon ' + type}
-    src={require('../../../asset-inliner/inlined/icons/'+type+'.svg.js')}
+    alt={"icon " + type}
+    src={require("../../../asset-inliner/inlined/icons/" + type + ".svg.js")}
     style={{
-      'width': Icon.sizes[size] || Icon.sizes['small'],
-      'height': Icon.sizes[size] || Icon.sizes['small']
+      width: Icon.sizes[size] || Icon.sizes["small"],
+      height: Icon.sizes[size] || Icon.sizes["small"]
     }}
   />
-)
+);
 
 Icon.propTypes = {
   /*
@@ -20,12 +20,12 @@ Icon.propTypes = {
   /*
   * Icon size
   */
-  size: PropTypes.oneOf(['small', 'large']).isRequired
-}
+  size: PropTypes.oneOf(["small", "large"]).isRequired
+};
 
 Icon.sizes = {
-  small: '40px',
-  large: '70px'
-}
+  small: "40px",
+  large: "70px"
+};
 
-export default Icon
+export default Icon;

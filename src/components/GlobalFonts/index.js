@@ -1,1 +1,1 @@
-export { default } from './GlobalFonts'
+export { default } from "./GlobalFonts";
