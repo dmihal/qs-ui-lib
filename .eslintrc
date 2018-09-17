@@ -1,7 +1,0 @@
-{
-  "overrides": [{
-    "files": [ "**/*.test.js"],
-    "env": {},
-    "plugins": []
-  }]
-}

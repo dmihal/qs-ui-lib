@@ -1,1 +1,1 @@
-export { default } from './GlobalTypography'
+export { default } from "./GlobalTypography";

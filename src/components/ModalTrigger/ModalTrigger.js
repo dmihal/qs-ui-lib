@@ -1,16 +1,19 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 const ModalTrigger = ({ className, children, modalID }) => (
   <label
-    htmlFor={'modal-trigger-' + modalID}
-    className={"toggleModal " + className}>
-      {children}
+    htmlFor={"modal-trigger-" + modalID}
+    className={"toggleModal " + (className ? " " + className : "")}
+  >
+    {children}
     <style jsx>{`
-      label { cursor: pointer; }  
+      label {
+        cursor: pointer;
+      }
     `}</style>
   </label>
-)
+);
 
 ModalTrigger.propTypes = {
   /**
@@ -21,6 +24,6 @@ ModalTrigger.propTypes = {
    * Wrapper layout block
    */
   modalID: PropTypes.string.isRequired
-}
+};
 
-export default ModalTrigger
+export default ModalTrigger;

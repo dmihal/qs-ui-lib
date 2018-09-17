@@ -1,19 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { MarginPaddingSize, Colors } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { MarginPaddingSize, Colors } from "../vars";
 
 const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
   <figure className="CarouselGalleryCard">
     <div className="CarouselGalleryCard-header">
-      <img src={imgSrc}/>
+      <img src={imgSrc} />
       <div className="CarouselGalleryCard-header-text">
         <h3>{title}</h3>
         <h4>{subText}</h4>
       </div>
     </div>
-    <div className="CarouselGalleryCard-content">
-      {children}
-    </div>
+    <div className="CarouselGalleryCard-content">{children}</div>
     <style jsx>{`
       .CarouselGalleryCard {
         width: 470px;
@@ -24,6 +22,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
         border-radius: 2px;
         border-color: #c4cdd5;
         margin: 0;
+
         @media (width <= 500px) {
           height: auto;
           max-height: 430px;
@@ -40,7 +39,7 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
           display: flex;
           width: 100%;
           padding: 0 ${MarginPaddingSize[1]} ${MarginPaddingSize[1]} 0;
-          
+
           img {
             display: block;
             margin-right: ${MarginPaddingSize[1]};
@@ -48,18 +47,18 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
             height: 120px;
           }
 
-          .CarouselGalleryCard-header-text { 
+          .CarouselGalleryCard-header-text {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-        
+
             h3 {
               margin-bottom: ${MarginPaddingSize[1]};
             }
 
             * {
               display: block;
-             
+
               &:last-child {
                 margin-bottom: 0;
                 color: #708090;
@@ -67,19 +66,16 @@ const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
             }
           }
         }
-        .CarouselGalleryCard-header-content { 
-
-        }
       }
     `}</style>
   </figure>
-)
+);
 
 CarouselGalleryCard.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.object.isRequired,
-}
+  children: PropTypes.object.isRequired
+};
 
-export default CarouselGalleryCard
+export default CarouselGalleryCard;

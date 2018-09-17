@@ -1,17 +1,15 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import LayoutGrid from '../LayoutGrid'
+import React from "react";
+import PropTypes from "prop-types";
+import LayoutGrid from "../LayoutGrid";
 
-import { MarginPaddingSize, Colors } from '../vars';
+import { MarginPaddingSize } from "../vars";
 
 const NavigationSub = ({ children }) => (
   <React.Fragment>
     <header className="NavigationSub">
       <LayoutGrid columns={1}>
         <nav>
-          <ul className="nav-items">
-            { children }
-          </ul>
+          <ul className="nav-items">{children}</ul>
         </nav>
       </LayoutGrid>
       <style jsx>{`
@@ -25,7 +23,7 @@ const NavigationSub = ({ children }) => (
             display: flex;
             justify-content: center;
 
-            > :global(*) { 
+            > :global(*) {
               padding: 0 ${MarginPaddingSize[3]};
             }
           }
@@ -33,13 +31,13 @@ const NavigationSub = ({ children }) => (
       `}</style>
     </header>
   </React.Fragment>
-)
+);
 
 NavigationSub.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.array.isRequired,
-}
+  children: PropTypes.array.isRequired
+};
 
-export default NavigationSub
+export default NavigationSub;

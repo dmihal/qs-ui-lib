@@ -1,20 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { bgpattern } from '../../../asset-inliner'
+import React from "react";
+import { bgpattern } from "../../asset-inliner";
 
-const PatternBorder = ({ children }) => (
+const PatternBorder = () => (
   <div className="PatternBorder">
     <style jsx>{`
       .PatternBorder {
         width: 100%;
         height: 20px;
         opacity: 0.7;
-        background: ${'url('+bgpattern+')'} repeat;
+        background: ${"url(" + bgpattern + ")"} repeat;
       }
     `}</style>
   </div>
-)
+);
 
-PatternBorder.propTypes = {}
-
-export default PatternBorder
+export default PatternBorder;

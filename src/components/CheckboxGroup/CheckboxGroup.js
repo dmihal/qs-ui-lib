@@ -1,72 +1,95 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Colors, MarginPaddingSize } from '../vars'
-import { glyphcheck } from '../../../asset-inliner'
+import React from "react";
+import PropTypes from "prop-types";
+import { Colors, MarginPaddingSize } from "../vars";
+import { glyphcheck } from "../../asset-inliner";
 
-const CheckboxGroup = ({ nameID, options, error }) => (
+const CheckboxGroup = ({ nameID, options, error, direction }) => (
   <React.Fragment>
     <form>
-      {
-        options.map((option, index)=> {
-          return (
-            <div
-              key={option.label+index}
-              className={
-                  "checkbox-choice-wrap" +
-                  (option.disabled ? ' disabled' : '' ) +
-                  (option.deactive ? ' deactive' : '' ) +
-                  (option.error ? ' error' : '' )}>
-                <input type="checkbox" id={option.label+index+nameID} name={nameID} disabled={option.disabled || option.error}/>
-                <label htmlFor={option.label+index+nameID}>{option.label}</label>
-            </div>
-          )
-        })
-      }
+      {options.map((option, index) => {
+        return (
+          <div
+            key={option.label + index}
+            className={
+              "checkbox-choice-wrap" +
+              (option.disabled ? " disabled" : "") +
+              (option.deactive ? " deactive" : "") +
+              (option.error ? " error" : "")
+            }
+          >
+            <input
+              type="checkbox"
+              id={option.label + index + nameID}
+              name={nameID}
+              disabled={option.disabled || option.error}
+            />
+            <label htmlFor={option.label + index + nameID}>
+              {option.label}
+            </label>
+          </div>
+        );
+      })}
     </form>
     <style jsx>{`
-      .checkbox-choice-wrap {
-          margin-bottom: ${MarginPaddingSize[1]};
+      form {
+        display: flex;
+        flex-direction: ${direction || "column"};
+      }
 
-          &.disabled {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              cursor: not-allowed;
-            }
+      .checkbox-choice-wrap {
+        display: flex;
+        align-items: ${direction === "row" ? "center" : ""};
+        margin-bottom: ${!direction || direction === "column"
+          ? MarginPaddingSize[1]
+          : "0"};
+        margin-right: ${direction === "row" ? MarginPaddingSize[1] : "0"};
+
+        &.disabled {
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            cursor: not-allowed;
           }
-          &.deactive label::after {
-            filter: saturate(0%) opacity(20%);
+        }
+
+        &.deactive label::after {
+          filter: saturate(0%) opacity(20%);
+        }
+
+        &.error {
+          input:checked + label:before,
+          input:not(:checked) + label:before {
+            border: 1px solid ${Colors.Cinnabar};
+            background: rgba(227, 66, 52, 0.1);
+            cursor: not-allowed;
           }
-          &.error {
-            input:checked + label:before,
-            input:not(:checked) + label:before {
-              border: 1px solid ${Colors.Cinnabar};
-              background: rgba(227, 66, 52, 0.1);
-              cursor: not-allowed;
-            }
-            input:checked + label:after,
-            input:not(:checked) + label:after {
-              background-image: ${ 'url(' + glyphcheck + ')' };
-            }
+
+          input:checked + label:after,
+          input:not(:checked) + label:after {
+            background-image: ${"url(" + glyphcheck + ")"};
+          }
         }
       }
+
       [type="checkbox"] {
         &:checked,
         &:not(:checked) {
           position: absolute;
           left: -9999px;
         }
+
         &:checked + label,
         &:not(:checked) + label {
           position: relative;
           padding-left: 28px;
           cursor: pointer;
-          line-height: 20px;
+          line-height: 1.2 !important;
           display: inline-block;
           color: #666;
         }
+
         &:checked + label:before,
         &:not(:checked) + label:before {
-          content: '';
+          content: "";
           position: absolute;
           left: 0;
           top: 0;
@@ -76,9 +99,10 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 2px;
           background: #fff;
         }
+
         &:checked + label:after,
         &:not(:checked) + label:after {
-          content: '';
+          content: "";
           width: 15px;
           height: 16px;
           position: absolute;
@@ -87,14 +111,16 @@ const CheckboxGroup = ({ nameID, options, error }) => (
           border-radius: 100%;
           -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
-          background-image: ${ error ? 'none' : 'url(' + glyphcheck + ')' };
+          background-image: ${error ? "none" : "url(" + glyphcheck + ")"};
           background-size: contain;
         }
+
         &:not(:checked) + label:after {
           opacity: 0;
           -webkit-transform: scale(0);
           transform: scale(0);
         }
+
         &:checked + label:after {
           opacity: 1;
           -webkit-transform: scale(1);
@@ -103,7 +129,7 @@ const CheckboxGroup = ({ nameID, options, error }) => (
       }
     `}</style>
   </React.Fragment>
-)
+);
 
 CheckboxGroup.propTypes = {
   /**
@@ -119,9 +145,9 @@ CheckboxGroup.propTypes = {
    */
   error: PropTypes.bool,
   /**
-   * Disabled 
+   * Disabled
    */
-  disabled: PropTypes.bool,
-}
+  disabled: PropTypes.bool
+};
 
-export default CheckboxGroup
+export default CheckboxGroup;

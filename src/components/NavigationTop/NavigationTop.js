@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { MarginPaddingSize } from '../vars'
-import LayoutWrapper from '../LayoutWrapper'
-import Logo from '../Logo'
+import React from "react";
+import PropTypes from "prop-types";
+import { MarginPaddingSize } from "../vars";
+import LayoutWrapper from "../LayoutWrapper";
+import Logo from "../Logo";
 
 const NavigationTop = ({ children }) => (
   <React.Fragment>
@@ -10,12 +10,10 @@ const NavigationTop = ({ children }) => (
       <LayoutWrapper>
         <nav>
           <div className="nav-left">
-            <Logo height="40px"/>
+            <Logo height="40px" />
           </div>
           <div className="nav-right">
-            <ul className="nav-items">
-              { children }
-            </ul>
+            <ul className="nav-items">{children}</ul>
           </div>
         </nav>
       </LayoutWrapper>
@@ -30,7 +28,7 @@ const NavigationTop = ({ children }) => (
             display: flex;
             justify-content: space-between;
           }
-        
+
           .nav-right {
             text-align: right;
           }
@@ -39,7 +37,7 @@ const NavigationTop = ({ children }) => (
             display: flex;
             height: 100%;
 
-            > :global(*) { 
+            > :global(*) {
               padding: 0 ${MarginPaddingSize[1]};
               display: flex;
               flex-direction: column;
@@ -55,13 +53,13 @@ const NavigationTop = ({ children }) => (
       `}</style>
     </header>
   </React.Fragment>
-)
+);
 
 NavigationTop.propTypes = {
   /**
    * Nav Elements
    */
-  children: PropTypes.array.isRequired,
-}
+  children: PropTypes.array.isRequired
+};
 
-export default NavigationTop
+export default NavigationTop;

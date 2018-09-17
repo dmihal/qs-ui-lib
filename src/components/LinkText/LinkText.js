@@ -1,14 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Typography, Colors } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { Typography, Colors } from "../vars";
 
 const LinkText = ({ children, arrow, inverse, activeState }) => (
   <span className="LinkText">
-    { arrow ? (<div className="arrow-right"></div>) : null }
+    {arrow ? <div className="arrow-right" /> : null}
     {children}
     <style jsx>{`
-      
-      .LinkText { 
+      .LinkText {
         color: ${Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
@@ -29,7 +28,7 @@ const LinkText = ({ children, arrow, inverse, activeState }) => (
       }
     `}</style>
   </span>
-)
+);
 
 LinkText.propTypes = {
   /**
@@ -48,6 +47,6 @@ LinkText.propTypes = {
    * LinkText activeState
    */
   activeState: PropTypes.bool
-}
+};
 
-export default LinkText
+export default LinkText;

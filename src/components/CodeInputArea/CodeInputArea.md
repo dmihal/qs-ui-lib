@@ -1,6 +1,5 @@
 ```jsx
-const sampleCode =
-`pragma solidity ^0.4.15;
+const sampleCode = `pragma solidity ^0.4.15;
 
 // Proof of Existence contract, version 1
 contract ProofOfExistence1 {
@@ -23,11 +22,10 @@ contract ProofOfExistence1 {
 
 <CodeInputArea
   code={sampleCode}
-  className="X123"
-  styleOverrides={`.X123 * { background: #eee; }`}
-  handleChange={(value, data, editor) => { 
-  console.log(value)
-  console.log(data) 
-  console.log(editor) 
-  }}/>
+  handleChange={(value, data, editor) => {
+    console.log(value);
+    console.log(data);
+    console.log(editor);
+  }}
+/>;
 ```

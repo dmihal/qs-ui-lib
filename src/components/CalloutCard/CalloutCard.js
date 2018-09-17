@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import LinkText from '../LinkText'
-import { MarginPaddingSize, Colors } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import LinkText from "../LinkText";
+import { MarginPaddingSize, Colors } from "../vars";
 
 const CalloutCard = ({ img, title, linkText }) => (
   <div className="CalloutCard">
-    <img src={img} alt="call out card"/>
+    <img src={img} alt="call out card" />
     <h2>{title}</h2>
     <div className="callout-bottom">
       <LinkText arrow>{linkText}</LinkText>
@@ -47,17 +47,28 @@ const CalloutCard = ({ img, title, linkText }) => (
           border: 1px solid #e4e4e4;
           margin-bottom: ${MarginPaddingSize[0]};
         }
-
       }
     `}</style>
   </div>
-)
+);
 
 CalloutCard.propTypes = {
+  /**
+   * Image
+   */
   img: PropTypes.string.isRequired,
+  /**
+   * Title
+   */
   title: PropTypes.string.isRequired,
+  /**
+   * Link text
+   */
   linkText: PropTypes.string.isRequired,
-  link: PropTypes.string.isRequired,
-}
+  /**
+   * Link URL
+   */
+  link: PropTypes.string.isRequired
+};
 
-export default CalloutCard
+export default CalloutCard;

@@ -1,34 +1,34 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Select from 'react-select'
-import { MarginPaddingSize, Colors } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import Select from "react-select";
+import { MarginPaddingSize, Colors } from "../vars";
 
 class SelectDropDown extends React.Component {
-  constructor () {
+  constructor() {
     super();
     this.state = {
-      selectedOption: '',
-    }
+      selectedOption: ""
+    };
   }
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption })
+  handleChange = selectedOption => {
+    this.setState({ selectedOption });
 
-    if(this.props.handleChange) {
-      this.props.handleChange(selectedOption)
+    if (this.props.handleChange) {
+      this.props.handleChange(selectedOption);
     }
-  }
+  };
   render() {
-  	const { selectedOption } = this.state;
+    const { selectedOption } = this.state;
 
     return (
-      <React.Fragment>
+      <div className="SelectDropDownWrapper">
         <Select
           name={name}
           value={selectedOption}
           onChange={this.handleChange}
           options={[
-            { value: 'one', label: 'One' },
-            { value: 'two', label: 'Two' },
+            { value: "one", label: "One" },
+            { value: "two", label: "Two" }
           ]}
         />
         <style jsx global>{`
@@ -93,31 +93,64 @@ class SelectDropDown extends React.Component {
           }
           .Select.is-focused:not(.is-open) > .Select-control {
             border-color: #007eff;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+              0 0 0 3px rgba(0, 126, 255, 0.1);
             background: #fff;
           }
-          .Select.has-value.is-clearable.Select--single > .Select-control .Select-value {
+          .Select.has-value.is-clearable.Select--single
+            > .Select-control
+            .Select-value {
             padding-right: 42px;
           }
-          .Select.has-value.Select--single > .Select-control .Select-value .Select-value-label,
-          .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+          .Select.has-value.Select--single
+            > .Select-control
+            .Select-value
+            .Select-value-label,
+          .Select.has-value.is-pseudo-focused.Select--single
+            > .Select-control
+            .Select-value
+            .Select-value-label {
             color: #333;
           }
-          .Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label,
-          .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label {
+          .Select.has-value.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label,
+          .Select.has-value.is-pseudo-focused.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label {
             cursor: pointer;
             text-decoration: none;
           }
-          .Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
-          .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
-          .Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
-          .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+          .Select.has-value.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:hover,
+          .Select.has-value.is-pseudo-focused.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:hover,
+          .Select.has-value.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:focus,
+          .Select.has-value.is-pseudo-focused.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:focus {
             color: #007eff;
             outline: none;
             text-decoration: underline;
           }
-          .Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
-          .Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+          .Select.has-value.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:focus,
+          .Select.has-value.is-pseudo-focused.Select--single
+            > .Select-control
+            .Select-value
+            a.Select-value-label:focus {
             background: #fff;
           }
           .Select.has-value.is-pseudo-focused .Select-input {
@@ -237,7 +270,7 @@ class SelectDropDown extends React.Component {
             width: 17px;
           }
           .Select-clear-zone:hover {
-            color: #D0021B;
+            color: #d0021b;
           }
           .Select-clear {
             display: inline-block;
@@ -460,44 +493,60 @@ class SelectDropDown extends React.Component {
             }
           }
         `}</style>
-        <style jsx>{`
-          :global(.Select-control) {
-            height: ${MarginPaddingSize[0]};
-            border-radius: 2px;
-            background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
-            border: solid 1px #c4cdd5;
-          }
-          :global(.Select-menu-outer > *) {
-            background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
-          }
-          :global(.Select-menu-outer > * > *) {
-            background-color: transparent;
-          }
-          :global(.Select-placeholder) {
-            color: ${Colors.Mirage};
-          }
-          :global(.Select-menu-outer *) {
-            color: ${Colors.Mirage};
-          }
-          :global(.Select--multi .Select-value-icon:hover) {
-            background-color: inherit;
-            color: ${Colors.Royal};
-          }
-          :global(.Select--multi .Select-value-icon:focus) {
-            background-color: inherit;
-            color: ${Colors.Royal};
-          }
-        `}
+        <style jsx>
+          {`
+            :global(.Select-control) {
+              height: ${MarginPaddingSize[0]};
+              border-radius: 2px;
+              background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
+              border: solid 1px #c4cdd5;
+            }
+
+            :global(.Select-menu-outer > *) {
+              background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
+            }
+
+            :global(.Select-menu-outer > * > *) {
+              background-color: transparent;
+            }
+
+            :global(.Select-placeholder) {
+              color: ${Colors.Mirage};
+            }
+
+            :global(.Select-menu-outer *) {
+              color: ${Colors.Mirage};
+            }
+
+            :global(.Select--multi .Select-value-icon:hover) {
+              background-color: inherit;
+              color: ${Colors.Royal};
+            }
+
+            :global(.Select--multi .Select-value-icon:focus) {
+              background-color: inherit;
+              color: ${Colors.Royal};
+            }
+          `}
         </style>
-      </React.Fragment>
+      </div>
     );
   }
 }
 
 SelectDropDown.propTypes = {
+  /*
+  * UUID 
+  */
   name: PropTypes.string,
+  /*
+  * Event Handler
+  */
   handleChange: PropTypes.func,
+  /*
+  * Dropdown options
+  */
   options: PropTypes.array
-}
+};
 
-export default SelectDropDown
+export default SelectDropDown;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * This is a global style baseline that is meant to be imported
@@ -20,6 +20,6 @@ const GlobalFonts = () => (
         font-style: normal;
     }
   `}</style>
-)
+);
 
-export default GlobalFonts
+export default GlobalFonts;

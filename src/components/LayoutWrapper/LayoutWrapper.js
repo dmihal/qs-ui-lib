@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { LayoutSizes, MarginPaddingSize } from '../vars'
+import React from "react";
+import PropTypes from "prop-types";
+import { LayoutSizes, MarginPaddingSize } from "../vars";
 
 /**
  * This is a top-level wrapper layout block
@@ -14,11 +14,11 @@ const LayoutWrapper = ({ children, documentationStylesOnly }) => (
         max-width: ${LayoutSizes[5]};
         padding: 0 ${MarginPaddingSize[3]};
         width: 100%;
-      } 
-      ${documentationStylesOnly}
+      }
+      ${documentationStylesOnly};
     `}</style>
   </div>
-)
+);
 
 LayoutWrapper.propTypes = {
   /**
@@ -29,6 +29,6 @@ LayoutWrapper.propTypes = {
     PropTypes.string,
     PropTypes.array
   ]).isRequired
-}
+};
 
-export default LayoutWrapper
+export default LayoutWrapper;
