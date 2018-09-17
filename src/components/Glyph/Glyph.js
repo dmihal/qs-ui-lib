@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Glyph = ({ type, size }) => (
+const Glyph = ({ className, type, size }) => (
   <img
+    className={"Glyph" + (className ? " " + className : "")}
     alt={"Glyph " + type}
     src={require("../../asset-inliner/inlined/glyphs/" + type + ".svg.js")}
     style={{
@@ -20,7 +21,7 @@ Glyph.propTypes = {
   /*
   * Glyph size
   */
-  size: PropTypes.oneOf(["small", "large"]).isRequired
+  size: PropTypes.string.isRequired
 };
 
 Glyph.sizes = {

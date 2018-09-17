@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Colors } from "../vars";
 
-const Toggle = ({ toggleID, size }) => (
-  <div className="Toggle">
+const Toggle = ({ className, toggleID, size }) => (
+  <div className={"Toggle" + (className ? " " + className : "")}>
     <input type="checkbox" name={toggleID} id={toggleID} />
     <label htmlFor={toggleID} />
     <style jsx>{`

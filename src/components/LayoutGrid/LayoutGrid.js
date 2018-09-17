@@ -5,8 +5,8 @@ import { LayoutSizes, MarginPaddingSize } from "../vars";
 /**
  * This is a column layout block
  */
-const LayoutGrid = ({ children, offset }) => (
-  <div className="LayoutGrid">
+const LayoutGrid = ({ className, children, offset }) => (
+  <div className={"LayoutGrid" + (className ? " " + className : "")}>
     {children}
     <style jsx>{`
       .LayoutGrid {

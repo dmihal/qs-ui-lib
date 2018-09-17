@@ -16,7 +16,7 @@ Row
 
 ```jsx
 <RadioGroup
-  nameID="ZZ24124"
+  nameID="IHIUWHIUADG"
   direction="row"
   options={[
     { value: "one", label: "Normal" },

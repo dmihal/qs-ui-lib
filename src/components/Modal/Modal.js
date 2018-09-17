@@ -40,7 +40,11 @@ class Modal extends Component {
 
   render() {
     return (
-      <div className="modal">
+      <div
+        className={
+          "modal" + (this.props.className ? " " + this.props.className : "")
+        }
+      >
         <input
           id={"modal-trigger-" + this.props.modalID}
           className="checkbox"

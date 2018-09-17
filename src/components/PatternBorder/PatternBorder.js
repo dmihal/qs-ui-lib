@@ -1,8 +1,8 @@
 import React from "react";
 import { bgpattern } from "../../asset-inliner";
 
-const PatternBorder = () => (
-  <div className="PatternBorder">
+const PatternBorder = ({ className }) => (
+  <div className={"PatternBorder" + (className ? " " + className : "")}>
     <style jsx>{`
       .PatternBorder {
         width: 100%;

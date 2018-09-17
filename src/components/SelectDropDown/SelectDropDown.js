@@ -21,7 +21,12 @@ class SelectDropDown extends React.Component {
     const { selectedOption } = this.state;
 
     return (
-      <div className="SelectDropDownWrapper">
+      <div
+        className={
+          "SelectDropDown" +
+          (this.props.className ? " " + this.props.className : "")
+        }
+      >
         <Select
           name={name}
           value={selectedOption}

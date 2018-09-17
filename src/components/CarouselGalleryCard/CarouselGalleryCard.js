@@ -2,8 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MarginPaddingSize, Colors } from "../vars";
 
-const CarouselGalleryCard = ({ children, imgSrc, title, subText }) => (
-  <figure className="CarouselGalleryCard">
+const CarouselGalleryCard = ({
+  className,
+  children,
+  imgSrc,
+  title,
+  subText
+}) => (
+  <figure
+    className={"CarouselGalleryCard" + (className ? " " + className : "")}
+  >
     <div className="CarouselGalleryCard-header">
       <img src={imgSrc} />
       <div className="CarouselGalleryCard-header-text">

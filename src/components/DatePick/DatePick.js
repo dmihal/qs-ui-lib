@@ -21,7 +21,11 @@ class DatePick extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div
+        className={
+          "DatePick" + (this.props.className ? " " + this.props.className : "")
+        }
+      >
         <DatePicker
           selected={this.state.startDate}
           onChange={this.handleChange}
@@ -895,7 +899,7 @@ class DatePick extends React.Component {
             color: transparent !important;
           }
         `}</style>
-      </React.Fragment>
+      </div>
     );
   }
 }

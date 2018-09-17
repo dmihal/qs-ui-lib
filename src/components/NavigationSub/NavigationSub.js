@@ -4,9 +4,9 @@ import LayoutGrid from "../LayoutGrid";
 
 import { MarginPaddingSize } from "../vars";
 
-const NavigationSub = ({ children }) => (
+const NavigationSub = ({ className, children }) => (
   <React.Fragment>
-    <header className="NavigationSub">
+    <header className={"NavigationSub" + (className ? " " + className : "")}>
       <LayoutGrid columns={1}>
         <nav>
           <ul className="nav-items">{children}</ul>

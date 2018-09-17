@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors } from "../vars";
 
-const LinkText = ({ children, arrow, inverse, activeState }) => (
-  <span className="LinkText">
+const LinkText = ({ className, children, arrow, inverse, activeState }) => (
+  <span className={"LinkText" + (className ? " " + className : "")}>
     {arrow ? <div className="arrow-right" /> : null}
     {children}
     <style jsx>{`
@@ -38,15 +38,7 @@ LinkText.propTypes = {
   /**
    * LinkText arrow
    */
-  arrow: PropTypes.bool,
-  /**
-   * LinkText inverse colors
-   */
-  inverse: PropTypes.bool,
-  /**
-   * LinkText activeState
-   */
-  activeState: PropTypes.bool
+  arrow: PropTypes.bool
 };
 
 export default LinkText;

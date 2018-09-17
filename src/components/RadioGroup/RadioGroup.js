@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Colors, MarginPaddingSize } from "../vars";
 
-const RadioGroup = ({ nameID, options, direction }) => (
-  <React.Fragment>
+const RadioGroup = ({ className, nameID, options, direction }) => (
+  <div className={"RadioGroup" + (className ? " " + className : "")}>
     <form>
       {options.map((option, index) => {
         return (
@@ -123,7 +123,7 @@ const RadioGroup = ({ nameID, options, direction }) => (
         }
       }
     `}</style>
-  </React.Fragment>
+  </div>
 );
 
 RadioGroup.propTypes = {

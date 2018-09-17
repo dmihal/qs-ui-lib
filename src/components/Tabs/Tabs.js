@@ -37,7 +37,11 @@ class Tabs extends Component {
 
   render() {
     return (
-      <div className="Tabs">
+      <div
+        className={
+          "Tabs" + (this.props.className ? " " + this.props.className : "")
+        }
+      >
         {this.props.tabList.map(tabItem => {
           return (
             <Button

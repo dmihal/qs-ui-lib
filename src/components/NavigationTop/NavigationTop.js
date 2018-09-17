@@ -4,9 +4,9 @@ import { MarginPaddingSize } from "../vars";
 import LayoutWrapper from "../LayoutWrapper";
 import Logo from "../Logo";
 
-const NavigationTop = ({ children }) => (
+const NavigationTop = ({ className, children }) => (
   <React.Fragment>
-    <header className="NavigationTop">
+    <header className={"NavigationTop" + (className ? " " + className : "")}>
       <LayoutWrapper>
         <nav>
           <div className="nav-left">

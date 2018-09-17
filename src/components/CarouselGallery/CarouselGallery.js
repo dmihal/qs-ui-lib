@@ -5,8 +5,8 @@ import { MarginPaddingSize, Colors } from "../vars";
 
 import Carousel from "nuka-carousel";
 
-const CarouselGallery = ({ children, type, label, bottomLabel }) => (
-  <div className="CarouselGallery">
+const CarouselGallery = ({ className, children, type, label, bottomLabel }) => (
+  <div className={"CarouselGallery" + (className ? " " + className : "")}>
     {type === "A" ? (
       <React.Fragment>
         <div className="CarouselGallery-offset-bg" />

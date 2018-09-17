@@ -2,8 +2,15 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors, MarginPaddingSize } from "../vars";
 
-const Textarea = ({ label, placeholder, required, error, disabled }) => (
-  <div className="Textarea-wrapper">
+const Textarea = ({
+  className,
+  label,
+  placeholder,
+  required,
+  error,
+  disabled
+}) => (
+  <div className={"Textarea-wrapper" + (className ? " " + className : "")}>
     {label ? (
       <label>
         {label} {required ? "*" : null}

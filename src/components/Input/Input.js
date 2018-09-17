@@ -4,6 +4,7 @@ import { Typography, Colors, MarginPaddingSize } from "../vars";
 import { glyphsearch } from "../../asset-inliner";
 
 const Input = ({
+  className,
   type,
   label,
   placeholder,
@@ -12,7 +13,7 @@ const Input = ({
   error,
   disabled
 }) => (
-  <div className="input-wrapper">
+  <div className={"input-wrapper" + (className ? " " + className : "")}>
     {label ? (
       <label>
         {label} {required ? "*" : null}

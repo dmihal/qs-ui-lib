@@ -27,8 +27,16 @@ const quantstampLogoProductDark = require("../../asset-inliner/inlined/logos/qua
 // console.log(quantstampLogoProduct)
 // console.log(quantstampLogoProductDark)
 
-const Logo = ({ type, theme, productName, productColor, width, height }) => (
-  <div className="Logo">
+const Logo = ({
+  className,
+  type,
+  theme,
+  productName,
+  productColor,
+  width,
+  height
+}) => (
+  <div className={"Logo" + (className ? " " + className : "")}>
     {type === "default" ? (
       theme === "onLight" ? (
         <img src={quantstampLogo} alt="Quantstamp Logo" />

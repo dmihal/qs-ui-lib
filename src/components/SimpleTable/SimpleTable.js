@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SimpleTable = ({ data, tableTitle, direction }) => (
-  <div className="SimpleTable">
+const SimpleTable = ({ className, data, tableTitle, direction }) => (
+  <div className={"SimpleTable" + (className ? " " + className : "")}>
     <div className="table-wrapper">
       <div className="table-title">{tableTitle}</div>
       {direction === "horizontal" ? (

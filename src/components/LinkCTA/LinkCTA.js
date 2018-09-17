@@ -6,8 +6,8 @@ import {
   glyphdoublearrowcolormalibu
 } from "../../asset-inliner";
 
-const LinkCTA = ({ children, label, onDark }) => (
-  <div className="LinkCTA">
+const LinkCTA = ({ className, children, label, onDark }) => (
+  <div className={"LinkCTA" + (className ? " " + className : "")}>
     <div className="label">{label}</div>
     <div className="description-box">{children}</div>
     <style jsx>{`

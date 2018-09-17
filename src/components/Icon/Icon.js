@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Icon = ({ type, size }) => (
+const Icon = ({ className, type, size }) => (
   <img
+    className={"Icon" + (className ? " " + className : "")}
     alt={"icon " + type}
     src={require("../../asset-inliner/inlined/icons/" + type + ".svg.js")}
     style={{
@@ -20,7 +21,7 @@ Icon.propTypes = {
   /*
   * Icon size
   */
-  size: PropTypes.oneOf(["small", "large"]).isRequired
+  size: PropTypes.string.isRequired
 };
 
 Icon.sizes = {

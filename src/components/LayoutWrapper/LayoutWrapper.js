@@ -5,8 +5,8 @@ import { LayoutSizes, MarginPaddingSize } from "../vars";
 /**
  * This is a top-level wrapper layout block
  */
-const LayoutWrapper = ({ children, documentationStylesOnly }) => (
-  <div className="LayoutWrapper">
+const LayoutWrapper = ({ className, children, documentationStylesOnly }) => (
+  <div className={"LayoutWrapper" + (className ? " " + className : "")}>
     {children}
     <style jsx>{`
       .LayoutWrapper {

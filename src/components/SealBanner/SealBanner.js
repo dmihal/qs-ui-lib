@@ -4,8 +4,8 @@ import LinkText from "../LinkText";
 import { MarginPaddingSize, Typography } from "../vars";
 import { sealblue } from "../../asset-inliner";
 
-const SealBanner = ({ type, title, date, url }) => (
-  <div className={"SealBanner"}>
+const SealBanner = ({ className, type, title, date, url }) => (
+  <div className={"SealBanner" + (className ? " " + className : "")}>
     <div className={"SealBannerInner " + type}>
       <img className="sealImg" alt={"seal " + "blue"} src={sealblue} />
       <div className="info-box">

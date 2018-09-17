@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MarginPaddingSize, Colors, Typography } from "../vars";
 
-const CTAGridContent = ({ children, align }) => (
-  <div className="CTAGridContent">
+const CTAGridContent = ({ className, children, align }) => (
+  <div className={"CTAGridContent" + (className ? " " + className : "")}>
     <div className="inner-wrap">{children}</div>
     <style jsx>{`
       .CTAGridContent {

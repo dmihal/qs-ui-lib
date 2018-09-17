@@ -18,8 +18,8 @@ const iconReducer = type => {
   }
 };
 
-const Notification = ({ type, headline, subheader, link }) => (
-  <div className="Notification">
+const Notification = ({ className, type, headline, subheader, link }) => (
+  <div className={"Notification" + (className ? " " + className : "")}>
     <div className="icon-area">{iconReducer(type)}</div>
     <div className="info-area">
       <div className="info-area-top">

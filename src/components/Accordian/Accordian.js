@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { glypharrow } from "../../asset-inliner";
 
-const Accordian = ({ children, title }) => (
-  <details className="Accordian">
+const Accordian = ({ className, children, title }) => (
+  <details className={"Accordian" + (className ? " " + className : "")}>
     <summary>{title}</summary>
     <div className="details-content">{children}</div>
     <style jsx>{`

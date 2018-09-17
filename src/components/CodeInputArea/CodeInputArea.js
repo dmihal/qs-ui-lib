@@ -65,7 +65,12 @@ class CodeInputArea extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div
+        className={
+          "CodeInputArea" +
+          (this.props.className ? " " + this.props.className : "")
+        }
+      >
         <CodeMirror
           value={this.state.value}
           options={{
@@ -634,7 +639,7 @@ class CodeInputArea extends Component {
             }
           `}
         </style>
-      </React.Fragment>
+      </div>
     );
   }
 }

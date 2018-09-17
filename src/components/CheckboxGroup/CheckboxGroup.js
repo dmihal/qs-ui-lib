@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { Colors, MarginPaddingSize } from "../vars";
 import { glyphcheck } from "../../asset-inliner";
 
-const CheckboxGroup = ({ nameID, options, error, direction }) => (
-  <React.Fragment>
+const CheckboxGroup = ({ className, nameID, options, error, direction }) => (
+  <div className={"CheckboxGroup" + (className ? " " + className : "")}>
     <form>
       {options.map((option, index) => {
         return (
@@ -128,7 +128,7 @@ const CheckboxGroup = ({ nameID, options, error, direction }) => (
         }
       }
     `}</style>
-  </React.Fragment>
+  </div>
 );
 
 CheckboxGroup.propTypes = {

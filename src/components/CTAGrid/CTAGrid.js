@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { MarginPaddingSize } from "../vars";
 
-const CTAGrid = ({ children }) => (
-  <div className="CTAGrid">
+const CTAGrid = ({ className, children }) => (
+  <div className={"CTAGrid" + (className ? " " + className : "")}>
     {children}
     <style jsx>{`
       .CTAGrid {

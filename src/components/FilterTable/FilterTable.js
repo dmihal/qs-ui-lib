@@ -2,8 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReactTable from "react-table";
 
-const FilterTable = ({ tableTitle, data, columns }) => (
-  <div className="FilterTable">
+const FilterTable = ({ className, tableTitle, data, columns }) => (
+  <div className={"FilterTable" + (className ? " " + className : "")}>
     <div className="table-wrapper">
       <div className="table-title">{tableTitle}</div>
       <ReactTable data={data} columns={columns} />

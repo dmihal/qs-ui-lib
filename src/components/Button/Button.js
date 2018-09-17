@@ -4,6 +4,7 @@ import { Typography, Colors, MarginPaddingSize } from "../vars";
 import { glyphcarouselarrow } from "../../asset-inliner";
 
 const Button = ({
+  className,
   children,
   type,
   size,
@@ -16,7 +17,8 @@ const Button = ({
     className={
       "Button " +
       (activeHighlight ? "tab-active " : "") +
-      (styleOverRideRule ? styleOverRideRule : "")
+      (styleOverRideRule ? styleOverRideRule : "") +
+      (className ? " " + className : "")
     }
     disabled={type === "disabled"}
     onClick={onClick}

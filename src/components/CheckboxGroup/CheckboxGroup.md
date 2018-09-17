@@ -16,7 +16,7 @@ Row
 
 ```jsx
 <CheckboxGroup
-  nameID="ZZ24124"
+  nameID="UYAJHVADJH"
   direction="row"
   options={[
     { value: "one", label: "Normal" },

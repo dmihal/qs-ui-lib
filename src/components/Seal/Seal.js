@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Seal = ({ type }) => (
+const Seal = ({ className, type }) => (
   <img
+    className={"Seal" + (className ? " " + className : "")}
     alt={"seal " + type}
     src={require("../../asset-inliner/inlined/seals/seal-" + type + ".svg.js")}
     style={{

@@ -49,7 +49,11 @@ class SlideBar extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <div
+        className={
+          "SlideBar" + (this.props.className ? " " + this.props.className : "")
+        }
+      >
         <Slider
           min={0}
           max={this.props.max}
@@ -332,7 +336,7 @@ class SlideBar extends Component {
             background-color: ${Colors.Royal};
           }
         `}</style>
-      </React.Fragment>
+      </div>
     );
   }
 }

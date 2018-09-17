@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import LinkText from "../LinkText";
 import { MarginPaddingSize, Colors } from "../vars";
 
-const CalloutCard = ({ img, title, linkText }) => (
-  <div className="CalloutCard">
+const CalloutCard = ({ className, img, title, linkText }) => (
+  <div className={"CalloutCard" + (className ? " " + className : "")}>
     <img src={img} alt="call out card" />
     <h2>{title}</h2>
     <div className="callout-bottom">
