@@ -23,3 +23,9 @@
 - `npm run build` will build the component for publishing to npm and also bundle the demo app.
 
 - `npm run clean` will delete built resources.
+
+## Publishing
+
+- obtain credentials for the `qs-npm` npm user
+- run `npm login`
+- run `yarn build && npm publish`

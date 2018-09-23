@@ -36,7 +36,7 @@ import SlideBar from "./components/SlideBar";
 import SimpleTable from "./components/SimpleTable";
 import FilterTable from "./components/FilterTable";
 import Tabs from "./components/Tabs";
-import Textarea from "./components/Textarea";
+import TextArea from "./components/TextArea";
 import Toggle from "./components/Toggle";
 import Seal from "./components/Seal";
 import SealBanner from "./components/SealBanner";
@@ -81,7 +81,7 @@ export {
   SimpleTable,
   FilterTable,
   Tabs,
-  Textarea,
+  TextArea,
   Toggle,
   Seal,
   SealBanner

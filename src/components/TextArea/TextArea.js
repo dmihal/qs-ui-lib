@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors, MarginPaddingSize } from "../vars";
 
-const Textarea = ({
+const TextArea = ({
   className,
   label,
   placeholder,
@@ -10,7 +10,7 @@ const Textarea = ({
   error,
   disabled
 }) => (
-  <div className={"Textarea-wrapper" + (className ? " " + className : "")}>
+  <div className={"TextArea-wrapper" + (className ? " " + className : "")}>
     {label ? (
       <label>
         {label} {required ? "*" : null}
@@ -19,7 +19,7 @@ const Textarea = ({
     {error ? <label className="error">{error}</label> : null}
     <textarea placeholder={placeholder} disabled={disabled} />
     <style jsx>{`
-      .Textarea-wrapper {
+      .TextArea-wrapper {
         border-radius: 2px;
         background-color: #ffffff;
         display: inline-block;
@@ -67,7 +67,7 @@ const Textarea = ({
   </div>
 );
 
-Textarea.propTypes = {
+TextArea.propTypes = {
   /**
    * Field label
    */
@@ -90,4 +90,4 @@ Textarea.propTypes = {
   disabled: PropTypes.bool
 };
 
-export default Textarea;
+export default TextArea;
