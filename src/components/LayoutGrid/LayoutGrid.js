@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { LayoutSizes, MarginPaddingSize } from "../vars";
+import { LayoutSizes, MarginPaddingSize, GridGutter } from "../vars";
 
 /**
  * This is a column layout block
@@ -16,48 +16,26 @@ const LayoutGrid = ({ className, children, offset }) => (
         justify-content: space-between;
         width: 100%;
 
-        /* 
+        /*
           TODO: For some reason global flags are needed?
           Shouldn't nesting "just work"?
         */
         > :global(*) {
           ${children.length > 1
-            ? "width: calc( (" +
-              LayoutSizes[3] +
-              "/" +
-              children.length +
-              ") - (" +
-              MarginPaddingSize[2] +
-              "/" +
-              children.length +
-              ") );"
-            : "width: 100%;"} ${offset
-            ? offset === "left"
-              ? "&:first-child { width: " +
-                LayoutSizes[2] +
-                "};" +
-                "&:nth-child(2) { width: " +
-                LayoutSizes[0] +
-                "};"
-              : offset === "right"
-                ? "&:first-child { width: " +
-                  LayoutSizes[0] +
-                  "};" +
-                  "&:nth-child(2) { width: " +
-                  LayoutSizes[2] +
-                  "};"
-                : ""
-            : ""};
+            ? `width: calc(${100 / children.length}% - ${(20 *
+                (children.length - 1)) /
+                children.length}px);`
+            : "width: 100%;"};
         }
 
         > :global(*:first-child) {
           ${offset && children.length === 2
             ? offset === "left"
-              ? "width: " + LayoutSizes[2] + ";"
+              ? `width: calc(${(2 * 100) / 3}% - ${GridGutter / 2}px);`
               : ""
             : ""} ${offset && children.length === 2
             ? offset === "right"
-              ? "width: " + LayoutSizes[0] + ";"
+              ? `width: calc(${100 / 3}% - ${GridGutter / 2}px);`
               : ""
             : ""};
         }
@@ -65,20 +43,20 @@ const LayoutGrid = ({ className, children, offset }) => (
         > :global(*:nth-child(2)) {
           ${offset && children.length === 2
             ? offset === "left"
-              ? "width: " + LayoutSizes[0] + ";"
+              ? `width: calc(${100 / 3}% - ${GridGutter / 2}px);`
               : ""
             : ""} ${offset && children.length === 2
             ? offset === "right"
-              ? "width: " + LayoutSizes[2] + ";"
+              ? `width: calc(${(2 * 100) / 3}% - ${GridGutter / 2}px);`
               : ""
             : ""};
         }
       }
       @media (width <= 500px) {
         flex-direction: column;
-        /* 
+        /*
           This is nutty but it worked
-          Probably some sort of transpiling madness PR needed to submit upstream 
+          Probably some sort of transpiling madness PR needed to submit upstream
         */
         :global(*[class*="LayoutGrid"] *) {
           width: 100% !important;

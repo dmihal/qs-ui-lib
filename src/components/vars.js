@@ -7,6 +7,7 @@ export const Colors = {
   PoloBlue: "rgba(131,174,216,1)",
   Slate: "rgba(112,128,144,1)",
   Gallery: "rgba(238,238,238,1)",
+  Nurse: "rgba(228,228,228,1)",
   Alabaster: "rgba(249,249,249,1)",
   Mirage: "rgba(30,40,55,1)",
   LaPalma: "rgba(17,168,23,1)",
@@ -30,7 +31,7 @@ export const Typography = {
   typePrimaryFont: "GT Walsheim Pro",
   typePrimaryStack: "GT Walsheim Pro, Helvetica, Arial, sans-serif",
   typePrimaryWeight: {
-    regular: "500",
+    regular: "400",
     medium: "500",
     light: "100",
     normal: "normal"
@@ -54,7 +55,10 @@ export const MarginPaddingSize = [
   "10px",
   "20px",
   "40px",
+  "60px",
   "80px",
   "120px",
   "240px"
 ];
+
+export const GridGutter = 20;

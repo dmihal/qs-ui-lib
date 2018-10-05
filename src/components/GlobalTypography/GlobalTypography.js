@@ -25,6 +25,7 @@ const GlobalTypography = () => (
     h1 {
       font-weight: ${Typography.typePrimaryWeight.regular};
       font-size: ${Typography.fontSize[0]};
+      line-height: 1.18;
     }
 
     h2 {

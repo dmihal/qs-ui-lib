@@ -15,6 +15,10 @@ const LayoutWrapper = ({ className, children, documentationStylesOnly }) => (
         padding: 0 ${MarginPaddingSize[3]};
         width: 100%;
       }
+
+      @media (width <= 768px) {
+        padding: 0 !important;
+      }
       ${documentationStylesOnly};
     `}</style>
   </div>
