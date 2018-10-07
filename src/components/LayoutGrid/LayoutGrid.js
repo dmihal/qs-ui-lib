@@ -52,19 +52,19 @@ const LayoutGrid = ({ className, children, offset }) => (
             : ""};
         }
       }
-      @media (width <= 500px) {
+      @media (width <= 768px) {
         flex-direction: column;
         /*
           This is nutty but it worked
           Probably some sort of transpiling madness PR needed to submit upstream
         */
-        :global(*[class*="LayoutGrid"] *) {
+        :global(*[class*="LayoutGrid"] > *) {
           width: 100% !important;
         }
-        :global(*[class*="LayoutGrid"] *:first-child) {
+        :global(*[class*="LayoutGrid"] > *:first-child) {
           width: 100% !important;
         }
-        :global(*[class*="LayoutGrid"] *:nth-child(2)) {
+        :global(*[class*="LayoutGrid"] > *:nth-child(2)) {
           width: 100% !important;
         }
       }
