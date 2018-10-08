@@ -11,6 +11,7 @@ import CodeInputArea from "./components/CodeInputArea";
 // import LayoutSizes from "./components/LayoutSizes";
 import CTAGrid from "./components/CTAGrid";
 import CTAGridContent from "./components/CTAGridContent";
+import CustomerLogo from "./components/CustomerLogo";
 import DatePick from "./components/DatePick";
 import GlobalDefault from "./components/GlobalDefault";
 import GlobalFonts from "./components/GlobalFonts";
@@ -38,6 +39,7 @@ import FilterTable from "./components/FilterTable";
 import Tabs from "./components/Tabs";
 import TextArea from "./components/TextArea";
 import Toggle from "./components/Toggle";
+import TokenIcon from "./components/TokenIcon";
 import Seal from "./components/Seal";
 import SealBanner from "./components/SealBanner";
 import { Colors, LayoutSizes, MarginPaddingSize } from "./components/vars";
@@ -54,6 +56,7 @@ export {
   Colors,
   CTAGrid,
   CTAGridContent,
+  CustomerLogo,
   DatePick,
   GlobalDefault,
   GlobalFonts,
@@ -83,6 +86,7 @@ export {
   Tabs,
   TextArea,
   Toggle,
+  TokenIcon,
   Seal,
   SealBanner
 };
