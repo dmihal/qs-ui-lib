@@ -23,6 +23,7 @@ const glyphleft = require("./inlined/glyphs/glyph-left.svg.js");
 const glyphlinkedin = require("./inlined/glyphs/glyph-linkedin.svg.js");
 const glyphmedium = require("./inlined/glyphs/glyph-medium.svg.js");
 const glyphmyreports = require("./inlined/glyphs/glyph-myreports.svg.js");
+const glyphnodecount = require("./inlined/glyphs/glyph-node-count.svg.js");
 const glyphquantstamp = require("./inlined/glyphs/glyph-quantstamp.svg.js");
 const glyphquestions = require("./inlined/glyphs/glyph-questions.svg.js");
 const glyphreport = require("./inlined/glyphs/glyph-report.svg.js");
@@ -100,6 +101,7 @@ module.exports = {
   glyphlinkedin: glyphlinkedin,
   glyphmedium: glyphmedium,
   glyphmyreports: glyphmyreports,
+  glyphnodecount: glyphnodecount,
   glyphquantstamp: glyphquantstamp,
   glyphquestions: glyphquestions,
   glyphreport: glyphreport,
