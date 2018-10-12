@@ -2,8 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Typography, Colors } from "../vars";
 
-const LinkText = ({ className, children, arrow, inverse, activeState }) => (
-  <span className={"LinkText" + (className ? " " + className : "")}>
+const LinkText = ({
+  className,
+  children,
+  arrow,
+  inverse,
+  activeState,
+  onClick
+}) => (
+  <span
+    className={"LinkText" + (className ? " " + className : "")}
+    onClick={onClick}
+  >
     {arrow ? <div className="arrow-right" /> : null}
     {children}
     <style jsx>{`

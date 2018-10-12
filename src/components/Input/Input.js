@@ -4,6 +4,8 @@ import { Typography, Colors, MarginPaddingSize } from "../vars";
 import { glyphsearch } from "../../asset-inliner";
 
 const Input = ({
+  id,
+  field,
   className,
   type,
   label,
@@ -24,6 +26,8 @@ const Input = ({
       type={type || "text"}
       placeholder={placeholder}
       disabled={disabled}
+      id={id}
+      field={field}
     />
     <style jsx>{`
       .input-wrapper {
@@ -90,6 +94,14 @@ Input.propTypes = {
    * Field label
    */
   label: PropTypes.string,
+  /**
+   * Input id
+   */
+  id: PropTypes.string,
+  /**
+   * Input field
+   */
+  field: PropTypes.string,
   /**
    * PlaceHolder
    */
