@@ -117,6 +117,10 @@ const Colors = () => (
           background: ${ColorVars.Gallery};
         }
 
+        &.Nurse {
+          background: ${ColorVars.Nurse};
+        }
+
         &.Alabaster {
           background: ${ColorVars.Alabaster};
         }

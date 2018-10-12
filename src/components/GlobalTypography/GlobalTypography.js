@@ -19,12 +19,13 @@ const GlobalTypography = () => (
     h4,
     p {
       margin-top: 0 !important;
-      margin-bottom: ${MarginPaddingSize[2]};
+      margin-bottom: ${MarginPaddingSize[1]};
     }
 
     h1 {
       font-weight: ${Typography.typePrimaryWeight.regular};
       font-size: ${Typography.fontSize[0]};
+      line-height: 1.18;
     }
 
     h2 {
