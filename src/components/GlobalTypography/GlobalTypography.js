@@ -19,7 +19,7 @@ const GlobalTypography = () => (
     h4,
     p {
       margin-top: 0 !important;
-      margin-bottom: ${MarginPaddingSize[2]};
+      margin-bottom: ${MarginPaddingSize[1]};
     }
 
     h1 {
