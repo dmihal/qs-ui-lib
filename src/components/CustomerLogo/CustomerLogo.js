@@ -1,13 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const CustomerLogo = ({ className, name, size }) => (
+const CustomerLogo = ({ className, name, url, size }) => (
   <img
     className={"CustomerLogo" + (className ? " " + className : "")}
     alt={"Customer logo " + name}
-    src={
-      "https://s3-us-west-1.amazonaws.com/qsp-www-images/logos/" + name + ".svg"
-    }
+    src={url}
     style={{
       width: CustomerLogo.sizes[size] || CustomerLogo.sizes["small"]
     }}
@@ -22,7 +20,11 @@ CustomerLogo.propTypes = {
   /*
   * CustomerLogo size
   */
-  size: PropTypes.string.isRequired
+  size: PropTypes.string.isRequired,
+  /*
+  * CustomerLogo url
+  */
+  url: PropTypes.string.isRequired
 };
 
 CustomerLogo.sizes = {
