@@ -3,14 +3,14 @@
 ### Quantstamp Component Library and Style Guide
 
 [npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/qs-ui-library
+[npm]: https://www.npmjs.org/package/qs-ui-lib
 
 [![npm package][npm-badge]][npm]
 
 <!-- [![Coveralls][coveralls-badge]][coveralls] -->
 <!--
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/quantstamp/qs-ui-library
+[coveralls]: https://coveralls.io/github/quantstamp/qs-ui-lib
 -->
 
 ![](https://quantstamp.com/assets/logo-website-dc3b71626c62e8a01d8767a293e104e968c43940060c9a0f7ca2d5e258c29def.svg)
@@ -22,16 +22,16 @@
 From your React.js project folder
 
 ```bash
-npm i qs-ui-library --save
+npm i qs-ui-lib --save
 # or
-yarn add qs-ui-library
+yarn add qs-ui-lib
 ```
 
 Then to source the component in your page or top level component
 
 ```js
 // File: pages/mypage.js
-import { MyComponent } from 'qs-ui-library'
+import { MyComponent } from 'qs-ui-lib'
 
 |
 |
@@ -85,8 +85,8 @@ How to start locally for development:
 (pre-reqs: node/npm, nvm, git)
 
 ```
-git clone git://github.com/quantstamp/qs-ui-library.git
-cd qs-ui-library
+git clone git://github.com/quantstamp/qs-ui-lib.git
+cd qs-ui-lib
 nvm use
 npm i
 npm start
