@@ -8,6 +8,7 @@ const LinkText = ({ className, children, arrow, inverse, activeState }) => (
     {children}
     <style jsx>{`
       .LinkText {
+        text-decoration: none;
         color: ${Colors.Royal};
         font-size: ${Typography.fontSize[4]};
         cursor: pointer;
