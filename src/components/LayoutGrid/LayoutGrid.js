@@ -11,7 +11,7 @@ const LayoutGrid = ({ className, children, offset }) => (
     <style jsx>{`
       .LayoutGrid {
         margin: auto;
-        max-width: ${LayoutSizes[3]};
+        max-width: ${LayoutSizes[5]};
         display: flex;
         justify-content: space-between;
         width: 100%;
