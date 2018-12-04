@@ -37,12 +37,20 @@ const Colors = () => (
       <div className="Circle Mirage" />
     </div>
     <div className="Legend">
+      <h4>Colors.Crusoe</h4>
+      <div className="Circle Crusoe" />
+    </div>
+    <div className="Legend">
       <h4>Colors.LaPalma</h4>
       <div className="Circle LaPalma" />
     </div>
     <div className="Legend">
       <h4>Colors.Atlantis</h4>
       <div className="Circle Atlantis" />
+    </div>
+    <div className="Legend">
+      <h4>Colors.DeYork</h4>
+      <div className="Circle DeYork" />
     </div>
     <div className="Legend">
       <h4>Colors.Yellow</h4>
@@ -137,12 +145,20 @@ const Colors = () => (
           background: ${ColorVars.Mirage};
         }
 
+        &.Crusoe {
+          background: ${ColorVars.Crusoe};
+        }
+
         &.LaPalma {
           background: ${ColorVars.LaPalma};
         }
 
         &.Atlantis {
           background: ${ColorVars.Atlantis};
+        }
+
+        &.DeYork {
+          background: ${ColorVars.DeYork};
         }
 
         &.Yellow {
