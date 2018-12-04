@@ -20,22 +20,19 @@ class Modal extends Component {
     /**
      * Modal Position
      */
-    position: PropTypes.string
+    position: PropTypes.string,
+    /**
+     * Dispatch close modal
+     */
+    onCloseModalClick: PropTypes.func
   };
 
   constructor(props) {
     super();
     this.modalTrigger = React.createRef();
     this.state = {
-      title: props.title,
-      initFire: props.fire
+      title: props.title
     };
-  }
-
-  handleCloseClick() {
-    this.setState({
-      initFire: false
-    });
   }
 
   render() {
@@ -49,19 +46,11 @@ class Modal extends Component {
           id={"modal-trigger-" + this.props.modalID}
           className="checkbox"
           type="checkbox"
-          defaultChecked={this.props.fire ? this.state.initFire : null}
-        />
-        <label
-          htmlFor={"modal-trigger-" + this.props.modalID}
-          className="open-modal"
-          ref={this.modalTrigger}
+          checked={this.isOpen}
+          defaultChecked={true}
         />
         <div className="modal-overlay">
-          <label
-            htmlFor={"modal-trigger-" + this.props.modalID}
-            className="o-close"
-            onClick={this.checkBox}
-          />
+          <label className="o-close" onClick={this.props.onCloseModalClick} />
           <div
             className={
               "modal-wrap " +
@@ -70,10 +59,7 @@ class Modal extends Component {
                 : "")
             }
           >
-            <label
-              htmlFor={"modal-trigger-" + this.props.modalID}
-              className="close"
-            >
+            <label className="close" onClick={this.props.onCloseModalClick}>
               <img src={glyphclosex} alt="close button" />
             </label>
             <h2>{this.state.title}</h2>
