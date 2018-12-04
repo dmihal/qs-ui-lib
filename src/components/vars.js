@@ -15,10 +15,12 @@ export const Colors = {
   Yellow: "rgba(255,184,0,1)",
   Crusta: "rgba(255,126,46,1)",
   Cinnabar: "rgba(227,66,52,1)",
+  Milano: "rgba(164,55,54,1)",
   Lavender: "rgba(224,78,227,1)",
   Violet: "rgba(155,64,164,1)",
   SanMarino: "rgba(80,104,178,1)",
   ResolutionBlue: "rgba(0,31,124,1)",
+  BigStone: "rgba(20,35,63,1)",
   White: "rgba(255,255,255,1)",
   Black: "rgba(0,0,0,1)"
 };

@@ -57,6 +57,10 @@ const Colors = () => (
       <div className="Circle Cinnabar" />
     </div>
     <div className="Legend">
+      <h4>Colors.Milano</h4>
+      <div className="Circle Milano" />
+    </div>
+    <div className="Legend">
       <h4>Colors.Lavender</h4>
       <div className="Circle Lavender" />
     </div>
@@ -71,6 +75,10 @@ const Colors = () => (
     <div className="Legend">
       <h4>Colors.ResolutionBlue</h4>
       <div className="Circle ResolutionBlue" />
+    </div>
+    <div className="Legend">
+      <h4>Colors.BigStone</h4>
+      <div className="Circle BigStone" />
     </div>
     <style jsx>{`
       .LegendWrapper {
@@ -149,6 +157,10 @@ const Colors = () => (
           background: ${ColorVars.Cinnabar};
         }
 
+        &.Milano {
+          background: ${ColorVars.Milano};
+        }
+
         &.Lavender {
           background: ${ColorVars.Lavender};
         }
@@ -163,6 +175,10 @@ const Colors = () => (
 
         &.ResolutionBlue {
           background: ${ColorVars.ResolutionBlue};
+        }
+
+        &.BigStone {
+          background: ${ColorVars.BigStone};
         }
       }
     `}</style>
