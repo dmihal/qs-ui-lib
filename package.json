@@ -63,7 +63,7 @@
     "cypress": "^3.1.0",
     "husky": "^1.0.0-rc.14",
     "minimist": "^1.2.0",
-    "nodemon": "^1.18.3",
+    "nodemon": "^1.18.9",
     "prettier": "1.14.2",
     "pretty-quick": "^1.6.0",
     "react": "^16.4.2",
