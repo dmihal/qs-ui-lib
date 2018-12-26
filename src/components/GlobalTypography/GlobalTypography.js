@@ -1,14 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Colors, Typography, MarginPaddingSize } from "../vars";
 
 /**
  * This is a global style baseline that is meant to be imported
  * at the top layer of your app
  */
-const GlobalTypography = () => (
+const GlobalTypography = ({ theme }) => (
   <style jsx global>{`
     * {
-      color: ${Colors.Mirage};
+      color: ${theme === "dark" ? Colors.White : Colors.Mirage};
       font-family: ${Typography.typePrimaryStack} !important;
       font-size: ${Typography.fontSize[3]};
     }
@@ -69,5 +70,13 @@ const GlobalTypography = () => (
     }
   `}</style>
 );
+
+GlobalTypography.propTypes = {
+  theme: PropTypes.oneOf(["light", "dark"])
+};
+
+GlobalTypography.defaultProps = {
+  theme: "light"
+};
 
 export default GlobalTypography;

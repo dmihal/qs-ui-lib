@@ -1,6 +1,11 @@
 ```js static
-<GlobalDefault/>
+<GlobalDefault />
 ```
+
+```js static
+<GlobalDefault theme="dark" />
+```
+
 ```jsx noeditor
-<GlobalDefault/>
+<GlobalDefault />
 ```
