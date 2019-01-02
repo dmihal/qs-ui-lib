@@ -63,6 +63,15 @@ class CodeInputArea extends Component {
     looper(cm);
   };
 
+  componentDidUpdate(oldProps) {
+    if (
+      oldProps.code !== this.props.code &&
+      this.props.code !== this.state.value
+    ) {
+      this.setState({ value: this.props.code });
+    }
+  }
+
   render() {
     return (
       <div
